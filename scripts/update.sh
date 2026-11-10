@@ -12,8 +12,6 @@ link_repo "$REPO_DIR" "$MM_DIR" # also links modules added since the first insta
 
 if [ "${1:-}" = "--all" ]; then
 	git -C "$MM_DIR" pull --ff-only && (cd "$MM_DIR" && npm run install-mm)
-	(cd "$MM_DIR/modules/MMM-CalendarExt3" && git pull --ff-only && git submodule update --init --recursive && npm ci --omit=dev --no-audit --no-fund)
-	(cd "$MM_DIR/modules/MMM-Todoist" && git pull --ff-only && npm install --omit=dev --no-audit --no-fund)
 fi
 
 "$REPO_DIR/scripts/restart.sh"

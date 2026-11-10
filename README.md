@@ -4,13 +4,16 @@ A Skylight-style family screen for the TV, built on [MagicMirror²](https://magi
 Hebrew, right-to-left, with weather for Rehovot.
 
 ```
-┌──────────────────────────────┬──────────────────────────────┐
-│ Weather now + 4-day forecast │ Clock + Hebrew date          │
-│ News briefing (5 bullets)    │ Todos & recurring chores     │
-├──────────────────────────────┴──────────────────────────────┤
-│ 2-week calendar: Family · Person 1 · Person 2 · Holidays    │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────┬──────────────────┐
+│                                      │ Clock + weather  │
+│  This week: 7 days, color per person │ + 4-day forecast │
+│  (Family · Person 1 · Person 2 ·     ├──────────────────┤
+│   Holidays)                          │ Today's chores   │
+│                                      ├──────────────────┤
+│  Next week's highlights              │ Morning news     │
+└──────────────────────────────────────┴──────────────────┘
 ```
+Light Material 3 design, Hebrew right to left. On a phone the cards stack in one column.
 
 | Panel | Source | Who updates it |
 |---|---|---|
@@ -25,7 +28,7 @@ Hebrew, right-to-left, with weather for Rehovot.
 |---|---|
 | ![TV layout](docs/layout-tv.png) | ![Phone layout](docs/layout-phone.png) |
 
-<sub>These previews show the layout with placeholder content.</sub>
+<sub>Previews rendered from the real modules with demo data (news text is placeholder).</sub>
 
 ## Try it on your Mac first (no Pi needed)
 
@@ -156,6 +159,9 @@ config/config.js            layout, calendars, location, feeds (no secrets)
 config/config.env.example   template for your private links and keys
 config/custom.css           TV styling: large Hebrew font, RTL, overscan margins
 modules/MMM-DailyTLDR/      custom module: RSS → Claude → 5-bullet Hebrew briefing
+modules/MMM-ClockWeather/   clock + weather card and phone forecast (Open-Meteo)
+modules/MMM-WeekCalendar/   week grid (TV), day list + today card (phone)
+modules/MMM-Chores/         today's chores from Todoist
 modules/MMM-PhoneView/      makes phones use the stacked layout
 modules/MMM-Demo/           sample calendars & chores for demo mode (MM_DEMO=1)
 scripts/local.sh            run on a Mac/Linux laptop in the browser (demo or real)

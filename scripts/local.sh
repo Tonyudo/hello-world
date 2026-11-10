@@ -42,7 +42,6 @@ export ELECTRON_SKIP_BINARY_DOWNLOAD=1
 if [ ! -d "$MM_DIR/node_modules" ] || [ "$UPDATE" -eq 1 ]; then
 	[ "$UPDATE" -eq 1 ] && [ -d "$MM_DIR/.git" ] && git -C "$MM_DIR" pull --ff-only
 	install_magicmirror "$MM_DIR"
-	install_third_party_modules "$MM_DIR"
 fi
 link_repo "$REPO_DIR" "$MM_DIR"
 

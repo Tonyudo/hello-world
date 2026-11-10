@@ -21,15 +21,6 @@ install_magicmirror() { # $1 = MagicMirror dir
 	(cd "$mm" && npm run install-mm)
 }
 
-install_third_party_modules() { # $1 = MagicMirror dir
-	local mods="$1/modules"
-	say "Installing calendar grid and Todoist modules"
-	[ -d "$mods/MMM-CalendarExt3" ] || git clone https://github.com/MMRIZE/MMM-CalendarExt3 "$mods/MMM-CalendarExt3"
-	(cd "$mods/MMM-CalendarExt3" && git submodule update --init --recursive && npm ci --omit=dev --no-audit --no-fund)
-	[ -d "$mods/MMM-Todoist" ] || git clone https://github.com/cbrooker/MMM-Todoist "$mods/MMM-Todoist"
-	(cd "$mods/MMM-Todoist" && npm install --omit=dev --no-audit --no-fund)
-}
-
 link_repo() { # $1 = repo dir, $2 = MagicMirror dir
 	local repo="$1" mm="$2"
 	say "Linking this repo's config and modules into MagicMirror"
@@ -41,7 +32,8 @@ link_repo() { # $1 = repo dir, $2 = MagicMirror dir
 		chmod 600 "$repo/config/config.env"
 	fi
 	ln -sfn "$repo/config/config.env" "$mm/config/config.env"
-	for m in MMM-DailyTLDR MMM-PhoneView MMM-Demo; do
+	# All modules are in this repo (no third-party modules needed).
+	for m in MMM-DailyTLDR MMM-PhoneView MMM-Demo MMM-ClockWeather MMM-WeekCalendar MMM-Chores; do
 		ln -sfn "$repo/modules/$m" "$mm/modules/$m"
 	done
 	if [ ! -d "$repo/modules/MMM-DailyTLDR/node_modules" ]; then

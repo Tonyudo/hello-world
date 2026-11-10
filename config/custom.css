@@ -1,185 +1,264 @@
-/* Family dashboard — TV styling for MagicMirror² (Hebrew, right-to-left).
- * Loaded from ~/MagicMirror/config/ (linked to this repo by scripts/install.sh).
+/* Family dashboard — Material 3 (light), Hebrew right-to-left.
+ * Loaded from ~/MagicMirror/config/ (linked to this repo by the install scripts).
+ *
+ * TV (≥761px): a card grid — side column (clock+weather, chores, news) and a big week calendar.
+ * Phone (≤760px): one scrolling column — header, today, chores, this week, news, forecast.
+ * Every visible module sits in the top_bar region and is placed by its "card-*" class.
  */
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
 :root {
-  --font-primary: "Heebo", "Noto Sans Hebrew", "Roboto Condensed", sans-serif;
-  --font-secondary: "Heebo", "Noto Sans Hebrew", "Roboto", sans-serif;
-  --accent: #6ab0ff;
-  --panel-bg: rgba(255, 255, 255, 0.04);
-  --gap: 28px;
+  /* Material 3 light tokens */
+  --md-background: #eef0f6;
+  --md-surface: #ffffff;
+  --md-surface-container: #f3f4f9;
+  --md-surface-container-high: #e7e8ef;
+  --md-day: #f7f8fc;
+  --md-weekend: #fbf7ef;
+  --md-today: #e8edff;
+  --md-on-surface: #1b1b1f;
+  --md-on-surface-variant: #45464f;
+  --md-outline: #757780;
+  --md-outline-variant: #c6c6d0;
+  --md-primary: #2f5bd3;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #dce1ff;
+  --md-on-primary-container: #001550;
+  --md-error: #ba1a1a;
+  --md-error-container: #ffdad6;
+  --md-on-error-container: #410002;
+  --md-elevation-1: 0 1px 2px rgba(20, 24, 40, 0.06), 0 1px 3px 1px rgba(20, 24, 40, 0.04);
+  --md-radius-xl: 28px;
+  --md-radius-l: 20px;
+  --md-radius-m: 18px;
+  --md-radius-s: 14px;
+
+  /* MagicMirror's own variables */
+  --font-primary: "Rubik", "Noto Sans Hebrew", sans-serif;
+  --font-secondary: "Rubik", "Noto Sans Hebrew", sans-serif;
+  --color-background: var(--md-background);
+  --color-text: var(--md-on-surface);
+  --color-text-bright: var(--md-on-surface);
+  --color-text-dimmed: var(--md-on-surface-variant);
+  --gap-body-top: 40px;
+  --gap-body-right: 40px;
+  --gap-body-bottom: 40px;
+  --gap-body-left: 40px;
+}
+
+html,
+body {
+  background: var(--md-background);
 }
 
 body {
-  margin: 36px 48px; /* most TVs crop the edges (overscan) */
-  height: calc(100% - 72px);
-  width: calc(100% - 96px);
   direction: rtl;
+  color: var(--md-on-surface);
   font-family: var(--font-primary);
-  background: #000;
+  line-height: 1.35;
 }
 
-/* Two columns across the top: each takes just under half the width. */
-.region.top.right,
-.region.top.left {
-  width: calc(50% - var(--gap) / 2);
+/* Our modules draw their own titles */
+.module-header {
+  display: none !important;
 }
 
-/* MagicMirror never sets left: 0 on left regions; with direction: rtl they would
-   otherwise sit on the right edge on top of the right column. */
-.region.left {
-  left: 0;
+/* ── The grid ── */
+.region.top.bar {
+  height: 100%;
 }
 
-.region.top.right .container,
-.region.top.left .container {
+.region.top.bar > .container {
+  height: 100%;
+  display: grid;
+  direction: rtl; /* first column = right edge */
+  grid-template-columns: 600px minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-areas:
+    "now    cal"
+    "chores cal"
+    "news   cal";
+  gap: 24px;
+}
+
+.module.card {
+  margin: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  background: var(--md-surface);
+  border-radius: var(--md-radius-xl);
+  padding: 24px 32px;
+  box-shadow: var(--md-elevation-1);
   text-align: right;
 }
 
-.module {
-  margin-bottom: 22px;
+.card-now { grid-area: now; padding: 24px 32px; }
+.card-chores { grid-area: chores; }
+.card-news {
+  grid-area: news;
+  overflow: hidden;
+  /* If a long briefing doesn't fit, fade it out instead of cutting a line in half */
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
 }
 
-.module-header {
-  font-family: var(--font-primary);
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: 0;
-  text-transform: none;
-  color: #aaa;
-  border-bottom: 1px solid #333;
-  padding-bottom: 6px;
-  margin-bottom: 10px;
-}
-
-/* ── Clock ── */
-.clock .time {
-  font-size: 110px;
-  line-height: 1;
-}
-.clock .date {
-  font-size: 34px;
-}
-
-/* ── Weather ── */
-.weather .large {
-  font-size: 80px;
-}
-.weather table.small {
-  font-size: 26px;
-}
-
-/* ── Todoist ── */
-.MMM-Todoist table {
-  font-size: 28px;
-  direction: rtl;
-}
-.MMM-Todoist td {
-  padding: 4px 8px;
-}
-
-/* ── News briefing ── */
-.MMM-DailyTLDR {
-  --tldr-font-size: 28px;
-  max-width: 100%;
-}
-
-/* ── Calendar grid ── */
-.MMM-CalendarExt3 {
-  direction: rtl;
-}
-.MMM-CalendarExt3 .cell.today {
-  background: rgba(106, 176, 255, 0.12);
-}
-
-/* ── Show/hide per screen ── */
-.phone-only {
+/* TV: the top 3 stories (the phone shows all of them) */
+.card-news .tldr-list li:nth-child(n + 4) {
   display: none;
+}
+.card-cal { grid-area: cal; padding: 28px; }
+.card-today { grid-area: today; }
+.card-forecast { grid-area: forecast; }
+
+.card-cal > .module-content {
+  height: 100%;
+}
+
+.phone-only {
+  display: none !important;
+}
+
+/* ── Shared card parts ── */
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--md-on-surface);
+}
+
+.card-meta {
+  font-size: 16px;
+  color: var(--md-on-surface-variant);
+}
+
+.card-empty {
+  padding: 8px 0;
+  font-size: 19px;
+  color: var(--md-on-surface-variant);
 }
 
 /* ══════════════════════════════════════════════════════════════
- * Phone layout (Tailscale / remote viewing): stack everything in
- * one scrollable column. Needs the MMM-PhoneView module so phones
- * report their real width.
- * Order: clock → todos → this week → weather → news.
+ * Phone: one scrolling column. Needs MMM-PhoneView for the viewport.
  * ══════════════════════════════════════════════════════════════ */
 @media (max-width: 760px) {
+  :root {
+    --gap-body-top: 20px;
+    --gap-body-right: 16px;
+    --gap-body-bottom: 32px;
+    --gap-body-left: 16px;
+  }
+
   html {
     overflow-y: auto;
     cursor: auto;
     user-select: text;
-    font-size: 16px;
   }
 
   body {
     position: static;
-    margin: 12px 14px 40px;
-    width: auto;
     height: auto;
+    width: auto;
   }
 
   .region,
-  .region.top.left,
-  .region.top.right,
-  .region.top.center,
-  .region.bottom.left,
-  .region.bottom.right,
-  .region.bottom.center,
-  .region.third,
-  .region.middle.center {
+  .region.top.bar {
     position: static;
     width: 100%;
+    height: auto;
     transform: none;
-    text-align: right;
   }
 
   .region.fullscreen {
     display: none;
   }
 
-  .region.top.bar {
-    display: flex;
-    flex-direction: column;
-  }
-  .region.top.right {
-    order: -1; /* clock, todos and agenda first */
+  .region.top.bar > .container {
+    height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: "now" "today" "chores" "cal" "news" "forecast";
+    gap: 16px;
   }
 
-  .tv-only {
-    display: none !important;
-  }
   .phone-only {
-    display: block;
+    display: block !important;
   }
 
-  .module {
-    margin-bottom: 18px;
-  }
-  .module-header {
-    font-size: 15px;
+  .module.card {
+    border-radius: 24px;
+    padding: 18px;
   }
 
-  .clock .time {
-    font-size: 56px;
-  }
-  .clock .date {
-    font-size: 18px;
-  }
+  .card-title { font-size: 20px; }
+  .card-meta { font-size: 13px; }
+  .card-empty { font-size: 15px; }
 
-  .weather .large {
-    font-size: 44px;
+  /* Header: clock + weather pill, no card */
+  .module.card.card-now {
+    background: transparent;
+    box-shadow: none;
+    padding: 8px 8px 4px;
   }
-  .weather table.small {
-    font-size: 16px;
+  .card-now .cw-top { align-items: center; }
+  .card-now .cw-time { font-size: 52px; letter-spacing: 0; }
+  .card-now .cw-date { font-size: 16px; }
+  .card-now .cw-now {
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 20px;
+    background: var(--md-surface);
   }
+  .card-now .cw-now svg { width: 30px; height: 30px; }
+  .card-now .cw-temp { font-size: 22px; font-weight: 500; }
+  .card-now .cw-hilo { display: block; font-size: 13px; color: var(--md-on-surface-variant); direction: ltr; }
+  .card-now .cw-strip,
+  .card-now .cw-days { display: none; }
 
-  .MMM-Todoist table,
-  .calendar table {
-    font-size: 17px;
-  }
+  /* Forecast card */
+  .card-forecast .cw-days { gap: 8px; }
+  .card-forecast .cw-day { padding: 10px 0; gap: 4px; border-radius: var(--md-radius-s); }
+  .card-forecast .cw-dow { font-size: 13px; }
+  .card-forecast .cw-range { font-size: 15px; }
+  .card-forecast svg { width: 24px; height: 24px; }
 
-  .MMM-DailyTLDR {
-    --tldr-font-size: 17px;
-  }
+  /* Chores */
+  .ch-row { min-height: 48px; gap: 14px; }
+  .ch-box { width: 24px; height: 24px; border-width: 2px; }
+  .ch-title { font-size: 17px; white-space: normal; }
+  .ch-tag { font-size: 13px; padding: 3px 10px; }
+  .ch-count { min-width: 28px; height: 28px; font-size: 14px; }
+  .ch-repeat { width: 18px; height: 18px; }
+
+  /* Calendar: list instead of grid */
+  .wc-week { height: auto; gap: 14px; }
+  .wc-heading { font-size: 20px; }
+  .wc-range { font-size: 14px; }
+  .wc-grid,
+  .wc-legend,
+  .wc-next { display: none; }
+  .wc-list { display: flex; flex-direction: column; gap: 14px; }
+  .wc-listday { display: flex; flex-direction: column; gap: 6px; }
+  .wc-listhead { font-size: 14px; font-weight: 600; color: var(--md-on-surface-variant); }
+  .wc-ev-row { padding: 10px 12px; }
+  .wc-time { font-size: 14px; }
+  .wc-title { font-size: 16px; }
+  .wc-none { text-align: start; font-size: 15px; margin: 0; }
+  .wc-today-card .wc-title { font-size: 17px; }
+  .wc-meta { font-size: 14px; }
+
+  /* News */
+  .card-news { --tldr-font-size: 16px; overflow: visible; -webkit-mask-image: none; mask-image: none; }
+  .card-news .tldr-list li:nth-child(n + 4) { display: list-item; }
+  .tldr-list { gap: 12px; }
+  .tldr-list li::before { width: 8px; height: 8px; }
 }

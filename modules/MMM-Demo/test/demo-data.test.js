@@ -27,7 +27,7 @@ test("unknown calendar returns null", () => {
 	assert.equal(demo.buildCalendar("nope", NOW), null);
 });
 
-test("todoist response has the shape MMM-Todoist reads", () => {
+test("todoist response has the shape MMM-Chores reads", () => {
 	const r = demo.buildTodoist(NOW);
 	assert.ok(Array.isArray(r.items) && r.items.length === 5);
 	assert.equal(r.items[0].due.date, "2026-11-10");

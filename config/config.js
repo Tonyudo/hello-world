@@ -7,33 +7,40 @@
  * Demo mode (MM_DEMO=1, used by scripts/local.sh): calendars and chores come from sample data
  * served by modules/MMM-Demo, so it runs with no accounts. Weather and news are real.
  *
- * Layout on a 1920x1080 TV (Hebrew, right-to-left):
- *   ┌──────────────────────────┬──────────────────────────┐
- *   │ weather + news briefing  │ clock + date + todos     │
- *   ├──────────────────────────┴──────────────────────────┤
- *   │ 2-week family calendar (color per person)           │
- *   └─────────────────────────────────────────────────────┘
- * Phones get a single stacked column instead (config/custom.css).
+ * Layout on a 1920x1080 TV (Hebrew, right-to-left), Material 3 cards:
+ *   ┌──────────────┬──────────────────────────────────────┐
+ *   │ clock+weather│                                      │
+ *   ├──────────────┤        week calendar (7 days)        │
+ *   │ chores       │        color per person              │
+ *   ├──────────────┤                                      │
+ *   │ news         │        next-week strip               │
+ *   └──────────────┴──────────────────────────────────────┘
+ * Phones get one stacked column instead (config/custom.css).
  */
 const DEMO = process.env.MM_DEMO === "1";
 const PORT = 8080;
 const DEMO_BASE = "http://localhost:" + PORT + "/demo";
 const path = require("node:path");
 
-// One list of calendars, used by both the TV grid and the phone agenda.
+// One list of calendars. The hidden calendar module reads them; MMM-WeekCalendar colors events by name.
+// label = what the legend shows (change "שם 1" / "שם 2" to your names); bg/fg = event chip colors.
 const CALENDARS = [
-	{ name: "family", color: "#f5b942", symbol: "house", url: DEMO ? DEMO_BASE + "/calendar/family.ics" : "${SECRET_CAL_FAMILY}" },
-	{ name: "person1", color: "#5ab0ff", symbol: "user", url: DEMO ? DEMO_BASE + "/calendar/person1.ics" : "${SECRET_CAL_PERSON1}" },
-	{ name: "person2", color: "#ff7eb6", symbol: "user", url: DEMO ? DEMO_BASE + "/calendar/person2.ics" : "${SECRET_CAL_PERSON2}" },
+	{ name: "family", label: "משפחה", swatch: "#F2B84B", bg: "#FFE3A6", fg: "#3A2A00", url: DEMO ? DEMO_BASE + "/calendar/family.ics" : "${SECRET_CAL_FAMILY}" },
+	{ name: "person1", label: "שם 1", swatch: "#4F7BE8", bg: "#D8E2FF", fg: "#001A41", url: DEMO ? DEMO_BASE + "/calendar/person1.ics" : "${SECRET_CAL_PERSON1}" },
+	{ name: "person2", label: "שם 2", swatch: "#D9508A", bg: "#FFD9E6", fg: "#3D0020", url: DEMO ? DEMO_BASE + "/calendar/person2.ics" : "${SECRET_CAL_PERSON2}" },
 	{
 		name: "holidays",
+		label: "חגים",
+		swatch: "#3E9B5A",
+		bg: "#C8EFCF",
+		fg: "#00210B",
 		// Google's public Jewish holidays calendar (Hebrew)
 		url: "https://calendar.google.com/calendar/ical/iw.jewish%23holiday%40group.v.calendar.google.com/public/basic.ics",
-		color: "#7ddc8a",
-		symbol: "star-of-david",
 		fetchInterval: 24 * 60 * 60 * 1000
 	}
 ];
+const CALENDAR_STYLES = Object.fromEntries(CALENDARS.map((c) => [c.name, { label: c.label, swatch: c.swatch, bg: c.bg, fg: c.fg }]));
+const PLACE = { lat: 31.8928, lon: 34.8113, place: "רחובות" };
 
 let config = {
 	address: "0.0.0.0", // reachable from other devices on the home network (e.g. an Android TV browser)
@@ -57,6 +64,12 @@ let config = {
 		"modules/MMM-DailyTLDR/node_helper.js",
 		"modules/MMM-DailyTLDR/lib/core.js",
 		"modules/MMM-PhoneView/MMM-PhoneView.js",
+		"modules/MMM-ClockWeather/MMM-ClockWeather.js",
+		"modules/MMM-ClockWeather/MMM-ClockWeather.css",
+		"modules/MMM-WeekCalendar/MMM-WeekCalendar.js",
+		"modules/MMM-WeekCalendar/MMM-WeekCalendar.css",
+		"modules/MMM-Chores/MMM-Chores.js",
+		"modules/MMM-Chores/MMM-Chores.css",
 		"modules/MMM-Demo/lib/demo-data.js"
 	].map((f) => path.join(__dirname, "..", f)),
 
@@ -67,105 +80,58 @@ let config = {
 		// ── Makes phones use the stacked layout (see config/custom.css) ──
 		{ module: "MMM-PhoneView" },
 
-		// ── Clock & date (top right = start of the line in Hebrew) ──
+		// Every visible module goes in top_bar; config/custom.css places each by its card-* class.
+
+		// ── Clock + weather (TV: first card; phone: header) ──
 		{
-			module: "clock",
-			position: "top_right",
-			config: {
-				displaySeconds: false,
-				dateFormat: "dddd, D בMMMM",
-				showSunTimes: false
-			}
+			module: "MMM-ClockWeather",
+			position: "top_bar",
+			classes: "card card-now",
+			config: { mode: "full", ...PLACE }
 		},
 
-		// ── Todos & recurring chores (Todoist) ──
+		// ── Phone only: today's events ──
 		{
-			module: "MMM-Todoist",
-			position: "top_right",
-			header: "משימות",
+			module: "MMM-WeekCalendar",
+			position: "top_bar",
+			classes: "card card-today phone-only",
+			config: { mode: "today", title: "היום", calendars: CALENDAR_STYLES }
+		},
+
+		// ── Chores (Todoist): overdue, today and undated ──
+		{
+			module: "MMM-Chores",
+			position: "top_bar",
+			classes: "card card-chores",
 			config: {
 				accessToken: DEMO ? "demo" : "${SECRET_TODOIST_TOKEN}",
-				...(DEMO ? { apiBase: DEMO_BASE + "/todoist" } : {}),
-				// Empty = every task the token's owner can see. To show only the shared
-				// household project, put its ID here, e.g. projects: ["6Jf8VQXxpwv56VQ7"].
+				apiBase: DEMO ? DEMO_BASE + "/todoist/v1" : "https://api.todoist.com/api/v1",
+				// Only the shared household project: put its id here, e.g. ["6Jf8VQXxpwv56VQ7"]. Empty = all tasks.
 				projects: [],
-				displayTasksWithinDays: 0, // today + overdue (recurring chores appear on their day)
-				displayTasksWithoutDue: true,
-				maximumEntries: 10,
-				showProject: false,
-				displayAvatar: false,
-				wrapEvents: true,
-				maxTitleLength: 40,
-				fade: false,
-				updateInterval: 5 * 60 * 1000
+				max: 6
 			}
 		},
 
-		// ── Phone only: next 7 days as a list (the 2-week grid is too wide for a phone) ──
+		// ── Week calendar (TV: 7-day grid; phone: day-by-day list) ──
 		{
-			module: "calendar",
-			position: "top_right",
-			header: "השבוע",
-			classes: "phone-only",
-			config: {
-				broadcastEvents: false, // the grid already gets events from the hidden calendar below
-				maximumEntries: 15,
-				maximumNumberOfDays: 7,
-				fetchInterval: 5 * 60 * 1000,
-				timeFormat: "absolute",
-				dateFormat: "ddd D/M",
-				fullDayEventDateFormat: "ddd D/M",
-				showEnd: false,
-				maxTitleLength: 40,
-				wrapEvents: true,
-				fade: false,
-				coloredSymbol: true,
-				calendars: CALENDARS
-			}
+			module: "MMM-WeekCalendar",
+			position: "top_bar",
+			classes: "card card-cal",
+			config: { mode: "week", title: "השבוע", calendars: CALENDAR_STYLES }
 		},
 
-		// ── Weather: Rehovot (Open-Meteo, free, no key) ──
-		{
-			module: "weather",
-			position: "top_left",
-			config: {
-				weatherProvider: "openmeteo",
-				type: "current",
-				lat: 31.8928,
-				lon: 34.8113,
-				appendLocationNameToHeader: false,
-				showHumidity: "below",
-				showSun: true,
-				roundTemp: true
-			}
-		},
-		{
-			module: "weather",
-			position: "top_left",
-			config: {
-				weatherProvider: "openmeteo",
-				type: "forecast",
-				lat: 31.8928,
-				lon: 34.8113,
-				maxNumberOfDays: 4,
-				showPrecipitationProbability: true,
-				roundTemp: true,
-				fade: false,
-				appendLocationNameToHeader: false
-			}
-		},
-
-		// ── Daily news TL;DR (custom module in this repo) ──
+		// ── Daily news TL;DR ──
 		{
 			module: "MMM-DailyTLDR",
-			position: "top_left",
-			header: "תקציר בוקר",
+			position: "top_bar",
+			classes: "card card-news",
 			config: {
+				title: "תקציר בוקר",
 				apiKey: "${SECRET_ANTHROPIC_API_KEY}", // without a key: plain headlines
 				refreshTime: "06:00",
 				bullets: 5,
 				language: "Hebrew",
-				// Check these with: node modules/MMM-DailyTLDR/check-feeds.js
+				// Check these with: npm run check-feeds
 				feeds: [
 					{ name: "ynet", url: "https://www.ynet.co.il/Integration/StoryRss2.xml" },
 					{ name: "הארץ", url: "https://www.haaretz.co.il/srv/htz---all-articles" },
@@ -175,38 +141,23 @@ let config = {
 			}
 		},
 
-		// ── Calendar data source (no position = hidden; it feeds the grid below) ──
+		// ── Phone only: 4-day forecast ──
+		{
+			module: "MMM-ClockWeather",
+			position: "top_bar",
+			classes: "card card-forecast phone-only",
+			config: { mode: "forecast", ...PLACE }
+		},
+
+		// ── Calendar data source (no position = hidden; feeds MMM-WeekCalendar) ──
 		{
 			module: "calendar",
 			config: {
 				broadcastPastEvents: true,
-				maximumNumberOfDays: 31,
-				maximumEntries: 200,
+				maximumNumberOfDays: 21,
+				maximumEntries: 300,
 				fetchInterval: 5 * 60 * 1000,
-				calendars: CALENDARS
-			}
-		},
-
-		// ── Two-week family calendar grid ──
-		{
-			module: "MMM-CalendarExt3",
-			position: "bottom_bar",
-			classes: "tv-only",
-			config: {
-				mode: "week",
-				weekIndex: 0, // start with the current week
-				weeksInView: 2,
-				firstDayOfWeek: 0, // Sunday
-				weekends: [5, 6], // Friday, Saturday
-				locale: "he-IL",
-				maxEventLines: 5,
-				fontSize: "22px",
-				eventHeight: "30px",
-				showWeekNumber: false,
-				useWeather: true,
-				displayLegend: false,
-				headerWeekDayOptions: { weekday: "long" },
-				cellDateOptions: { day: "numeric", month: "short" }
+				calendars: CALENDARS.map(({ name, url, color = "", symbol = "calendar", fetchInterval }) => ({ name, url, color, symbol, ...(fetchInterval ? { fetchInterval } : {}) }))
 			}
 		}
 	]

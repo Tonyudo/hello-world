@@ -1,0 +1,195 @@
+.wc-week {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wc-head {
+  padding: 0 4px;
+}
+
+.wc-heading {
+  font-size: 34px;
+}
+
+.wc-range {
+  margin-inline-start: 12px;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--md-on-surface-variant);
+}
+
+.wc-legend {
+  display: flex;
+  gap: 10px;
+}
+
+.wc-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--md-outline-variant);
+  font-size: 17px;
+  color: var(--md-on-surface);
+}
+
+.wc-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+/* ── TV grid ── */
+.wc-grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.wc-day {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 10px;
+  border-radius: var(--md-radius-l);
+  background: var(--md-day);
+}
+
+.wc-day.is-weekend {
+  background: var(--md-weekend);
+}
+
+.wc-day.is-today {
+  background: var(--md-today);
+  outline: 2px solid var(--md-primary);
+  outline-offset: -2px;
+}
+
+.wc-day.is-past .wc-ev {
+  opacity: 0.55;
+}
+
+.wc-dayhead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 6px;
+}
+
+.wc-dow {
+  font-size: 18px;
+  color: var(--md-on-surface-variant);
+}
+
+.wc-num {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--md-on-surface-variant);
+}
+
+.is-today .wc-dow {
+  color: var(--md-primary);
+  font-weight: 600;
+}
+
+.is-today .wc-num {
+  border-radius: 50%;
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+}
+
+.wc-ev {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  border-radius: var(--md-radius-s);
+  background: var(--ev-bg, var(--md-surface-container-high));
+  color: var(--ev-fg, var(--md-on-surface));
+}
+
+.wc-time {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.8;
+  font-variant-numeric: tabular-nums;
+}
+
+.wc-title {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.wc-more,
+.wc-none {
+  text-align: center;
+  font-size: 17px;
+  color: var(--md-on-surface-variant);
+}
+
+.wc-none {
+  margin-top: 8px;
+}
+
+/* ── Next week strip ── */
+.wc-next {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 18px;
+  border-radius: var(--md-radius-m);
+  background: var(--md-surface-container);
+}
+
+.wc-next-label {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--md-on-surface-variant);
+}
+
+.wc-next-item {
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: var(--ev-bg, var(--md-surface-container-high));
+  color: var(--ev-fg, var(--md-on-surface));
+  font-size: 18px;
+}
+
+/* ── Phone list + today card (hidden on the TV grid) ── */
+.wc-list {
+  display: none;
+}
+
+.wc-ev-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.wc-today-card .wc-ev-row {
+  min-height: 56px;
+  box-sizing: border-box;
+  padding: 8px 14px;
+}
+
+.wc-meta {
+  padding: 8px 4px 4px;
+  font-size: 15px;
+  color: var(--md-on-surface-variant);
+}

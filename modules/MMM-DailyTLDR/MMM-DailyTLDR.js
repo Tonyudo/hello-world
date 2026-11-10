@@ -1,6 +1,7 @@
 /* MMM-DailyTLDR: a once-a-day, AI-written news briefing for the family screen. */
 Module.register("MMM-DailyTLDR", {
 	defaults: {
+		title: "תקציר בוקר",
 		feeds: [], // [{ name: "Ynet", url: "https://..." }]
 		bullets: 5,
 		language: "Hebrew",
@@ -11,7 +12,6 @@ Module.register("MMM-DailyTLDR", {
 		model: "claude-opus-5-5",
 		effort: "low",
 		showSources: true,
-		showUpdated: true,
 		updatedLabel: "עודכן",
 		emptyText: "התקציר יופיע כאן אחרי העדכון הראשון"
 	},
@@ -28,7 +28,7 @@ Module.register("MMM-DailyTLDR", {
 	socketNotificationReceived (notification, payload) {
 		if (notification === "TLDR_DATA") {
 			this.briefing = payload;
-			this.updateDom(1000);
+			this.updateDom(0);
 		}
 	},
 
@@ -37,37 +37,47 @@ Module.register("MMM-DailyTLDR", {
 		root.className = "tldr";
 		root.dir = "rtl";
 
-		if (!this.briefing || !this.briefing.bullets?.length) {
-			root.innerHTML = `<div class="tldr-empty dimmed">${this.config.emptyText}</div>`;
+		const head = document.createElement("div");
+		head.className = "card-head";
+		const h = document.createElement("h2");
+		h.className = "card-title";
+		h.textContent = this.config.title;
+		head.appendChild(h);
+		const b = this.briefing;
+		if (b && b.generatedAt) {
+			const t = new Date(b.generatedAt).toLocaleTimeString("he-IL", { hour: "2-digit", minute: "2-digit", hour12: false });
+			const meta = document.createElement("span");
+			meta.className = "card-meta";
+			meta.textContent = `${this.config.updatedLabel} ${t}${b.mode === "ai" ? "" : " · כותרות"}`;
+			head.appendChild(meta);
+		}
+		root.appendChild(head);
+
+		if (!b || !b.bullets?.length) {
+			const empty = document.createElement("div");
+			empty.className = "card-empty";
+			empty.textContent = this.config.emptyText;
+			root.appendChild(empty);
 			return root;
 		}
 
 		const list = document.createElement("ul");
 		list.className = "tldr-list";
-		for (const b of this.briefing.bullets) {
+		for (const item of b.bullets) {
 			const li = document.createElement("li");
 			const text = document.createElement("span");
 			text.className = "tldr-text";
-			text.textContent = b.text;
+			text.textContent = item.text;
 			li.appendChild(text);
-			if (this.config.showSources && b.source) {
+			if (this.config.showSources && item.source) {
 				const src = document.createElement("span");
 				src.className = "tldr-source";
-				src.textContent = b.source;
+				src.textContent = item.source;
 				li.appendChild(src);
 			}
 			list.appendChild(li);
 		}
 		root.appendChild(list);
-
-		if (this.config.showUpdated && this.briefing.generatedAt) {
-			const t = new Date(this.briefing.generatedAt);
-			const foot = document.createElement("div");
-			foot.className = "tldr-foot dimmed";
-			const time = t.toLocaleTimeString(config.locale || undefined, { hour: "2-digit", minute: "2-digit" });
-			foot.textContent = `${this.config.updatedLabel} ${time}${this.briefing.mode === "ai" ? "" : " · כותרות"}`;
-			root.appendChild(foot);
-		}
 		return root;
 	}
 });

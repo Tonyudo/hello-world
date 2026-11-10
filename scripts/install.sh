@@ -31,7 +31,6 @@ fi
 node -v
 
 install_magicmirror "$MM_DIR"
-install_third_party_modules "$MM_DIR"
 link_repo "$REPO_DIR" "$MM_DIR"
 
 say "Start on boot (desktop autostart) and keep running if it crashes"
