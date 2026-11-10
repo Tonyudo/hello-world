@@ -27,6 +27,35 @@ Hebrew, right-to-left, with weather for Rehovot.
 
 <sub>These previews show the layout with placeholder content.</sub>
 
+## Try it on your Mac first (no Pi needed)
+
+Everything runs in your browser. It uses the same code that will later run on the Pi.
+
+**One-time:** install Node.js 22 LTS from [nodejs.org](https://nodejs.org). If Terminal asks for git, run `xcode-select --install`.
+
+```bash
+git clone https://github.com/tonyudo/hello-world.git family-dashboard
+cd family-dashboard
+npm run demo
+```
+
+The first run takes a few minutes while it downloads MagicMirror². Then `http://localhost:8080` opens by itself.
+
+| Command | What you get |
+|---|---|
+| `npm run demo` | **Sample** calendars and chores for this week, plus **real** weather (Rehovot) and real news headlines. A yellow "מצב הדגמה" badge marks it as demo data. |
+| `npm run real` | Your real accounts, read from `config/config.env` (see [step 3](#3-fill-in-your-links-and-keys)) |
+| `npm test` | Unit tests for the custom modules |
+| `npm run check-feeds` | Checks that each news feed works |
+
+**While it's running:**
+- Save `config/config.js`, `config/custom.css` or a module file and the page reloads by itself. Use this to try layout and feature changes.
+- **Phone layout:** in Chrome, open DevTools (⌥⌘I) → device toolbar (⇧⌘M) → pick an iPhone.
+- **TV size:** go fullscreen (⌃⌘F) on a 1080p screen, or set the device toolbar to 1920×1080.
+- Stop with **Ctrl+C**.
+
+MagicMirror is installed in `.magicmirror/` inside this folder (git ignores it). To start fresh, delete that folder.
+
 ## What you need
 
 - Raspberry Pi 5 (4 GB is plenty) + official 27 W USB-C power supply + case + 32 GB microSD + micro-HDMI to HDMI cable. About ₪400–500.
@@ -128,7 +157,10 @@ config/config.env.example   template for your private links and keys
 config/custom.css           TV styling: large Hebrew font, RTL, overscan margins
 modules/MMM-DailyTLDR/      custom module: RSS → Claude → 5-bullet Hebrew briefing
 modules/MMM-PhoneView/      makes phones use the stacked layout
-scripts/                    install, run, restart, update, TV on/off, remote access
+modules/MMM-Demo/           sample calendars & chores for demo mode (MM_DEMO=1)
+scripts/local.sh            run on a Mac/Linux laptop in the browser (demo or real)
+scripts/install.sh          Raspberry Pi setup; shares its steps with local.sh via scripts/lib.sh
+scripts/                    also: run, restart, update, TV on/off, remote access
 ```
 
 ## Roadmap

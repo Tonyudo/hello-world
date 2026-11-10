@@ -11,7 +11,8 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MM_DIR="${MM_DIR:-$HOME/MagicMirror}"
 NODE_MAJOR=22
 
-say() { printf '\n\033[1;34m==> %s\033[0m\n' "$*"; }
+# shellcheck source=lib.sh
+source "$REPO_DIR/scripts/lib.sh"
 
 if [ "$(id -u)" -eq 0 ]; then
 	echo "Run this as your normal user (it uses sudo where needed), not as root." >&2
@@ -23,47 +24,15 @@ sudo apt-get update
 sudo apt-get install -y git curl fonts-noto-core v4l-utils
 
 say "Node.js $NODE_MAJOR"
-need_node=1
-if command -v node >/dev/null; then
-	major="$(node -p 'process.versions.node.split(".")[0]')"
-	[ "$major" -ge "$NODE_MAJOR" ] && need_node=0
-fi
-if [ "$need_node" -eq 1 ]; then
+if ! node_ok; then
 	curl -fsSL "https://deb.nodesource.com/setup_${NODE_MAJOR}.x" | sudo -E bash -
 	sudo apt-get install -y nodejs
 fi
 node -v
 
-say "MagicMirror² in $MM_DIR"
-if [ ! -d "$MM_DIR/.git" ]; then
-	git clone --depth 1 https://github.com/MagicMirrorOrg/MagicMirror.git "$MM_DIR"
-fi
-(cd "$MM_DIR" && npm run install-mm)
-
-say "Third-party modules"
-cd "$MM_DIR/modules"
-if [ ! -d MMM-CalendarExt3 ]; then
-	git clone https://github.com/MMRIZE/MMM-CalendarExt3
-fi
-(cd MMM-CalendarExt3 && git submodule update --init --recursive && npm ci --omit=dev --no-audit --no-fund)
-if [ ! -d MMM-Todoist ]; then
-	git clone https://github.com/cbrooker/MMM-Todoist
-fi
-(cd MMM-Todoist && npm install --omit=dev --no-audit --no-fund)
-
-say "Linking this repo's config and news module into MagicMirror"
-for f in config.js custom.css; do
-	ln -sfn "$REPO_DIR/config/$f" "$MM_DIR/config/$f"
-done
-if [ ! -f "$REPO_DIR/config/config.env" ]; then
-	cp "$REPO_DIR/config/config.env.example" "$REPO_DIR/config/config.env"
-	chmod 600 "$REPO_DIR/config/config.env"
-	echo "Created config/config.env — fill in your calendar links and keys (see README)."
-fi
-ln -sfn "$REPO_DIR/config/config.env" "$MM_DIR/config/config.env"
-ln -sfn "$REPO_DIR/modules/MMM-DailyTLDR" "$MM_DIR/modules/MMM-DailyTLDR"
-ln -sfn "$REPO_DIR/modules/MMM-PhoneView" "$MM_DIR/modules/MMM-PhoneView"
-(cd "$REPO_DIR/modules/MMM-DailyTLDR" && npm install --omit=dev --no-audit --no-fund)
+install_magicmirror "$MM_DIR"
+install_third_party_modules "$MM_DIR"
+link_repo "$REPO_DIR" "$MM_DIR"
 
 say "Start on boot (desktop autostart) and keep running if it crashes"
 chmod +x "$REPO_DIR"/scripts/*.sh

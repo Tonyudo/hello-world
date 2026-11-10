@@ -1,8 +1,11 @@
 /* Family dashboard — MagicMirror² config
  *
- * Personal values (calendar links, API keys, names) live in config/config.env, not here,
+ * Personal values (calendar links, API keys) live in config/config.env, not here,
  * so this file can stay in git. Copy config/config.env.example to config/config.env and fill it in.
- * Variables named SECRET_* are hidden from the browser and only used on the Pi.
+ * Variables named SECRET_* are hidden from the browser and only used by the server.
+ *
+ * Demo mode (MM_DEMO=1, used by scripts/local.sh): calendars and chores come from sample data
+ * served by modules/MMM-Demo, so it runs with no accounts. Weather and news are real.
  *
  * Layout on a 1920x1080 TV (Hebrew, right-to-left):
  *   ┌──────────────────────────┬──────────────────────────┐
@@ -10,10 +13,31 @@
  *   ├──────────────────────────┴──────────────────────────┤
  *   │ 2-week family calendar (color per person)           │
  *   └─────────────────────────────────────────────────────┘
+ * Phones get a single stacked column instead (config/custom.css).
  */
+const DEMO = process.env.MM_DEMO === "1";
+const PORT = 8080;
+const DEMO_BASE = "http://localhost:" + PORT + "/demo";
+const path = require("node:path");
+
+// One list of calendars, used by both the TV grid and the phone agenda.
+const CALENDARS = [
+	{ name: "family", color: "#f5b942", symbol: "house", url: DEMO ? DEMO_BASE + "/calendar/family.ics" : "${SECRET_CAL_FAMILY}" },
+	{ name: "person1", color: "#5ab0ff", symbol: "user", url: DEMO ? DEMO_BASE + "/calendar/person1.ics" : "${SECRET_CAL_PERSON1}" },
+	{ name: "person2", color: "#ff7eb6", symbol: "user", url: DEMO ? DEMO_BASE + "/calendar/person2.ics" : "${SECRET_CAL_PERSON2}" },
+	{
+		name: "holidays",
+		// Google's public Jewish holidays calendar (Hebrew)
+		url: "https://calendar.google.com/calendar/ical/iw.jewish%23holiday%40group.v.calendar.google.com/public/basic.ics",
+		color: "#7ddc8a",
+		symbol: "star-of-david",
+		fetchInterval: 24 * 60 * 60 * 1000
+	}
+];
+
 let config = {
 	address: "0.0.0.0", // reachable from other devices on the home network (e.g. an Android TV browser)
-	port: 8080,
+	port: PORT,
 	basePath: "/",
 	// Allow localhost, the home network, and your Tailscale devices (100.64.0.0/10) only.
 	// MagicMirror has no login: never port-forward it on the router. Use Tailscale (scripts/remote-access.sh).
@@ -24,7 +48,22 @@ let config = {
 	timeFormat: 24,
 	units: "metric",
 
+	// Local development (scripts/local.sh): saving any of these restarts the server and reloads the browser.
+	watchTargets: [
+		"config/config.js",
+		"config/custom.css",
+		"modules/MMM-DailyTLDR/MMM-DailyTLDR.js",
+		"modules/MMM-DailyTLDR/MMM-DailyTLDR.css",
+		"modules/MMM-DailyTLDR/node_helper.js",
+		"modules/MMM-DailyTLDR/lib/core.js",
+		"modules/MMM-PhoneView/MMM-PhoneView.js",
+		"modules/MMM-Demo/lib/demo-data.js"
+	].map((f) => path.join(__dirname, "..", f)),
+
 	modules: [
+		// ── Sample data + "demo" badge (only with MM_DEMO=1) ──
+		...(DEMO ? [{ module: "MMM-Demo" }] : []),
+
 		// ── Makes phones use the stacked layout (see config/custom.css) ──
 		{ module: "MMM-PhoneView" },
 
@@ -45,7 +84,8 @@ let config = {
 			position: "top_right",
 			header: "משימות",
 			config: {
-				accessToken: "${SECRET_TODOIST_TOKEN}",
+				accessToken: DEMO ? "demo" : "${SECRET_TODOIST_TOKEN}",
+				...(DEMO ? { apiBase: DEMO_BASE + "/todoist" } : {}),
 				// Empty = every task the token's owner can see. To show only the shared
 				// household project, put its ID here, e.g. projects: ["6Jf8VQXxpwv56VQ7"].
 				projects: [],
@@ -80,17 +120,7 @@ let config = {
 				wrapEvents: true,
 				fade: false,
 				coloredSymbol: true,
-				calendars: [
-					{ url: "${SECRET_CAL_FAMILY}", color: "#f5b942", symbol: "house" },
-					{ url: "${SECRET_CAL_PERSON1}", color: "#5ab0ff", symbol: "user" },
-					{ url: "${SECRET_CAL_PERSON2}", color: "#ff7eb6", symbol: "user" },
-					{
-						url: "https://calendar.google.com/calendar/ical/iw.jewish%23holiday%40group.v.calendar.google.com/public/basic.ics",
-						color: "#7ddc8a",
-						symbol: "star-of-david",
-						fetchInterval: 24 * 60 * 60 * 1000
-					}
-				]
+				calendars: CALENDARS
 			}
 		},
 
@@ -131,7 +161,7 @@ let config = {
 			position: "top_left",
 			header: "תקציר בוקר",
 			config: {
-				apiKey: "${SECRET_ANTHROPIC_API_KEY}",
+				apiKey: "${SECRET_ANTHROPIC_API_KEY}", // without a key: plain headlines
 				refreshTime: "06:00",
 				bullets: 5,
 				language: "Hebrew",
@@ -153,34 +183,7 @@ let config = {
 				maximumNumberOfDays: 31,
 				maximumEntries: 200,
 				fetchInterval: 5 * 60 * 1000,
-				calendars: [
-					{
-						name: "family",
-						url: "${SECRET_CAL_FAMILY}",
-						color: "#f5b942",
-						symbol: "house"
-					},
-					{
-						name: "person1",
-						url: "${SECRET_CAL_PERSON1}",
-						color: "#5ab0ff",
-						symbol: "user"
-					},
-					{
-						name: "person2",
-						url: "${SECRET_CAL_PERSON2}",
-						color: "#ff7eb6",
-						symbol: "user"
-					},
-					{
-						name: "holidays",
-						// Google's public Jewish holidays calendar (Hebrew)
-						url: "https://calendar.google.com/calendar/ical/iw.jewish%23holiday%40group.v.calendar.google.com/public/basic.ics",
-						color: "#7ddc8a",
-						symbol: "star-of-david",
-						fetchInterval: 24 * 60 * 60 * 1000
-					}
-				]
+				calendars: CALENDARS
 			}
 		},
 
