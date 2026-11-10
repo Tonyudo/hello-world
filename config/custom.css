@@ -1,0 +1,88 @@
+/* Family dashboard — TV styling for MagicMirror² (Hebrew, right-to-left).
+ * Loaded from ~/MagicMirror/config/ (linked to this repo by scripts/install.sh).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600&display=swap");
+
+:root {
+  --font-primary: "Heebo", "Noto Sans Hebrew", "Roboto Condensed", sans-serif;
+  --font-secondary: "Heebo", "Noto Sans Hebrew", "Roboto", sans-serif;
+  --accent: #6ab0ff;
+  --panel-bg: rgba(255, 255, 255, 0.04);
+  --gap: 28px;
+}
+
+body {
+  margin: 36px 48px; /* most TVs crop the edges (overscan) */
+  height: calc(100% - 72px);
+  width: calc(100% - 96px);
+  direction: rtl;
+  font-family: var(--font-primary);
+  background: #000;
+}
+
+/* Two columns across the top: each takes just under half the width. */
+.region.top.right,
+.region.top.left {
+  width: calc(50% - var(--gap) / 2);
+}
+
+.region.top.right .container,
+.region.top.left .container {
+  text-align: right;
+}
+
+.module {
+  margin-bottom: 22px;
+}
+
+.module-header {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #aaa;
+  border-bottom: 1px solid #333;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+/* ── Clock ── */
+.clock .time {
+  font-size: 110px;
+  line-height: 1;
+}
+.clock .date {
+  font-size: 34px;
+}
+
+/* ── Weather ── */
+.weather .large {
+  font-size: 80px;
+}
+.weather table.small {
+  font-size: 26px;
+}
+
+/* ── Todoist ── */
+.MMM-Todoist table {
+  font-size: 28px;
+  direction: rtl;
+}
+.MMM-Todoist td {
+  padding: 4px 8px;
+}
+
+/* ── News briefing ── */
+.MMM-DailyTLDR {
+  --tldr-font-size: 28px;
+  max-width: 100%;
+}
+
+/* ── Calendar grid ── */
+.MMM-CalendarExt3 {
+  direction: rtl;
+}
+.MMM-CalendarExt3 .cell.today {
+  background: rgba(106, 176, 255, 0.12);
+}
