@@ -19,7 +19,13 @@ Hebrew, right-to-left, with weather for Rehovot.
 | Weather | Open-Meteo (free, no key) | Automatic |
 | News briefing | ynet, Haaretz, TheMarker, Globes → summarized by Claude at 06:00 | Automatic |
 
-**The TV only displays. All input happens on your phones.**
+**The TV only displays. All input happens on your phones.** The same dashboard opens on your phones from anywhere (see [View from anywhere](#view-from-anywhere)).
+
+| TV (1920×1080) | Phone |
+|---|---|
+| ![TV layout](docs/layout-tv.png) | ![Phone layout](docs/layout-phone.png) |
+
+<sub>These previews show the layout with placeholder content.</sub>
 
 ## What you need
 
@@ -58,6 +64,24 @@ cd ~/MagicMirror && node modules/MMM-DailyTLDR/check-feeds.js
 sudo reboot
 ```
 `check-feeds` shows ✔ or ✘ for each feed. If one fails, find the outlet's current RSS link and replace it in `config/config.js`.
+
+## View from anywhere
+
+The Pi serves the dashboard as a web page. **Tailscale** lets your phones reach it from anywhere: a free private network that links only your own devices. Nothing is opened to the internet.
+
+> ⚠️ MagicMirror has no login. **Never** open port 8080 on your router. Anyone who found it would see your family's schedule.
+
+1. On the Pi: `~/family-dashboard/scripts/remote-access.sh`. Sign in with the link it prints. Google sign-in works.
+2. On each phone: install **Tailscale** from the App Store or Google Play and sign in with **the same account**.
+3. Open the address the script printed, e.g. `https://family-dashboard.tail1234.ts.net`. Then use **Add to Home Screen** so it opens like an app.
+
+On a phone the page switches to a single column: clock → todos → this week's events → weather → news. The TV keeps its own layout. Both read the same data, so they always match.
+
+| | |
+|---|---|
+| Works when | the Pi is on and online, and Tailscale is on in the phone |
+| Cost | free (Tailscale Personal plan) |
+| Fallback address | `http://family-dashboard:8080` (inside Tailscale) |
 
 ## Everyday use
 
@@ -103,7 +127,8 @@ config/config.js            layout, calendars, location, feeds (no secrets)
 config/config.env.example   template for your private links and keys
 config/custom.css           TV styling: large Hebrew font, RTL, overscan margins
 modules/MMM-DailyTLDR/      custom module: RSS → Claude → 5-bullet Hebrew briefing
-scripts/                    install, run, restart, update, TV on/off
+modules/MMM-PhoneView/      makes phones use the stacked layout
+scripts/                    install, run, restart, update, TV on/off, remote access
 ```
 
 ## Roadmap

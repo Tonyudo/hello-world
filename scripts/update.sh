@@ -6,6 +6,8 @@ MM_DIR="${MM_DIR:-$HOME/MagicMirror}"
 
 git -C "$REPO_DIR" pull --ff-only
 (cd "$REPO_DIR/modules/MMM-DailyTLDR" && npm install --omit=dev --no-audit --no-fund)
+# Modules added after the first install
+ln -sfn "$REPO_DIR/modules/MMM-PhoneView" "$MM_DIR/modules/MMM-PhoneView"
 
 if [ "${1:-}" = "--all" ]; then
 	git -C "$MM_DIR" pull --ff-only && (cd "$MM_DIR" && npm run install-mm)

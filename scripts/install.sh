@@ -62,6 +62,7 @@ if [ ! -f "$REPO_DIR/config/config.env" ]; then
 fi
 ln -sfn "$REPO_DIR/config/config.env" "$MM_DIR/config/config.env"
 ln -sfn "$REPO_DIR/modules/MMM-DailyTLDR" "$MM_DIR/modules/MMM-DailyTLDR"
+ln -sfn "$REPO_DIR/modules/MMM-PhoneView" "$MM_DIR/modules/MMM-PhoneView"
 (cd "$REPO_DIR/modules/MMM-DailyTLDR" && npm install --omit=dev --no-audit --no-fund)
 
 say "Start on boot (desktop autostart) and keep running if it crashes"
@@ -79,5 +80,6 @@ Next steps:
   1. Edit $REPO_DIR/config/config.env (calendar links, Todoist token, Anthropic key).
   2. Check the news feeds:   cd $MM_DIR && node modules/MMM-DailyTLDR/check-feeds.js
   3. Reboot (or run $REPO_DIR/scripts/run.sh) — the dashboard opens full screen.
+Optional: view it from your phone anywhere — run $REPO_DIR/scripts/remote-access.sh
 Optional: turn the TV on/off on a schedule — see "TV schedule" in the README.
 EOF

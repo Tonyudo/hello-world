@@ -15,8 +15,9 @@ let config = {
 	address: "0.0.0.0", // reachable from other devices on the home network (e.g. an Android TV browser)
 	port: 8080,
 	basePath: "/",
-	// Allow localhost and private home-network addresses only.
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.0.0/16", "::ffff:10.0.0.0/8"],
+	// Allow localhost, the home network, and your Tailscale devices (100.64.0.0/10) only.
+	// MagicMirror has no login: never port-forward it on the router. Use Tailscale (scripts/remote-access.sh).
+	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.0.0/16", "::ffff:10.0.0.0/8", "::ffff:100.64.0.0/10"],
 
 	language: "he",
 	locale: "he-IL",
@@ -24,6 +25,9 @@ let config = {
 	units: "metric",
 
 	modules: [
+		// ── Makes phones use the stacked layout (see config/custom.css) ──
+		{ module: "MMM-PhoneView" },
+
 		// ── Clock & date (top right = start of the line in Hebrew) ──
 		{
 			module: "clock",
@@ -54,6 +58,39 @@ let config = {
 				maxTitleLength: 40,
 				fade: false,
 				updateInterval: 5 * 60 * 1000
+			}
+		},
+
+		// ── Phone only: next 7 days as a list (the 2-week grid is too wide for a phone) ──
+		{
+			module: "calendar",
+			position: "top_right",
+			header: "השבוע",
+			classes: "phone-only",
+			config: {
+				broadcastEvents: false, // the grid already gets events from the hidden calendar below
+				maximumEntries: 15,
+				maximumNumberOfDays: 7,
+				fetchInterval: 5 * 60 * 1000,
+				timeFormat: "absolute",
+				dateFormat: "ddd D/M",
+				fullDayEventDateFormat: "ddd D/M",
+				showEnd: false,
+				maxTitleLength: 40,
+				wrapEvents: true,
+				fade: false,
+				coloredSymbol: true,
+				calendars: [
+					{ url: "${SECRET_CAL_FAMILY}", color: "#f5b942", symbol: "house" },
+					{ url: "${SECRET_CAL_PERSON1}", color: "#5ab0ff", symbol: "user" },
+					{ url: "${SECRET_CAL_PERSON2}", color: "#ff7eb6", symbol: "user" },
+					{
+						url: "https://calendar.google.com/calendar/ical/iw.jewish%23holiday%40group.v.calendar.google.com/public/basic.ics",
+						color: "#7ddc8a",
+						symbol: "star-of-david",
+						fetchInterval: 24 * 60 * 60 * 1000
+					}
+				]
 			}
 		},
 
@@ -151,6 +188,7 @@ let config = {
 		{
 			module: "MMM-CalendarExt3",
 			position: "bottom_bar",
+			classes: "tv-only",
 			config: {
 				mode: "week",
 				weekIndex: 0, // start with the current week

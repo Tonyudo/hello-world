@@ -26,6 +26,12 @@ body {
   width: calc(50% - var(--gap) / 2);
 }
 
+/* MagicMirror never sets left: 0 on left regions; with direction: rtl they would
+   otherwise sit on the right edge on top of the right column. */
+.region.left {
+  left: 0;
+}
+
 .region.top.right .container,
 .region.top.left .container {
   text-align: right;
@@ -85,4 +91,95 @@ body {
 }
 .MMM-CalendarExt3 .cell.today {
   background: rgba(106, 176, 255, 0.12);
+}
+
+/* ── Show/hide per screen ── */
+.phone-only {
+  display: none;
+}
+
+/* ══════════════════════════════════════════════════════════════
+ * Phone layout (Tailscale / remote viewing): stack everything in
+ * one scrollable column. Needs the MMM-PhoneView module so phones
+ * report their real width.
+ * Order: clock → todos → this week → weather → news.
+ * ══════════════════════════════════════════════════════════════ */
+@media (max-width: 760px) {
+  html {
+    overflow-y: auto;
+    cursor: auto;
+    user-select: text;
+    font-size: 16px;
+  }
+
+  body {
+    position: static;
+    margin: 12px 14px 40px;
+    width: auto;
+    height: auto;
+  }
+
+  .region,
+  .region.top.left,
+  .region.top.right,
+  .region.top.center,
+  .region.bottom.left,
+  .region.bottom.right,
+  .region.bottom.center,
+  .region.third,
+  .region.middle.center {
+    position: static;
+    width: 100%;
+    transform: none;
+    text-align: right;
+  }
+
+  .region.fullscreen {
+    display: none;
+  }
+
+  .region.top.bar {
+    display: flex;
+    flex-direction: column;
+  }
+  .region.top.right {
+    order: -1; /* clock, todos and agenda first */
+  }
+
+  .tv-only {
+    display: none !important;
+  }
+  .phone-only {
+    display: block;
+  }
+
+  .module {
+    margin-bottom: 18px;
+  }
+  .module-header {
+    font-size: 15px;
+  }
+
+  .clock .time {
+    font-size: 56px;
+  }
+  .clock .date {
+    font-size: 18px;
+  }
+
+  .weather .large {
+    font-size: 44px;
+  }
+  .weather table.small {
+    font-size: 16px;
+  }
+
+  .MMM-Todoist table,
+  .calendar table {
+    font-size: 17px;
+  }
+
+  .MMM-DailyTLDR {
+    --tldr-font-size: 17px;
+  }
 }
