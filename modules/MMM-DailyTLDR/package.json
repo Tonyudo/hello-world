@@ -1,0 +1,15 @@
+{
+  "name": "mmm-dailytldr",
+  "version": "1.0.0",
+  "description": "MagicMirror module: a once-a-day AI news briefing from RSS feeds",
+  "main": "MMM-DailyTLDR.js",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/core.test.js",
+    "check-feeds": "node check-feeds.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.7.0"
+  }
+}

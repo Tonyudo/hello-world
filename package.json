@@ -1,0 +1,14 @@
+{
+  "name": "family-dashboard",
+  "private": true,
+  "description": "Hebrew family dashboard for the TV and phone, built on MagicMirror²",
+  "scripts": {
+    "demo": "scripts/local.sh",
+    "real": "scripts/local.sh --real",
+    "test": "node --test \"modules/*/test/*.test.js\"",
+    "check-feeds": "node modules/MMM-DailyTLDR/check-feeds.js"
+  },
+  "engines": {
+    "node": ">=22.22.2 <23 || >=24"
+  }
+}

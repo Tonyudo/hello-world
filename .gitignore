@@ -1,0 +1,10 @@
+# Personal secrets (calendar links, API keys) — never commit
+config/config.env
+
+# Written by MagicMirror / the news module at runtime
+config/basepath.js
+modules/MMM-DailyTLDR/cache.json
+node_modules/
+
+# Local MagicMirror install used by scripts/local.sh
+.magicmirror/
