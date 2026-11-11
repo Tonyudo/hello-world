@@ -50,6 +50,9 @@ let config = {
 	// MagicMirror has no login: never port-forward it on the router. Use Tailscale (scripts/remote-access.sh).
 	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.0.0/16", "::ffff:10.0.0.0/8", "::ffff:100.64.0.0/10"],
 
+	// Quiet terminal: only warnings and errors. Run with MM_LOG=all to see every fetch and broadcast.
+	logLevel: process.env.MM_LOG === "all" ? ["DEBUG", "INFO", "LOG", "WARN", "ERROR"] : ["WARN", "ERROR"],
+
 	language: "he",
 	locale: "he-IL",
 	timeFormat: 24,

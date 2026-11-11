@@ -48,6 +48,7 @@ The first run takes a few minutes while it downloads MagicMirror². Then `http:/
 |---|---|
 | `npm run demo` | **Sample** calendars and chores for this week, plus **real** weather (Rehovot) and real news headlines. A yellow "מצב הדגמה" badge marks it as demo data. |
 | `npm run real` | Your real accounts, read from `config/config.env` (see [step 3](#3-fill-in-your-links-and-keys)) |
+| `npm run demo:verbose` | Demo with the full log in the terminal (every fetch and update), for troubleshooting |
 | `npm test` | Unit tests for the custom modules |
 | `npm run check-feeds` | Checks that each news feed works |
 
