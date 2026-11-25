@@ -1,0 +1,15 @@
+{
+  "name": "symbiosis-unfold",
+  "private": true,
+  "description": "Research and experiment tool for how life cooperates, competes and depends on itself",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "check-data": "node scripts/check-data.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
+    "d3": "7.9.0"
+  },
+  "engines": { "node": ">=20" }
+}

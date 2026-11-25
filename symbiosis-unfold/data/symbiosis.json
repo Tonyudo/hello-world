@@ -1,0 +1,3672 @@
+{
+  "meta": {
+    "title": "Symbiosis Unfold dataset",
+    "version": "1.0.0",
+    "notes": "Curated, citation-backed relationships. Citations marked needed=true are intentionally left open rather than invented. dependence.{source,target} = how much that side depends on THIS particular partner (obligate | facultative | none); a parasite that needs some host but not this one is facultative. Drives the cascade and path-finder tools.",
+    "groups": [
+      {
+        "id": "fungi",
+        "label": "Fungi",
+        "color": "#f2a93b"
+      },
+      {
+        "id": "bacteria",
+        "label": "Bacteria",
+        "color": "#b98cff"
+      },
+      {
+        "id": "plants",
+        "label": "Plants",
+        "color": "#c9e265"
+      },
+      {
+        "id": "protists",
+        "label": "Protists & Algae",
+        "color": "#2fe0c8"
+      },
+      {
+        "id": "insects",
+        "label": "Insects",
+        "color": "#ff8c5a"
+      },
+      {
+        "id": "birds",
+        "label": "Birds",
+        "color": "#5fd2ff"
+      },
+      {
+        "id": "animals",
+        "label": "Animals (non-bird)",
+        "color": "#ff74b8"
+      },
+      {
+        "id": "humans",
+        "label": "Humans",
+        "color": "#f5efe0"
+      }
+    ],
+    "types": [
+      {
+        "id": "mutualism",
+        "label": "Mutualism",
+        "color": "#3fe08f"
+      },
+      {
+        "id": "commensalism",
+        "label": "Commensalism",
+        "color": "#6f8cff"
+      },
+      {
+        "id": "parasitism",
+        "label": "Parasitism",
+        "color": "#ff4d5e"
+      },
+      {
+        "id": "context",
+        "label": "Shifts with context",
+        "color": "gradient"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "amf",
+      "name": "Arbuscular mycorrhizal fungi",
+      "sci": "Glomeromycota (e.g. Rhizophagus irregularis)",
+      "group": "fungi",
+      "habitat": [
+        "soil",
+        "agricultural",
+        "forest",
+        "grassland"
+      ],
+      "scale": "micro",
+      "fact": "Fossil arbuscules in the ~400-million-year-old Rhynie chert show this partnership is about as old as land plants themselves."
+    },
+    {
+      "id": "ecm",
+      "name": "Ectomycorrhizal fungi",
+      "sci": "Rhizopogon, Russula, Suillus and others",
+      "group": "fungi",
+      "habitat": [
+        "soil",
+        "forest",
+        "temperate"
+      ],
+      "scale": "micro",
+      "fact": "Mapped forest networks have shown single Douglas firs linked through ectomycorrhizal fungi to dozens of neighbouring trees."
+    },
+    {
+      "id": "tulasnella",
+      "name": "Orchid mycorrhizal fungi",
+      "sci": "Tulasnella, Ceratobasidium",
+      "group": "fungi",
+      "habitat": [
+        "soil",
+        "forest",
+        "grassland"
+      ],
+      "scale": "micro",
+      "fact": "Orchid seeds are dust-like with almost no food reserve; most cannot germinate in nature without one of these fungi feeding them."
+    },
+    {
+      "id": "epichloe",
+      "name": "Epichloë endophyte",
+      "sci": "Epichloë coenophiala",
+      "group": "fungi",
+      "habitat": [
+        "grassland",
+        "agricultural",
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Lives entirely inside the grass and passes to the next generation through the seed—it never needs to leave its host."
+    },
+    {
+      "id": "lichen_fungus",
+      "name": "Lichen fungus (horsehair lichen)",
+      "sci": "Bryoria spp. (Ascomycota)",
+      "group": "fungi",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Bryoria fremontii (black tree lichen) was pit-cooked and eaten by several Indigenous peoples of the Pacific Northwest."
+    },
+    {
+      "id": "cyphobasidium",
+      "name": "Cyphobasidium lichen yeast",
+      "sci": "Cyphobasidium (Basidiomycota)",
+      "group": "fungi",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "micro",
+      "fact": "Its 2016 discovery in lichen cortices challenged the ~150-year-old 'one fungus + one alga' definition of a lichen."
+    },
+    {
+      "id": "leucoagaricus",
+      "name": "Leafcutter ant fungus",
+      "sci": "Leucoagaricus gongylophorus",
+      "group": "fungi",
+      "habitat": [
+        "tropical-forest",
+        "soil"
+      ],
+      "scale": "micro",
+      "fact": "Produces swollen hyphal tips called gongylidia that appear to exist only to feed the ants."
+    },
+    {
+      "id": "escovopsis",
+      "name": "Escovopsis",
+      "sci": "Escovopsis spp.",
+      "group": "fungi",
+      "habitat": [
+        "tropical-forest",
+        "soil"
+      ],
+      "scale": "micro",
+      "fact": "A specialised mycoparasite known only from the gardens of fungus-growing ants."
+    },
+    {
+      "id": "termitomyces",
+      "name": "Termitomyces",
+      "sci": "Termitomyces spp.",
+      "group": "fungi",
+      "habitat": [
+        "soil",
+        "grassland",
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Termitomyces mushrooms that sprout from termite mounds are prized wild edibles across Africa and Asia."
+    },
+    {
+      "id": "raffaelea",
+      "name": "Laurel wilt fungus",
+      "sci": "Raffaelea lauricola",
+      "group": "fungi",
+      "habitat": [
+        "forest",
+        "agricultural"
+      ],
+      "scale": "micro",
+      "fact": "Since detection in Georgia in 2002, laurel wilt has killed a large share of redbay trees across the US Southeast."
+    },
+    {
+      "id": "ophiocordyceps",
+      "name": "Zombie-ant fungus",
+      "sci": "Ophiocordyceps unilateralis s.l.",
+      "group": "fungi",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "micro",
+      "fact": "Infected ants clamp onto a leaf vein in a 'death grip' at a height and humidity that suits the fungus's spore release."
+    },
+    {
+      "id": "bd",
+      "name": "Amphibian chytrid fungus",
+      "sci": "Batrachochytrium dendrobatidis",
+      "group": "fungi",
+      "habitat": [
+        "freshwater",
+        "tropical-forest",
+        "wetland"
+      ],
+      "scale": "micro",
+      "fact": "Scheele et al. (2019) linked chytridiomycosis to declines in at least 501 amphibian species, including 90 presumed extinctions."
+    },
+    {
+      "id": "saccharomyces",
+      "name": "Brewer's/baker's yeast",
+      "sci": "Saccharomyces cerevisiae",
+      "group": "fungi",
+      "habitat": [
+        "human-settlement",
+        "forest"
+      ],
+      "scale": "micro",
+      "fact": "Industrial beer yeasts trace to a few domesticated lineages—a genuine case of humans domesticating a microbe."
+    },
+    {
+      "id": "bradyrhizobium",
+      "name": "Soybean rhizobia",
+      "sci": "Bradyrhizobium japonicum",
+      "group": "bacteria",
+      "habitat": [
+        "soil",
+        "agricultural"
+      ],
+      "scale": "micro",
+      "fact": "Nitrogenase is so oxygen-sensitive that the plant makes leghemoglobin to buffer it—why active nodules are pink inside."
+    },
+    {
+      "id": "trichormus",
+      "name": "Azolla cyanobiont",
+      "sci": "Trichormus azollae (syn. Anabaena azollae)",
+      "group": "bacteria",
+      "habitat": [
+        "freshwater",
+        "wetland",
+        "agricultural",
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Passed between fern generations and so degraded in its genome that it appears unable to live on its own."
+    },
+    {
+      "id": "agrobacterium",
+      "name": "Crown gall bacterium",
+      "sci": "Agrobacterium tumefaciens",
+      "group": "bacteria",
+      "habitat": [
+        "soil",
+        "agricultural"
+      ],
+      "scale": "micro",
+      "fact": "Its natural ability to insert DNA into plant genomes became the workhorse tool of plant genetic engineering."
+    },
+    {
+      "id": "pseudonocardia",
+      "name": "Pseudonocardia",
+      "sci": "Pseudonocardia spp. (Actinobacteria)",
+      "group": "bacteria",
+      "habitat": [
+        "tropical-forest",
+        "soil",
+        "host-external"
+      ],
+      "scale": "micro",
+      "fact": "On some fungus-growing ants it grows in specialised cuticle crypts—a living antibiotic dispenser on the ant's body."
+    },
+    {
+      "id": "buchnera",
+      "name": "Buchnera",
+      "sci": "Buchnera aphidicola",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Its genome is ~640 kb—roughly one-seventh of E. coli's—after shedding genes it no longer needs inside aphid cells."
+    },
+    {
+      "id": "hamiltonella",
+      "name": "Hamiltonella",
+      "sci": "Hamiltonella defensa",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Much of its anti-wasp protection comes from toxin genes carried by a bacteriophage (APSE) living inside the bacterium."
+    },
+    {
+      "id": "wigglesworthia",
+      "name": "Wigglesworthia",
+      "sci": "Wigglesworthia glossinidia",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Supplies B vitamins missing from an all-blood diet; tsetse females cleared of it become sterile."
+    },
+    {
+      "id": "wolbachia",
+      "name": "Wolbachia",
+      "sci": "Wolbachia pipientis",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Estimated to infect roughly 40–65% of insect species—possibly the most widespread bacterial infection on Earth."
+    },
+    {
+      "id": "bee_gut",
+      "name": "Bee core gut bacteria",
+      "sci": "Snodgrassella alvi, Gilliamella apicola",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "A small, consistent set of bacterial species makes up most of the honeybee gut community worldwide."
+    },
+    {
+      "id": "rumen_bacteria",
+      "name": "Rumen bacteria",
+      "sci": "Fibrobacter, Ruminococcus and others",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "The microbes, not the cow, break down cellulose; the cow lives largely on their fermentation products."
+    },
+    {
+      "id": "vibrio",
+      "name": "Vibrio fischeri",
+      "sci": "Aliivibrio fischeri",
+      "group": "bacteria",
+      "habitat": [
+        "marine",
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Each dawn the squid vents most of its bacteria into the sea and regrows the population by nightfall."
+    },
+    {
+      "id": "endoriftia",
+      "name": "Endoriftia",
+      "sci": "Candidatus Endoriftia persephone",
+      "group": "bacteria",
+      "habitat": [
+        "deep-sea",
+        "marine",
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Oxidises hydrogen sulphide from vent fluid to fix carbon—photosynthesis-free primary production."
+    },
+    {
+      "id": "borrelia",
+      "name": "Lyme disease spirochete",
+      "sci": "Borrelia burgdorferi",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal",
+        "forest",
+        "temperate"
+      ],
+      "scale": "micro",
+      "fact": "Lyme disease is named after Lyme, Connecticut, where a cluster of cases was investigated in the 1970s."
+    },
+    {
+      "id": "bacteroides",
+      "name": "Bacteroides thetaiotaomicron",
+      "sci": "Bacteroides thetaiotaomicron",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Carries a huge repertoire of genes for breaking down plant polysaccharides that human enzymes can't touch."
+    },
+    {
+      "id": "bifido",
+      "name": "Bifidobacterium infantis",
+      "sci": "Bifidobacterium longum subsp. infantis",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Human milk contains oligosaccharides the infant can't digest—they largely feed bacteria like this one."
+    },
+    {
+      "id": "hpylori",
+      "name": "Helicobacter pylori",
+      "sci": "Helicobacter pylori",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Barry Marshall drank a culture of it to help prove it causes gastritis; he and Robin Warren won the 2005 Nobel Prize."
+    },
+    {
+      "id": "sepidermidis",
+      "name": "Staphylococcus epidermidis",
+      "sci": "Staphylococcus epidermidis",
+      "group": "bacteria",
+      "habitat": [
+        "host-external"
+      ],
+      "scale": "micro",
+      "fact": "One of the most common bacteria on human skin—and a leading cause of infections on implanted medical devices."
+    },
+    {
+      "id": "almond",
+      "name": "Almond",
+      "sci": "Prunus dulcis",
+      "group": "plants",
+      "habitat": [
+        "agricultural",
+        "temperate"
+      ],
+      "scale": "medium",
+      "fact": "Most commercial varieties are self-incompatible, so California orchards rent well over a million honeybee hives each bloom."
+    },
+    {
+      "id": "soybean",
+      "name": "Soybean",
+      "sci": "Glycine max",
+      "group": "plants",
+      "habitat": [
+        "agricultural"
+      ],
+      "scale": "medium",
+      "fact": "A top global protein crop, partly because its root nodules supply much of its own nitrogen."
+    },
+    {
+      "id": "douglas_fir",
+      "name": "Douglas fir",
+      "sci": "Pseudotsuga menziesii",
+      "group": "plants",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "large",
+      "fact": "Can live for more than 500 years and grow among the tallest trees on Earth."
+    },
+    {
+      "id": "paper_birch",
+      "name": "Paper birch",
+      "sci": "Betula papyrifera",
+      "group": "plants",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "large",
+      "fact": "Its white bark is rich in betulin and was used for canoes and containers."
+    },
+    {
+      "id": "ghost_pipe",
+      "name": "Ghost pipe",
+      "sci": "Monotropa uniflora",
+      "group": "plants",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Has no chlorophyll; it takes all its carbon from fungi, which take it from trees."
+    },
+    {
+      "id": "orchids",
+      "name": "Terrestrial orchids",
+      "sci": "Orchidaceae",
+      "group": "plants",
+      "habitat": [
+        "forest",
+        "grassland",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Orchidaceae is one of the largest families of flowering plants, with roughly 28,000 species."
+    },
+    {
+      "id": "azolla",
+      "name": "Azolla (mosquito fern)",
+      "sci": "Azolla spp.",
+      "group": "plants",
+      "habitat": [
+        "freshwater",
+        "wetland",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Used for centuries as a green manure in rice paddies in China and Vietnam."
+    },
+    {
+      "id": "fescue",
+      "name": "Tall fescue",
+      "sci": "Lolium arundinaceum",
+      "group": "plants",
+      "habitat": [
+        "grassland",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Endophyte-infected pastures cause 'fescue toxicosis' in cattle, costing US producers hundreds of millions of dollars a year."
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado & redbay",
+      "sci": "Persea americana, Persea borbonia (Lauraceae)",
+      "group": "plants",
+      "habitat": [
+        "forest",
+        "agricultural"
+      ],
+      "scale": "large",
+      "fact": "Avocado shares the laurel family with redbay, which is why laurel wilt threatens Florida's avocado groves."
+    },
+    {
+      "id": "yucca",
+      "name": "Yucca",
+      "sci": "Yucca spp.",
+      "group": "plants",
+      "habitat": [
+        "desert",
+        "grassland"
+      ],
+      "scale": "medium",
+      "fact": "Relies on a single moth lineage for pollination—no bees, no wind."
+    },
+    {
+      "id": "fig",
+      "name": "Figs",
+      "sci": "Ficus spp.",
+      "group": "plants",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "large",
+      "fact": "There are 750+ fig species; the old 'one fig, one wasp' rule has many exceptions."
+    },
+    {
+      "id": "heliconia",
+      "name": "Heliconia",
+      "sci": "Heliconia bihai, H. caribaea",
+      "group": "plants",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "medium",
+      "fact": "Its curved flowers match the curved bills of the hummingbirds that pollinate it."
+    },
+    {
+      "id": "whitebark_pine",
+      "name": "Whitebark pine",
+      "sci": "Pinus albicaulis",
+      "group": "plants",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "large",
+      "fact": "Its cones don't open on their own; it depends almost entirely on Clark's nutcrackers to plant its seeds."
+    },
+    {
+      "id": "bullhorn_acacia",
+      "name": "Bullhorn acacia",
+      "sci": "Vachellia cornigera",
+      "group": "plants",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "medium",
+      "fact": "Grows hollow thorns to house ants and feeds them nectar and protein-rich 'Beltian bodies'."
+    },
+    {
+      "id": "ophrys",
+      "name": "Early spider orchid",
+      "sci": "Ophrys sphegodes",
+      "group": "plants",
+      "habitat": [
+        "grassland",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Mimics the sex pheromone of female mining bees so precisely that males try to mate with the flower."
+    },
+    {
+      "id": "maize",
+      "name": "Maize",
+      "sci": "Zea mays",
+      "group": "plants",
+      "habitat": [
+        "agricultural"
+      ],
+      "scale": "medium",
+      "fact": "Domesticated from teosinte in southern Mexico ~9,000 years ago; its husked cobs can't disperse seed without people."
+    },
+    {
+      "id": "trebouxia",
+      "name": "Trebouxia (lichen alga)",
+      "sci": "Trebouxia spp.",
+      "group": "protists",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "micro",
+      "fact": "One of the most common green-algal partners in lichens worldwide."
+    },
+    {
+      "id": "symbiodinium",
+      "name": "Coral symbiotic algae",
+      "sci": "Symbiodiniaceae (dinoflagellates)",
+      "group": "protists",
+      "habitat": [
+        "reef",
+        "marine",
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "These dinoflagellates can supply most of a reef coral's energy through photosynthesis."
+    },
+    {
+      "id": "trichonympha",
+      "name": "Termite gut flagellates",
+      "sci": "Trichonympha and other parabasalids",
+      "group": "protists",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Lower termites can't digest wood without the flagellates packed into their hindgut."
+    },
+    {
+      "id": "plasmodium",
+      "name": "Malaria parasite",
+      "sci": "Plasmodium falciparum",
+      "group": "protists",
+      "habitat": [
+        "host-internal",
+        "tropical-forest",
+        "human-settlement"
+      ],
+      "scale": "micro",
+      "fact": "Malaria still kills hundreds of thousands of people a year, most of them young children in Africa."
+    },
+    {
+      "id": "leafcutter",
+      "name": "Leafcutter ants",
+      "sci": "Atta & Acromyrmex",
+      "group": "insects",
+      "habitat": [
+        "tropical-forest",
+        "soil"
+      ],
+      "scale": "small",
+      "fact": "They don't eat the leaves they cut—they feed them to a fungus they farm underground."
+    },
+    {
+      "id": "macrotermes",
+      "name": "Fungus-growing termites",
+      "sci": "Macrotermes spp.",
+      "group": "insects",
+      "habitat": [
+        "grassland",
+        "soil",
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Their mounds act as ventilation systems that help keep the fungus garden's climate stable."
+    },
+    {
+      "id": "reticulitermes",
+      "name": "Subterranean termites",
+      "sci": "Reticulitermes spp.",
+      "group": "insects",
+      "habitat": [
+        "soil",
+        "forest",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Among the most economically damaging structural pests in North America and Europe."
+    },
+    {
+      "id": "ambrosia_beetle",
+      "name": "Redbay ambrosia beetle",
+      "sci": "Xyleborus glabratus",
+      "group": "insects",
+      "habitat": [
+        "forest",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Females carry fungal spores in special pouches called mycangia."
+    },
+    {
+      "id": "carpenter_ant",
+      "name": "Carpenter ants",
+      "sci": "Camponotus spp.",
+      "group": "insects",
+      "habitat": [
+        "tropical-forest",
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "They nest in wood but don't eat it—unlike termites, they only excavate."
+    },
+    {
+      "id": "aphids",
+      "name": "Aphids",
+      "sci": "Aphididae (models: Acyrthosiphon pisum, Aphis glycines)",
+      "group": "insects",
+      "habitat": [
+        "agricultural",
+        "grassland",
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "Many aphids reproduce clonally, born already carrying their own developing daughters ('telescoping generations')."
+    },
+    {
+      "id": "aphidius",
+      "name": "Aphid parasitoid wasp",
+      "sci": "Aphidius ervi",
+      "group": "insects",
+      "habitat": [
+        "agricultural",
+        "grassland"
+      ],
+      "scale": "small",
+      "fact": "Lays an egg inside a living aphid; the larva eats it from within, leaving a swollen 'mummy'."
+    },
+    {
+      "id": "lasius",
+      "name": "Black garden ant",
+      "sci": "Lasius niger",
+      "group": "insects",
+      "habitat": [
+        "grassland",
+        "temperate",
+        "human-settlement"
+      ],
+      "scale": "small",
+      "fact": "Strokes aphids with its antennae to solicit droplets of honeydew—'milking' them."
+    },
+    {
+      "id": "tsetse",
+      "name": "Tsetse fly",
+      "sci": "Glossina spp.",
+      "group": "insects",
+      "habitat": [
+        "grassland",
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Gives birth to one fully grown larva at a time, fed on 'milk' secreted inside the mother."
+    },
+    {
+      "id": "bedbug",
+      "name": "Bed bug",
+      "sci": "Cimex lectularius",
+      "group": "insects",
+      "habitat": [
+        "human-settlement"
+      ],
+      "scale": "small",
+      "fact": "Feeds only on blood, a diet poor in B vitamins—hence its reliance on Wolbachia."
+    },
+    {
+      "id": "drosophila",
+      "name": "Fruit fly (D. simulans)",
+      "sci": "Drosophila simulans",
+      "group": "insects",
+      "habitat": [
+        "human-settlement",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Researchers watched Wolbachia spread through California populations of this fly in near real time."
+    },
+    {
+      "id": "aedes",
+      "name": "Yellow fever mosquito",
+      "sci": "Aedes aegypti",
+      "group": "insects",
+      "habitat": [
+        "human-settlement",
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Spread worldwide with human shipping; it breeds in tiny containers of water around homes."
+    },
+    {
+      "id": "anopheles",
+      "name": "Malaria mosquito",
+      "sci": "Anopheles gambiae complex",
+      "group": "insects",
+      "habitat": [
+        "human-settlement",
+        "wetland",
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Only females bite; they need the protein in blood to produce eggs."
+    },
+    {
+      "id": "head_louse",
+      "name": "Head louse",
+      "sci": "Pediculus humanus capitis",
+      "group": "insects",
+      "habitat": [
+        "host-external",
+        "human-settlement"
+      ],
+      "scale": "small",
+      "fact": "Louse genetics have been used to estimate when humans started wearing clothing."
+    },
+    {
+      "id": "yucca_moth",
+      "name": "Yucca moth",
+      "sci": "Tegeticula spp.",
+      "group": "insects",
+      "habitat": [
+        "desert",
+        "grassland"
+      ],
+      "scale": "small",
+      "fact": "Females use specialised mouthpart tentacles to pack pollen onto the yucca stigma—deliberate pollination."
+    },
+    {
+      "id": "fig_wasp",
+      "name": "Fig wasps",
+      "sci": "Agaonidae",
+      "group": "insects",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Wingless males spend their whole lives inside the fig, mating and chewing exit tunnels for the females."
+    },
+    {
+      "id": "honeybee",
+      "name": "Western honeybee",
+      "sci": "Apis mellifera",
+      "group": "insects",
+      "habitat": [
+        "agricultural",
+        "grassland",
+        "human-settlement",
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "Foragers share the direction and distance of food with the waggle dance."
+    },
+    {
+      "id": "andrena",
+      "name": "Mining bees",
+      "sci": "Andrena nigroaenea",
+      "group": "insects",
+      "habitat": [
+        "grassland",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Solitary bees that nest in burrows dug into the ground."
+    },
+    {
+      "id": "acacia_ant",
+      "name": "Acacia ant",
+      "sci": "Pseudomyrmex ferrugineus",
+      "group": "insects",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Workers attack herbivores and prune away plants that grow too close to their host acacia."
+    },
+    {
+      "id": "oxpecker",
+      "name": "Red-billed oxpecker",
+      "sci": "Buphagus erythrorynchus",
+      "group": "birds",
+      "habitat": [
+        "grassland"
+      ],
+      "scale": "small",
+      "fact": "Its Swahili name translates roughly as 'the rhino's guard'—its alarm calls warn rhinos of approaching people."
+    },
+    {
+      "id": "cattle_egret",
+      "name": "Cattle egret",
+      "sci": "Bubulcus ibis",
+      "group": "birds",
+      "habitat": [
+        "grassland",
+        "agricultural",
+        "wetland"
+      ],
+      "scale": "medium",
+      "fact": "Colonised the Americas from Africa on its own in the late 1800s and spread alongside cattle ranching."
+    },
+    {
+      "id": "common_cuckoo",
+      "name": "Common cuckoo",
+      "sci": "Cuculus canorus",
+      "group": "birds",
+      "habitat": [
+        "wetland",
+        "forest",
+        "grassland"
+      ],
+      "scale": "medium",
+      "fact": "Different female lineages lay eggs that mimic the eggs of their particular host species."
+    },
+    {
+      "id": "reed_warbler",
+      "name": "Reed warbler",
+      "sci": "Acrocephalus scirpaceus",
+      "group": "birds",
+      "habitat": [
+        "wetland"
+      ],
+      "scale": "small",
+      "fact": "Rejects odd-looking eggs more often after seeing a cuckoo near its nest."
+    },
+    {
+      "id": "gs_cuckoo",
+      "name": "Great spotted cuckoo",
+      "sci": "Clamator glandarius",
+      "group": "birds",
+      "habitat": [
+        "grassland",
+        "agricultural"
+      ],
+      "scale": "medium",
+      "fact": "Unlike the common cuckoo, its chicks don't evict their host's eggs or nestlings."
+    },
+    {
+      "id": "carrion_crow",
+      "name": "Carrion crow",
+      "sci": "Corvus corone",
+      "group": "birds",
+      "habitat": [
+        "agricultural",
+        "human-settlement",
+        "forest"
+      ],
+      "scale": "medium",
+      "fact": "Some carrion crow populations breed cooperatively, with helpers raising young that aren't their own."
+    },
+    {
+      "id": "raven",
+      "name": "Common raven",
+      "sci": "Corvus corax",
+      "group": "birds",
+      "habitat": [
+        "forest",
+        "grassland",
+        "temperate"
+      ],
+      "scale": "medium",
+      "fact": "In Yellowstone, ravens turn up at virtually every winter wolf kill."
+    },
+    {
+      "id": "nutcracker",
+      "name": "Clark's nutcracker",
+      "sci": "Nucifraga columbiana",
+      "group": "birds",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "medium",
+      "fact": "One bird can cache tens of thousands of pine seeds a season and relocate many of them months later."
+    },
+    {
+      "id": "carib",
+      "name": "Purple-throated carib",
+      "sci": "Eulampis jugularis",
+      "group": "birds",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Males and females have differently shaped bills, each matching a different Heliconia species."
+    },
+    {
+      "id": "honeyguide",
+      "name": "Greater honeyguide",
+      "sci": "Indicator indicator",
+      "group": "birds",
+      "habitat": [
+        "grassland",
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "Responds specifically to the Yao honey-hunters' 'brrr-hm' call, which makes guiding far more likely."
+    },
+    {
+      "id": "varroa",
+      "name": "Varroa mite",
+      "sci": "Varroa destructor",
+      "group": "animals",
+      "habitat": [
+        "host-external",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Jumped from the Asian honeybee to Apis mellifera in the 20th century and is now a leading driver of colony losses."
+    },
+    {
+      "id": "cleaner_wrasse",
+      "name": "Bluestreak cleaner wrasse",
+      "sci": "Labroides dimidiatus",
+      "group": "animals",
+      "habitat": [
+        "reef",
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "A single cleaner can inspect more than 2,000 client fish in a day."
+    },
+    {
+      "id": "reef_fish",
+      "name": "Client reef fish",
+      "sci": "Many species (e.g. Hemigymnus melapterus)",
+      "group": "animals",
+      "habitat": [
+        "reef",
+        "marine"
+      ],
+      "scale": "medium",
+      "fact": "Clients visit cleaning stations many times a day; removing cleaners can reduce local fish diversity."
+    },
+    {
+      "id": "clownfish",
+      "name": "Clownfish",
+      "sci": "Amphiprion spp.",
+      "group": "animals",
+      "habitat": [
+        "reef",
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "All clownfish start life male; the dominant fish in a group becomes the female."
+    },
+    {
+      "id": "anemone",
+      "name": "Host sea anemone",
+      "sci": "e.g. Heteractis magnifica",
+      "group": "animals",
+      "habitat": [
+        "reef",
+        "marine"
+      ],
+      "scale": "medium",
+      "fact": "Its stinging cells don't fire on its resident clownfish, protected by the fish's mucus coat."
+    },
+    {
+      "id": "coral",
+      "name": "Reef-building corals",
+      "sci": "Scleractinia (e.g. Acropora)",
+      "group": "animals",
+      "habitat": [
+        "reef",
+        "marine"
+      ],
+      "scale": "medium",
+      "fact": "Coral reefs cover well under 1% of the sea floor yet host roughly a quarter of known marine species."
+    },
+    {
+      "id": "bobtail_squid",
+      "name": "Hawaiian bobtail squid",
+      "sci": "Euprymna scolopes",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "Uses bacterial light to erase its own moonlit shadow from predators below (counter-illumination)."
+    },
+    {
+      "id": "riftia",
+      "name": "Giant tubeworm",
+      "sci": "Riftia pachyptila",
+      "group": "animals",
+      "habitat": [
+        "deep-sea",
+        "marine"
+      ],
+      "scale": "medium",
+      "fact": "Adults have no mouth or gut; a tissue packed with bacteria feeds them."
+    },
+    {
+      "id": "rhino",
+      "name": "Black rhinoceros",
+      "sci": "Diceros bicornis",
+      "group": "animals",
+      "habitat": [
+        "grassland"
+      ],
+      "scale": "large",
+      "fact": "Critically endangered; poaching for horn remains the main threat."
+    },
+    {
+      "id": "cattle",
+      "name": "Cattle",
+      "sci": "Bos taurus",
+      "group": "animals",
+      "habitat": [
+        "grassland",
+        "agricultural"
+      ],
+      "scale": "large",
+      "fact": "Rumen fermentation produces methane that cattle belch out—a significant greenhouse-gas source."
+    },
+    {
+      "id": "grey_wolf",
+      "name": "Grey wolf",
+      "sci": "Canis lupus",
+      "group": "animals",
+      "habitat": [
+        "forest",
+        "grassland",
+        "temperate"
+      ],
+      "scale": "large",
+      "fact": "Reintroduced to Yellowstone National Park in 1995."
+    },
+    {
+      "id": "amphibians",
+      "name": "Frogs & other amphibians",
+      "sci": "Amphibia",
+      "group": "animals",
+      "habitat": [
+        "freshwater",
+        "wetland",
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Amphibians are the most threatened vertebrate class; roughly two in five species are at risk."
+    },
+    {
+      "id": "ixodes",
+      "name": "Blacklegged tick",
+      "sci": "Ixodes scapularis",
+      "group": "animals",
+      "habitat": [
+        "forest",
+        "temperate",
+        "host-external"
+      ],
+      "scale": "small",
+      "fact": "Larval ticks hatch uninfected and pick up Borrelia from their first blood meal."
+    },
+    {
+      "id": "mouse",
+      "name": "White-footed mouse",
+      "sci": "Peromyscus leucopus",
+      "group": "animals",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "One of the most competent Lyme reservoirs: many larval ticks that feed on it become infected."
+    },
+    {
+      "id": "dog",
+      "name": "Domestic dog",
+      "sci": "Canis familiaris",
+      "group": "animals",
+      "habitat": [
+        "human-settlement"
+      ],
+      "scale": "medium",
+      "fact": "The first domesticated animal—domestication began well before agriculture."
+    },
+    {
+      "id": "humans",
+      "name": "Humans",
+      "sci": "Homo sapiens",
+      "group": "humans",
+      "habitat": [
+        "human-settlement",
+        "agricultural",
+        "grassland",
+        "forest",
+        "temperate",
+        "tropical-forest"
+      ],
+      "scale": "large",
+      "fact": "A typical person carries about as many bacterial cells as human cells (Sender et al. 2016)."
+    }
+  ],
+  "edges": [
+    {
+      "id": "e01",
+      "source": "amf",
+      "target": "almond",
+      "type": "mutualism",
+      "obligate": "Fungus obligate; almond facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Fungal hyphae extend almond roots' reach for phosphorus and water in exchange for plant sugars. The fungus cannot complete its life cycle without a host.",
+      "gives": {
+        "source": "Phosphorus, zinc and water from soil beyond root reach",
+        "target": "Photosynthetic sugars and lipids"
+      },
+      "gets": {
+        "source": "All of its carbon",
+        "target": "Better nutrient uptake and drought tolerance"
+      },
+      "impact": {
+        "ecological": "Arbuscular mycorrhizae associate with most land plant species and shape soil structure.",
+        "human": "Managing mycorrhizae can reduce fertiliser needs in orchards; the size of the benefit varies by soil."
+      },
+      "citations": [
+        {
+          "author": "Smith & Read",
+          "year": 2008,
+          "venue": "Mycorrhizal Symbiosis, 3rd ed. (Academic Press)"
+        },
+        {
+          "needed": true,
+          "note": "almond-specific field study"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The general biology is textbook; almond-specific evidence is not cited here."
+    },
+    {
+      "id": "e02",
+      "source": "amf",
+      "target": "soybean",
+      "type": "context",
+      "obligate": "Fungus obligate; soybean facultative",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Usually a nutrient-for-sugar trade, but in phosphorus-rich soil or low light the plant can pay more carbon than it gets back. A textbook mutualism–parasitism continuum.",
+      "gives": {
+        "source": "Phosphorus and water",
+        "target": "Carbon (sugars, lipids)"
+      },
+      "gets": {
+        "source": "Carbon",
+        "target": "Net benefit in low-P soils; net cost in high-P or shaded conditions"
+      },
+      "impact": {
+        "ecological": "Shows that 'mutualism' is a variable outcome, not a fixed label.",
+        "human": "Heavy phosphorus fertilisation can make the partnership worthless to crops."
+      },
+      "citations": [
+        {
+          "author": "Johnson, Graham & Smith",
+          "year": 1997,
+          "venue": "New Phytologist"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e03",
+      "source": "ecm",
+      "target": "douglas_fir",
+      "type": "mutualism",
+      "obligate": "Fungi largely obligate; tree ecologically near-obligate in the wild",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "Ectomycorrhizal fungi sheath Douglas fir root tips and trade soil nitrogen and phosphorus for sugars. Seedlings in the field rarely thrive without them.",
+      "gives": {
+        "source": "Nitrogen, phosphorus, water; some pathogen protection",
+        "target": "Sugars"
+      },
+      "gets": {
+        "source": "Carbon",
+        "target": "Nutrients from organic matter roots can't access"
+      },
+      "impact": {
+        "ecological": "Underpins conifer forest productivity and nutrient cycling.",
+        "human": "Forestry nurseries inoculate seedlings to improve outplanting success."
+      },
+      "citations": [
+        {
+          "author": "Smith & Read",
+          "year": 2008,
+          "venue": "Mycorrhizal Symbiosis, 3rd ed. (Academic Press)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e04",
+      "source": "ecm",
+      "target": "paper_birch",
+      "type": "mutualism",
+      "obligate": "Fungi largely obligate; tree facultative-to-obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Birch roots trade sugars for fungus-gathered nutrients, and the same fungal species can also colonise neighbouring conifers.",
+      "gives": {
+        "source": "Nitrogen, phosphorus, water",
+        "target": "Sugars"
+      },
+      "gets": {
+        "source": "Carbon",
+        "target": "Nutrients"
+      },
+      "impact": {
+        "ecological": "Shared fungal partners physically connect different tree species.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Smith & Read",
+          "year": 2008,
+          "venue": "Mycorrhizal Symbiosis, 3rd ed. (Academic Press)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e05",
+      "source": "douglas_fir",
+      "target": "paper_birch",
+      "type": "context",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "none",
+        "target": "none"
+      },
+      "tldr": "Labelled carbon has been measured moving between birch and fir through shared fungal networks. How much this matters, and the 'mother tree' story, are disputed.",
+      "gives": {
+        "source": "Small amounts of carbon (direction varies by season)",
+        "target": "Small amounts of carbon"
+      },
+      "gets": {
+        "source": "Possibly minor carbon subsidy",
+        "target": "Possibly minor carbon subsidy"
+      },
+      "impact": {
+        "ecological": "If large, networks would change how we model forest competition; current evidence suggests effects are modest and context-specific.",
+        "human": "Widely popularised, and the popular version runs ahead of the evidence."
+      },
+      "citations": [
+        {
+          "author": "Simard et al.",
+          "year": 1997,
+          "venue": "Nature"
+        },
+        {
+          "author": "Karst, Jones & Hoeksema",
+          "year": 2023,
+          "venue": "Nature Ecology & Evolution"
+        }
+      ],
+      "confidence": "low",
+      "contested": true,
+      "confidence_note": "Karst et al. 2023 argue field evidence for network-mediated benefits is weak and over-cited."
+    },
+    {
+      "id": "e06",
+      "source": "ghost_pipe",
+      "target": "ecm",
+      "type": "parasitism",
+      "obligate": "Ghost pipe obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "A chlorophyll-free plant that taps into Russula fungi and takes carbon the fungi got from trees. It gives nothing back.",
+      "gives": {
+        "source": "Nothing known",
+        "target": "Carbon (ultimately from trees)"
+      },
+      "gets": {
+        "source": "All of its carbon",
+        "target": "A carbon drain"
+      },
+      "impact": {
+        "ecological": "Shows that fungal networks can be exploited by 'cheaters'.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Bidartondo",
+          "year": 2005,
+          "venue": "New Phytologist"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e07",
+      "source": "orchids",
+      "target": "tulasnella",
+      "type": "context",
+      "obligate": "Orchid obligate at germination",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "Orchid seedlings feed entirely on fungal carbon, so early on the orchid is effectively parasitic. Many green adults may pay some back, but evidence varies by species.",
+      "gives": {
+        "source": "Possibly carbon in green adults",
+        "target": "Carbon and nutrients to seedlings"
+      },
+      "gets": {
+        "source": "Germination and early growth",
+        "target": "Unclear benefit"
+      },
+      "impact": {
+        "ecological": "Orchid distribution can be limited by where suitable fungi occur.",
+        "human": "Orchid conservation and propagation often requires the fungal partner."
+      },
+      "citations": [
+        {
+          "author": "Rasmussen",
+          "year": 1995,
+          "venue": "Terrestrial Orchids: From Seed to Mycotrophic Plant (Cambridge UP)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e08",
+      "source": "bradyrhizobium",
+      "target": "soybean",
+      "type": "mutualism",
+      "obligate": "Neither (bacteria live free in soil; plants can use fertiliser N)",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Bacteria in root nodules convert atmospheric nitrogen into ammonia for the plant in exchange for carbon. Soybeans 'sanction' nodules that under-deliver.",
+      "gives": {
+        "source": "Fixed nitrogen (ammonia)",
+        "target": "Carbon, a low-oxygen nodule home"
+      },
+      "gets": {
+        "source": "Carbon and shelter",
+        "target": "Nitrogen"
+      },
+      "impact": {
+        "ecological": "Biological nitrogen fixation is a major natural N input to ecosystems.",
+        "human": "Saves large amounts of synthetic nitrogen fertiliser in soybean farming."
+      },
+      "citations": [
+        {
+          "author": "Kiers et al.",
+          "year": 2003,
+          "venue": "Nature"
+        },
+        {
+          "author": "Oldroyd et al.",
+          "year": 2011,
+          "venue": "Annual Review of Genetics"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e09",
+      "source": "trichormus",
+      "target": "azolla",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "A nitrogen-fixing cyanobacterium lives inside Azolla leaf cavities and passes to the next generation with the fern. Neither is found in nature without the other.",
+      "gives": {
+        "source": "Fixed nitrogen",
+        "target": "Shelter and carbon"
+      },
+      "gets": {
+        "source": "A permanent home",
+        "target": "Nitrogen self-sufficiency"
+      },
+      "impact": {
+        "ecological": "Azolla blooms can rapidly add nitrogen to wetlands.",
+        "human": "Traditional green manure for rice paddies."
+      },
+      "citations": [
+        {
+          "author": "Ran et al.",
+          "year": 2010,
+          "venue": "PLoS ONE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e10",
+      "source": "epichloe",
+      "target": "fescue",
+      "type": "context",
+      "obligate": "Fungus obligate (seed-transmitted)",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "A fungus inside the grass makes alkaloids that deter grazers and insects. Benefit to the grass depends on herbivore pressure and soil nutrients.",
+      "gives": {
+        "source": "Toxic alkaloids (defence), drought tolerance",
+        "target": "Nutrients, shelter, seed transmission"
+      },
+      "gets": {
+        "source": "A lifelong host",
+        "target": "Protection under grazing"
+      },
+      "impact": {
+        "ecological": "Can shift pasture plant and insect communities.",
+        "human": "Causes fescue toxicosis in cattle; 'friendly' endophyte strains are sold commercially."
+      },
+      "citations": [
+        {
+          "author": "Clay",
+          "year": 1988,
+          "venue": "Ecology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e11",
+      "source": "agrobacterium",
+      "target": "almond",
+      "type": "parasitism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "The bacterium inserts some of its own DNA into plant cells and reprograms them into a tumour that produces food only it can use.",
+      "gives": {
+        "source": "T-DNA that hijacks plant cells",
+        "target": "Opines (bacterial food)"
+      },
+      "gets": {
+        "source": "A custom nutrient supply",
+        "target": "Galls and reduced vigour"
+      },
+      "impact": {
+        "ecological": "A widespread soil pathogen.",
+        "human": "Crown gall harms nurseries and orchards, and the same mechanism powers plant biotechnology."
+      },
+      "citations": [
+        {
+          "author": "Chilton et al.",
+          "year": 1977,
+          "venue": "Cell"
+        },
+        {
+          "needed": true,
+          "note": "almond-specific host record"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The mechanism is well established; the almond-specific citation is missing."
+    },
+    {
+      "id": "e12",
+      "source": "lichen_fungus",
+      "target": "trebouxia",
+      "type": "mutualism",
+      "obligate": "Fungus obligate; alga facultative (also free-living)",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "The fungus builds a protective body and supplies water and minerals; the alga photosynthesises. Some researchers frame it as the fungus 'farming' the alga.",
+      "gives": {
+        "source": "Structure, UV protection, water, minerals",
+        "target": "Sugars and polyols"
+      },
+      "gets": {
+        "source": "All of its carbon",
+        "target": "Survival in exposed habitats"
+      },
+      "impact": {
+        "ecological": "Lichens colonise bare rock and bark, start soil formation and feed caribou in winter.",
+        "human": "Used as air-quality indicators."
+      },
+      "citations": [
+        {
+          "author": "Nash (ed.)",
+          "year": 2008,
+          "venue": "Lichen Biology, 2nd ed. (Cambridge UP)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e13",
+      "source": "cyphobasidium",
+      "target": "lichen_fungus",
+      "type": "mutualism",
+      "obligate": "Unknown",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A basidiomycete yeast lives in the outer layer of many macrolichens, so some lichens are three-partner systems. Its role is not yet known.",
+      "gives": {
+        "source": "Unknown; possibly secondary metabolites",
+        "target": "Habitat"
+      },
+      "gets": {
+        "source": "Habitat",
+        "target": "Unknown"
+      },
+      "impact": {
+        "ecological": "Changes how lichen symbiosis is defined.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Spribille et al.",
+          "year": 2016,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "low",
+      "confidence_note": "The yeast's presence is documented; the exchange and its benefit are not."
+    },
+    {
+      "id": "e14",
+      "source": "leafcutter",
+      "target": "leucoagaricus",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "Ants cut leaves to feed a fungus that they farm, weed and propagate; the fungus is their main food. Neither survives without the other.",
+      "gives": {
+        "source": "Cut leaves, weeding, dispersal to new nests",
+        "target": "Nutritious gongylidia"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Food, protection, transport to new colonies"
+      },
+      "impact": {
+        "ecological": "Leafcutters are dominant herbivores in the Neotropics and turn over large volumes of soil.",
+        "human": "Major agricultural pests in Latin America."
+      },
+      "citations": [
+        {
+          "author": "Mueller et al.",
+          "year": 1998,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e15",
+      "source": "escovopsis",
+      "target": "leucoagaricus",
+      "type": "parasitism",
+      "obligate": "Escovopsis (specialist)",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "A specialist fungus that attacks the ants' crop and can wipe out a garden.",
+      "gives": {
+        "source": "Nothing",
+        "target": "Nutrients"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Garden collapse risk"
+      },
+      "impact": {
+        "ecological": "Drives the ants' hygiene behaviours and the antibiotic partnership.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Currie, Mueller & Malloch",
+          "year": 1999,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e16",
+      "source": "pseudonocardia",
+      "target": "leafcutter",
+      "type": "mutualism",
+      "obligate": "Debated",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Bacteria on the ant cuticle make antibiotics that suppress Escovopsis. Prominent on Acromyrmex workers and largely absent from Atta workers.",
+      "gives": {
+        "source": "Antifungal compounds",
+        "target": "Secretions, surface habitat"
+      },
+      "gets": {
+        "source": "Habitat and food",
+        "target": "Garden protection"
+      },
+      "impact": {
+        "ecological": "A three-way arms race: ant, crop, pathogen and defender.",
+        "human": "A source of novel antifungal compounds in drug discovery."
+      },
+      "citations": [
+        {
+          "author": "Currie et al.",
+          "year": 1999,
+          "venue": "Nature"
+        },
+        {
+          "author": "Currie et al.",
+          "year": 2003,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "medium",
+      "contested": true,
+      "confidence_note": "How specific and how important the partnership is remains debated; it varies by ant genus."
+    },
+    {
+      "id": "e17",
+      "source": "macrotermes",
+      "target": "termitomyces",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "Termites cultivate Termitomyces on combs of chewed plant material; the fungus breaks down lignin and becomes the termites' food.",
+      "gives": {
+        "source": "Plant material, a climate-controlled mound",
+        "target": "Pre-digested food"
+      },
+      "gets": {
+        "source": "Digestion of tough plant material",
+        "target": "Cultivation and dispersal"
+      },
+      "impact": {
+        "ecological": "Major decomposers in African and Asian savannas.",
+        "human": "Termitomyces mushrooms are valued food."
+      },
+      "citations": [
+        {
+          "author": "Aanen et al.",
+          "year": 2002,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e18",
+      "source": "ambrosia_beetle",
+      "target": "raffaelea",
+      "type": "mutualism",
+      "obligate": "Beetle obligate; fungus largely dependent on beetle for transport",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "The beetle carries fungal spores in body pouches, plants them in tunnels in the wood, and feeds on the fungus.",
+      "gives": {
+        "source": "Transport and inoculation into new trees",
+        "target": "Food for larvae and adults"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Dispersal"
+      },
+      "impact": {
+        "ecological": "Invasive in the US Southeast.",
+        "human": "Spreads laurel wilt, which threatens avocado growing."
+      },
+      "citations": [
+        {
+          "author": "Farrell et al.",
+          "year": 2001,
+          "venue": "Evolution"
+        },
+        {
+          "author": "Fraedrich et al.",
+          "year": 2008,
+          "venue": "Plant Disease"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e19",
+      "source": "raffaelea",
+      "target": "avocado",
+      "type": "parasitism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "The beetle's fungal crop is lethal to laurel-family trees, blocking their water transport.",
+      "gives": {
+        "source": "Disease",
+        "target": "Wood to colonise"
+      },
+      "gets": {
+        "source": "Habitat",
+        "target": "Wilting and death"
+      },
+      "impact": {
+        "ecological": "Has removed most mature redbays across much of their range.",
+        "human": "A threat to Florida's avocado industry."
+      },
+      "citations": [
+        {
+          "author": "Fraedrich et al.",
+          "year": 2008,
+          "venue": "Plant Disease"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e20",
+      "source": "ophiocordyceps",
+      "target": "carpenter_ant",
+      "type": "parasitism",
+      "obligate": "Fungus obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "The fungus infects a worker ant, changes its behaviour so it bites a leaf vein, kills it, and sprouts a spore stalk from its head.",
+      "gives": {
+        "source": "Death",
+        "target": "Body and mobility"
+      },
+      "gets": {
+        "source": "Food and a spore-launch site",
+        "target": "Nothing"
+      },
+      "impact": {
+        "ecological": "May regulate ant populations; graveyards of infected ants form under colonies.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Hughes et al.",
+          "year": 2011,
+          "venue": "BMC Ecology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e21",
+      "source": "aphids",
+      "target": "buchnera",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "Buchnera lives inside specialised aphid cells and makes essential amino acids missing from plant sap. The partnership is well over 150 million years old.",
+      "gives": {
+        "source": "Housing in bacteriocytes, nutrients",
+        "target": "Essential amino acids"
+      },
+      "gets": {
+        "source": "Nutritionally complete diet",
+        "target": "A protected home"
+      },
+      "impact": {
+        "ecological": "Makes sap-feeding possible, one of the most successful insect lifestyles.",
+        "human": "Without Buchnera, aphids wouldn't be crop pests."
+      },
+      "citations": [
+        {
+          "author": "Shigenobu et al.",
+          "year": 2000,
+          "venue": "Nature"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e22",
+      "source": "aphids",
+      "target": "hamiltonella",
+      "type": "context",
+      "obligate": "Neither (facultative symbiont)",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "A heritable bacterium that kills parasitoid-wasp larvae inside the aphid. Valuable when wasps are common; when they're scarce, infected aphids can lose out to uninfected ones.",
+      "gives": {
+        "source": "Host cells, transmission to offspring",
+        "target": "Protection against parasitoid wasps"
+      },
+      "gets": {
+        "source": "Survival against wasps",
+        "target": "A home"
+      },
+      "impact": {
+        "ecological": "Changes how well biological pest control works.",
+        "human": "Can reduce the effectiveness of parasitoid releases against aphid pests."
+      },
+      "citations": [
+        {
+          "author": "Oliver et al.",
+          "year": 2003,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e23",
+      "source": "aphidius",
+      "target": "aphids",
+      "type": "parasitism",
+      "obligate": "Wasp obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "The wasp lays an egg inside an aphid and the larva consumes it from within.",
+      "gives": {
+        "source": "Death",
+        "target": "A larval host"
+      },
+      "gets": {
+        "source": "Food for its offspring",
+        "target": "Nothing"
+      },
+      "impact": {
+        "ecological": "A natural regulator of aphid populations.",
+        "human": "Sold commercially for greenhouse biocontrol."
+      },
+      "citations": [
+        {
+          "author": "Oliver et al.",
+          "year": 2003,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e24",
+      "source": "lasius",
+      "target": "aphids",
+      "type": "context",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Ants protect aphids from predators in exchange for sugary honeydew, but they also eat aphids when honeydew is less valuable than protein.",
+      "gives": {
+        "source": "Protection, sometimes transport",
+        "target": "Honeydew"
+      },
+      "gets": {
+        "source": "Sugar (and sometimes prey)",
+        "target": "Defence from ladybirds and wasps"
+      },
+      "impact": {
+        "ecological": "Ant tending can boost aphid colonies and their damage to plants.",
+        "human": "Controlling ants is a known lever for aphid control."
+      },
+      "citations": [
+        {
+          "author": "Stadler & Dixon",
+          "year": 2005,
+          "venue": "Annual Review of Ecology, Evolution, and Systematics"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e25",
+      "source": "aphids",
+      "target": "soybean",
+      "type": "parasitism",
+      "obligate": "Aphid obligate (host-specialised)",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Soybean aphids suck phloem sap, weakening plants and transmitting viruses.",
+      "gives": {
+        "source": "Damage, plant viruses",
+        "target": "Phloem sap"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Yield loss"
+      },
+      "impact": {
+        "ecological": "Invasive in North America since 2000.",
+        "human": "A major soybean pest that triggers widespread insecticide use."
+      },
+      "citations": [
+        {
+          "author": "Ragsdale et al.",
+          "year": 2011,
+          "venue": "Annual Review of Entomology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e26",
+      "source": "tsetse",
+      "target": "wigglesworthia",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "An intracellular bacterium supplies B vitamins that a blood-only diet lacks. Females without it can't reproduce.",
+      "gives": {
+        "source": "Host cells, maternal transmission",
+        "target": "B vitamins"
+      },
+      "gets": {
+        "source": "Fertility",
+        "target": "A home"
+      },
+      "impact": {
+        "ecological": "Makes blood-feeding possible for tsetse.",
+        "human": "Tsetse spread sleeping sickness; the symbiont is a potential control target."
+      },
+      "citations": [
+        {
+          "author": "Akman et al.",
+          "year": 2002,
+          "venue": "Nature Genetics"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e27",
+      "source": "bedbug",
+      "target": "wolbachia",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "In bed bugs, Wolbachia lives in a dedicated organ and makes the B vitamin biotin. Here the usual reproductive parasite has become a nutritional partner.",
+      "gives": {
+        "source": "Bacteriome housing",
+        "target": "Biotin (B vitamin)"
+      },
+      "gets": {
+        "source": "Normal growth and fertility",
+        "target": "A home"
+      },
+      "impact": {
+        "ecological": "Shows a parasite turning into a mutualist.",
+        "human": "Bed bug control could target the symbiont."
+      },
+      "citations": [
+        {
+          "author": "Hosokawa et al.",
+          "year": 2010,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e28",
+      "source": "wolbachia",
+      "target": "drosophila",
+      "type": "parasitism",
+      "obligate": "Wolbachia obligate (intracellular)",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Wolbachia makes uninfected females' eggs fail when they mate with infected males (cytoplasmic incompatibility), so the infection spreads.",
+      "gives": {
+        "source": "Reproductive manipulation",
+        "target": "Cells and maternal transmission"
+      },
+      "gets": {
+        "source": "Rapid spread",
+        "target": "Reduced fitness for uninfected females"
+      },
+      "impact": {
+        "ecological": "Can drive rapid change through insect populations.",
+        "human": "The basis of Wolbachia-based mosquito control."
+      },
+      "citations": [
+        {
+          "author": "Turelli & Hoffmann",
+          "year": 1991,
+          "venue": "Nature"
+        },
+        {
+          "author": "Werren, Baldo & Clark",
+          "year": 2008,
+          "venue": "Nature Reviews Microbiology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e29",
+      "source": "wolbachia",
+      "target": "aedes",
+      "type": "context",
+      "obligate": "Neither (introduced in the lab)",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "The wMel Wolbachia strain was moved into Aedes aegypti, where it blocks dengue virus replication. Releases have cut dengue incidence.",
+      "gives": {
+        "source": "Virus blocking; reproductive drive",
+        "target": "A new host"
+      },
+      "gets": {
+        "source": "Spread through populations",
+        "target": "Slight fitness costs, reduced virus load"
+      },
+      "impact": {
+        "ecological": "A human-engineered symbiosis.",
+        "human": "Reduced dengue cases by 77% in a randomised trial in Yogyakarta."
+      },
+      "citations": [
+        {
+          "author": "Moreira et al.",
+          "year": 2009,
+          "venue": "Cell"
+        },
+        {
+          "author": "Utarini et al.",
+          "year": 2021,
+          "venue": "New England Journal of Medicine"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e30",
+      "source": "aedes",
+      "target": "humans",
+      "type": "parasitism",
+      "obligate": "Females need blood meals to lay eggs",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A mosquito adapted to live alongside people; females feed on human blood and transmit dengue, Zika, chikungunya and yellow fever.",
+      "gives": {
+        "source": "Bites and viral diseases",
+        "target": "Blood and water containers for breeding"
+      },
+      "gets": {
+        "source": "Protein for eggs and urban habitat",
+        "target": "Disease"
+      },
+      "impact": {
+        "ecological": "Spread globally with trade.",
+        "human": "One of the most important disease vectors worldwide."
+      },
+      "citations": [
+        {
+          "author": "Powell & Tabachnick",
+          "year": 2013,
+          "venue": "Memórias do Instituto Oswaldo Cruz"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The biology is certain; please double-check the citation details."
+    },
+    {
+      "id": "e31",
+      "source": "head_louse",
+      "target": "humans",
+      "type": "parasitism",
+      "obligate": "Louse obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "A wingless insect that lives only on human scalps and feeds on blood several times a day.",
+      "gives": {
+        "source": "Itching",
+        "target": "Blood and habitat"
+      },
+      "gets": {
+        "source": "Everything",
+        "target": "Nothing"
+      },
+      "impact": {
+        "ecological": "Co-evolved with humans over millions of years.",
+        "human": "Lice DNA helps date the origin of clothing."
+      },
+      "citations": [
+        {
+          "author": "Kittler, Kayser & Stoneking",
+          "year": 2003,
+          "venue": "Current Biology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e32",
+      "source": "yucca",
+      "target": "yucca_moth",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "Female moths deliberately pollinate yucca flowers and lay eggs in them; the larvae eat some, but not all, of the seeds.",
+      "gives": {
+        "source": "Seeds as larval food",
+        "target": "Active pollination"
+      },
+      "gets": {
+        "source": "Reproduction",
+        "target": "A nursery"
+      },
+      "impact": {
+        "ecological": "A model of how 'cheating' is kept in check: plants abort overloaded flowers.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Pellmyr & Huth",
+          "year": 1994,
+          "venue": "Nature"
+        },
+        {
+          "author": "Pellmyr",
+          "year": 2003,
+          "venue": "Annals of the Missouri Botanical Garden"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e33",
+      "source": "fig",
+      "target": "fig_wasp",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "Tiny wasps pollinate figs from inside the enclosed fig and raise their young in some of its flowers. Neither can reproduce without the other.",
+      "gives": {
+        "source": "Nursery flowers",
+        "target": "Pollination"
+      },
+      "gets": {
+        "source": "Seeds",
+        "target": "Offspring"
+      },
+      "impact": {
+        "ecological": "Figs are keystone food for many tropical animals because they fruit year-round.",
+        "human": "Some commercial figs need wasp-pollination ('caprification')."
+      },
+      "citations": [
+        {
+          "author": "Janzen",
+          "year": 1979,
+          "venue": "Annual Review of Ecology and Systematics"
+        },
+        {
+          "author": "Cook & Rasplus",
+          "year": 2003,
+          "venue": "Trends in Ecology & Evolution"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e34",
+      "source": "honeybee",
+      "target": "almond",
+      "type": "mutualism",
+      "obligate": "Almond near-obligate for yield (self-incompatible varieties); bee facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "Self-incompatible almond varieties need bees to move pollen between trees; bees get early-season pollen and nectar.",
+      "gives": {
+        "source": "Cross-pollination",
+        "target": "Pollen and nectar"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Nut set"
+      },
+      "impact": {
+        "ecological": "Huge monocultures concentrate bee colonies and pathogens.",
+        "human": "California's almond crop depends on renting hives."
+      },
+      "citations": [
+        {
+          "author": "Klein et al.",
+          "year": 2007,
+          "venue": "Proceedings of the Royal Society B"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e35",
+      "source": "humans",
+      "target": "honeybee",
+      "type": "mutualism",
+      "obligate": "Neither (managed populations depend heavily on beekeepers)",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "People provide hives, medical care and transport; bees provide honey, wax and pollination services.",
+      "gives": {
+        "source": "Hives, Varroa treatment, feeding",
+        "target": "Honey, wax, pollination"
+      },
+      "gets": {
+        "source": "Food and crop yields",
+        "target": "Housing and global spread"
+      },
+      "impact": {
+        "ecological": "Managed bees can compete with wild pollinators.",
+        "human": "Pollination is worth billions of dollars to agriculture each year."
+      },
+      "citations": [
+        {
+          "author": "Crane",
+          "year": 1999,
+          "venue": "The World History of Beekeeping and Honey Hunting (Routledge)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e36",
+      "source": "varroa",
+      "target": "honeybee",
+      "type": "parasitism",
+      "obligate": "Mite obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "A mite that feeds mainly on bee fat-body tissue and spreads deformed wing virus.",
+      "gives": {
+        "source": "Tissue damage, viruses",
+        "target": "Food and brood cells to reproduce in"
+      },
+      "gets": {
+        "source": "Everything",
+        "target": "Colony decline"
+      },
+      "impact": {
+        "ecological": "Wild honeybee colonies have collapsed in many regions.",
+        "human": "A leading cause of beekeeper colony losses."
+      },
+      "citations": [
+        {
+          "author": "Ramsey et al.",
+          "year": 2019,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e37",
+      "source": "honeybee",
+      "target": "bee_gut",
+      "type": "mutualism",
+      "obligate": "Bacteria host-restricted; bee facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "A small, specialised set of gut bacteria digests pollen components and helps resist pathogens.",
+      "gives": {
+        "source": "Gut habitat, social transmission",
+        "target": "Digestion, pathogen resistance"
+      },
+      "gets": {
+        "source": "Health",
+        "target": "A home"
+      },
+      "impact": {
+        "ecological": "A model system for gut microbiomes.",
+        "human": "Antibiotic use in hives can disrupt it."
+      },
+      "citations": [
+        {
+          "author": "Kwong & Moran",
+          "year": 2016,
+          "venue": "Nature Reviews Microbiology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e38",
+      "source": "ophrys",
+      "target": "andrena",
+      "type": "parasitism",
+      "obligate": "Orchid obligate on its pollinator",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "The orchid imitates a female bee's scent; males try to mate with the flower and carry pollen, getting nothing in return.",
+      "gives": {
+        "source": "A false mating signal",
+        "target": "Pollination"
+      },
+      "gets": {
+        "source": "Reproduction",
+        "target": "Wasted time and sperm"
+      },
+      "impact": {
+        "ecological": "A classic case of sexual deception.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Schiestl et al.",
+          "year": 1999,
+          "venue": "Nature"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e39",
+      "source": "carib",
+      "target": "heliconia",
+      "type": "mutualism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Hummingbird bills and Heliconia flowers match in curvature and length. Each sex of the bird mainly visits a different Heliconia.",
+      "gives": {
+        "source": "Pollination",
+        "target": "Nectar"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Reproduction"
+      },
+      "impact": {
+        "ecological": "A clear case of coevolution between a bird and flowers.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Temeles & Kress",
+          "year": 2003,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e40",
+      "source": "nutcracker",
+      "target": "whitebark_pine",
+      "type": "mutualism",
+      "obligate": "Pine near-obligate; bird facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "Nutcrackers cache thousands of pine seeds in the ground; the ones they don't retrieve sprout. The pine depends on this for dispersal.",
+      "gives": {
+        "source": "Seed dispersal and burial",
+        "target": "Energy-rich seeds"
+      },
+      "gets": {
+        "source": "Winter food",
+        "target": "Reproduction"
+      },
+      "impact": {
+        "ecological": "Whitebark pine is a keystone of high-elevation ecosystems.",
+        "human": "Whitebark pine is listed as threatened in the US."
+      },
+      "citations": [
+        {
+          "author": "Tomback",
+          "year": 1982,
+          "venue": "Journal of Animal Ecology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e41",
+      "source": "acacia_ant",
+      "target": "bullhorn_acacia",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "The tree houses and feeds the ants; the ants defend it from herbivores and competing plants.",
+      "gives": {
+        "source": "Defence",
+        "target": "Housing and food"
+      },
+      "gets": {
+        "source": "Shelter and food",
+        "target": "Protection"
+      },
+      "impact": {
+        "ecological": "Unoccupied acacias are heavily damaged in experiments.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Janzen",
+          "year": 1966,
+          "venue": "Evolution"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e42",
+      "source": "cleaner_wrasse",
+      "target": "reef_fish",
+      "type": "mutualism",
+      "obligate": "Wrasse obligate (specialised cleaner); clients facultative",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Cleaners eat parasites off client fish, but sometimes cheat by biting nutritious mucus. Clients watch and choose honest cleaners.",
+      "gives": {
+        "source": "Parasite removal",
+        "target": "Food (parasites, mucus)"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Fewer parasites"
+      },
+      "impact": {
+        "ecological": "Removing cleaners lowers local fish diversity.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Grutter",
+          "year": 1999,
+          "venue": "Nature"
+        },
+        {
+          "author": "Bshary & Grutter",
+          "year": 2006,
+          "venue": "Nature"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e43",
+      "source": "clownfish",
+      "target": "anemone",
+      "type": "mutualism",
+      "obligate": "Clownfish obligate; anemone facultative",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "The anemone's stinging tentacles shelter the clownfish; the fish chases off anemone predators and provides nutrients.",
+      "gives": {
+        "source": "Defence, nutrients",
+        "target": "Shelter"
+      },
+      "gets": {
+        "source": "Protection",
+        "target": "Protection and nutrients"
+      },
+      "impact": {
+        "ecological": "Shared vulnerability to bleaching.",
+        "human": "Popular in the aquarium trade."
+      },
+      "citations": [
+        {
+          "author": "Fautin",
+          "year": 1991,
+          "venue": "Symbiosis"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e44",
+      "source": "bobtail_squid",
+      "target": "vibrio",
+      "type": "mutualism",
+      "obligate": "Neither strictly",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "The squid recruits glowing bacteria into a light organ, using the light to hide its shadow; the bacteria get food and a protected home.",
+      "gives": {
+        "source": "Nutrients and a light organ",
+        "target": "Bioluminescence"
+      },
+      "gets": {
+        "source": "Camouflage",
+        "target": "Habitat"
+      },
+      "impact": {
+        "ecological": "A model for how animals choose their microbes.",
+        "human": "Helped discover quorum sensing."
+      },
+      "citations": [
+        {
+          "author": "McFall-Ngai & Ruby",
+          "year": 1991,
+          "venue": "Science"
+        },
+        {
+          "author": "Nyholm & McFall-Ngai",
+          "year": 2004,
+          "venue": "Nature Reviews Microbiology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e45",
+      "source": "riftia",
+      "target": "endoriftia",
+      "type": "mutualism",
+      "obligate": "Worm obligate; bacteria also free-living",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Gutless tubeworms house chemosynthetic bacteria that use sulphide to produce food for the worm.",
+      "gives": {
+        "source": "Sulphide, oxygen, CO₂",
+        "target": "Organic carbon"
+      },
+      "gets": {
+        "source": "All nutrition",
+        "target": "A protected chemical supply"
+      },
+      "impact": {
+        "ecological": "Shows ecosystems can run on chemical energy instead of sunlight.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Cavanaugh et al.",
+          "year": 1981,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e46",
+      "source": "oxpecker",
+      "target": "rhino",
+      "type": "context",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Oxpeckers eat ticks but also keep wounds open to drink blood. Their alarm calls help rhinos detect approaching humans.",
+      "gives": {
+        "source": "Tick removal, alarm calls; but also wound feeding",
+        "target": "Food"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Mixed: warnings vs. reopened wounds"
+      },
+      "impact": {
+        "ecological": "A cautionary tale about labelling relationships mutualistic.",
+        "human": "May help rhinos avoid poachers."
+      },
+      "citations": [
+        {
+          "author": "Weeks",
+          "year": 2000,
+          "venue": "Behavioral Ecology"
+        },
+        {
+          "author": "Plotz & Linklater",
+          "year": 2020,
+          "venue": "Current Biology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e47",
+      "source": "cattle_egret",
+      "target": "cattle",
+      "type": "commensalism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Egrets follow grazing cattle and catch insects flushed by their hooves. The cattle appear unaffected.",
+      "gives": {
+        "source": "Nothing measurable",
+        "target": "Flushed insects"
+      },
+      "gets": {
+        "source": "More food for less effort",
+        "target": "Nothing"
+      },
+      "impact": {
+        "ecological": "Helped the egret's spread across continents.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Heatwole",
+          "year": 1965,
+          "venue": "Animal Behaviour"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The pattern is well documented; please double-check the citation details."
+    },
+    {
+      "id": "e48",
+      "source": "cattle",
+      "target": "rumen_bacteria",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Rumen microbes ferment cellulose into fatty acids the cow lives on; the cow provides a warm, steady fermentation chamber.",
+      "gives": {
+        "source": "Habitat, chewed plant matter",
+        "target": "Volatile fatty acids, microbial protein"
+      },
+      "gets": {
+        "source": "Energy from grass",
+        "target": "A stable home"
+      },
+      "impact": {
+        "ecological": "Lets ruminants live on grass.",
+        "human": "Produces methane, a major greenhouse gas from agriculture."
+      },
+      "citations": [
+        {
+          "author": "Hungate",
+          "year": 1966,
+          "venue": "The Rumen and Its Microbes (Academic Press)"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e49",
+      "source": "common_cuckoo",
+      "target": "reed_warbler",
+      "type": "parasitism",
+      "obligate": "Cuckoo obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "The cuckoo lays its egg in the warbler's nest; the hatchling evicts the host's eggs and is raised alone.",
+      "gives": {
+        "source": "Nothing",
+        "target": "Parental care"
+      },
+      "gets": {
+        "source": "Free childcare",
+        "target": "Lost breeding attempt"
+      },
+      "impact": {
+        "ecological": "A model coevolutionary arms race.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Davies & Brooke",
+          "year": 1988,
+          "venue": "Animal Behaviour"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e50",
+      "source": "gs_cuckoo",
+      "target": "carrion_crow",
+      "type": "context",
+      "obligate": "Cuckoo obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "One study found cuckoo chicks release a foul-smelling secretion that deters predators, so infested crow nests did better when predators were common. Later work disputed this.",
+      "gives": {
+        "source": "Possibly predator deterrence",
+        "target": "Parental care"
+      },
+      "gets": {
+        "source": "Free childcare",
+        "target": "Net cost or net benefit, depending on predation"
+      },
+      "impact": {
+        "ecological": "Would be a rare example of a brood parasite becoming a mutualist.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Canestrari et al.",
+          "year": 2014,
+          "venue": "Science"
+        },
+        {
+          "author": "Soler et al.",
+          "year": 2017,
+          "venue": "PLoS ONE"
+        }
+      ],
+      "confidence": "low",
+      "contested": true,
+      "confidence_note": "The original result is contested and its generality is unresolved."
+    },
+    {
+      "id": "e51",
+      "source": "raven",
+      "target": "grey_wolf",
+      "type": "commensalism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Ravens follow wolves and scavenge their kills. They can take enough meat to be costly to small packs.",
+      "gives": {
+        "source": "Possibly nothing; possibly a cost",
+        "target": "Carcass access"
+      },
+      "gets": {
+        "source": "Winter food",
+        "target": "Some meat loss"
+      },
+      "impact": {
+        "ecological": "Wolf kills subsidise many scavengers.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Stahler, Heinrich & Smith",
+          "year": 2002,
+          "venue": "Animal Behaviour"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e52",
+      "source": "bd",
+      "target": "amphibians",
+      "type": "parasitism",
+      "obligate": "Neither (also survives in water)",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A skin fungus that disrupts amphibians' electrolyte balance, driving the largest recorded wildlife disease loss of biodiversity.",
+      "gives": {
+        "source": "Lethal skin infection",
+        "target": "Keratinised skin to grow on"
+      },
+      "gets": {
+        "source": "Habitat",
+        "target": "Death"
+      },
+      "impact": {
+        "ecological": "Linked to declines in 500+ species and 90 presumed extinctions.",
+        "human": "A conservation crisis spread partly by the global wildlife trade."
+      },
+      "citations": [
+        {
+          "author": "Scheele et al.",
+          "year": 2019,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e53",
+      "source": "ixodes",
+      "target": "mouse",
+      "type": "parasitism",
+      "obligate": "Tick obligate (blood meals)",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Larval and nymphal ticks feed on white-footed mice, which efficiently infect them with Lyme bacteria.",
+      "gives": {
+        "source": "Blood loss",
+        "target": "Blood meals"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Nothing"
+      },
+      "impact": {
+        "ecological": "Host community make-up shapes Lyme risk.",
+        "human": "Mouse density can predict Lyme risk."
+      },
+      "citations": [
+        {
+          "author": "LoGiudice et al.",
+          "year": 2003,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e54",
+      "source": "borrelia",
+      "target": "ixodes",
+      "type": "commensalism",
+      "obligate": "Borrelia obligate on the tick–host cycle",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "The spirochete lives in the tick's gut and moves to its salivary glands during feeding. Effects on the tick are small and debated.",
+      "gives": {
+        "source": "Debated small effects",
+        "target": "Transport between hosts"
+      },
+      "gets": {
+        "source": "Transmission",
+        "target": "Little evident cost or benefit"
+      },
+      "impact": {
+        "ecological": "The vector link in the Lyme cycle.",
+        "human": "The route by which Lyme disease reaches people."
+      },
+      "citations": [
+        {
+          "author": "Burgdorfer et al.",
+          "year": 1982,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "'Commensalism' simplifies evidence on tick fitness effects, which is mixed."
+    },
+    {
+      "id": "e55",
+      "source": "borrelia",
+      "target": "humans",
+      "type": "parasitism",
+      "obligate": "Neither (humans are dead-end hosts)",
+      "dependence": {
+        "source": "none",
+        "target": "none"
+      },
+      "tldr": "Spread by tick bites, causing Lyme disease. Humans don't pass it on, so the bacteria gain nothing.",
+      "gives": {
+        "source": "Disease",
+        "target": "Accidental host"
+      },
+      "gets": {
+        "source": "Nothing (dead end)",
+        "target": "Illness"
+      },
+      "impact": {
+        "ecological": "Humans are incidental to its cycle.",
+        "human": "The most common vector-borne disease in the US."
+      },
+      "citations": [
+        {
+          "author": "Burgdorfer et al.",
+          "year": 1982,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e56",
+      "source": "humans",
+      "target": "bacteroides",
+      "type": "mutualism",
+      "obligate": "Neither strictly",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "A dominant gut bacterium breaks down dietary fibre into short-chain fatty acids we absorb, and shapes gut development.",
+      "gives": {
+        "source": "Nutrient-rich, warm gut habitat",
+        "target": "Short-chain fatty acids, gut maturation signals"
+      },
+      "gets": {
+        "source": "Energy from fibre",
+        "target": "A home"
+      },
+      "impact": {
+        "ecological": "Part of a microbial community with as many cells as the body.",
+        "human": "Linked to metabolism and immune health."
+      },
+      "citations": [
+        {
+          "author": "Bäckhed et al.",
+          "year": 2005,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e57",
+      "source": "humans",
+      "target": "bifido",
+      "type": "mutualism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Breast milk contains sugars that infants can't digest but this bacterium can. It thrives on them and helps protect the infant gut.",
+      "gives": {
+        "source": "Human milk oligosaccharides",
+        "target": "Gut acidification, pathogen exclusion"
+      },
+      "gets": {
+        "source": "A healthier infant gut",
+        "target": "A private food supply"
+      },
+      "impact": {
+        "ecological": "A diet that seems to have evolved to feed a microbe.",
+        "human": "Drives research on infant probiotics."
+      },
+      "citations": [
+        {
+          "author": "Sela et al.",
+          "year": 2008,
+          "venue": "PNAS"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e58",
+      "source": "humans",
+      "target": "hpylori",
+      "type": "context",
+      "obligate": "H. pylori obligate (human stomach)",
+      "dependence": {
+        "source": "none",
+        "target": "obligate"
+      },
+      "tldr": "A stomach bacterium that causes ulcers and gastric cancer in some carriers, but may lower risks of reflux and asthma.",
+      "gives": {
+        "source": "Stomach habitat",
+        "target": "Disease risk; possibly some protection"
+      },
+      "gets": {
+        "source": "Mixed outcome",
+        "target": "A specialist niche"
+      },
+      "impact": {
+        "ecological": "Has accompanied humans for at least ~60,000 years.",
+        "human": "Its removal is a public-health trade-off."
+      },
+      "citations": [
+        {
+          "author": "Marshall & Warren",
+          "year": 1984,
+          "venue": "The Lancet"
+        },
+        {
+          "author": "Blaser",
+          "year": 2006,
+          "venue": "EMBO Reports"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e59",
+      "source": "humans",
+      "target": "sepidermidis",
+      "type": "context",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "none",
+        "target": "facultative"
+      },
+      "tldr": "Usually a harmless skin resident that crowds out pathogens, but a common cause of infections on implants and catheters.",
+      "gives": {
+        "source": "Skin habitat",
+        "target": "Pathogen competition; occasional infection"
+      },
+      "gets": {
+        "source": "Mostly benefits",
+        "target": "A home"
+      },
+      "impact": {
+        "ecological": "A key part of the skin microbiome.",
+        "human": "A leading cause of hospital device infections."
+      },
+      "citations": [
+        {
+          "author": "Otto",
+          "year": 2009,
+          "venue": "Nature Reviews Microbiology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e60",
+      "source": "honeyguide",
+      "target": "humans",
+      "type": "mutualism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Wild honeyguides lead honey-hunters to bee nests in response to specific calls; people open the nests and leave wax for the birds.",
+      "gives": {
+        "source": "Directions to bee nests",
+        "target": "Access to wax and larvae"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Honey"
+      },
+      "impact": {
+        "ecological": "A rare cooperation between free-living wild animals and people.",
+        "human": "A culturally important practice in parts of Africa."
+      },
+      "citations": [
+        {
+          "author": "Isack & Reyer",
+          "year": 1989,
+          "venue": "Science"
+        },
+        {
+          "author": "Spottiswoode, Begg & Begg",
+          "year": 2016,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e61",
+      "source": "dog",
+      "target": "humans",
+      "type": "mutualism",
+      "obligate": "Dog effectively dependent; humans facultative",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Wolves that associated with humans became dogs, gaining food and shelter while providing hunting help, guarding and companionship.",
+      "gives": {
+        "source": "Hunting help, guarding, companionship",
+        "target": "Food and shelter"
+      },
+      "gets": {
+        "source": "Survival and reproduction",
+        "target": "Labour and companionship"
+      },
+      "impact": {
+        "ecological": "Free-ranging dogs affect wildlife.",
+        "human": "The oldest domestic partnership."
+      },
+      "citations": [
+        {
+          "author": "Frantz et al.",
+          "year": 2016,
+          "venue": "Science"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e62",
+      "source": "humans",
+      "target": "maize",
+      "type": "mutualism",
+      "obligate": "Maize obligate (can't disperse seed alone)",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "People turned teosinte into maize, whose cobs can't release their seeds. Maize now depends entirely on humans to reproduce.",
+      "gives": {
+        "source": "Planting, protection, global spread",
+        "target": "Food calories"
+      },
+      "gets": {
+        "source": "A staple food",
+        "target": "A planetary range"
+      },
+      "impact": {
+        "ecological": "Maize covers huge areas of land.",
+        "human": "One of the world's top staple crops."
+      },
+      "citations": [
+        {
+          "author": "Doebley, Gaut & Smith",
+          "year": 2006,
+          "venue": "Cell"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e63",
+      "source": "humans",
+      "target": "saccharomyces",
+      "type": "mutualism",
+      "obligate": "Neither",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "People spread and selectively bred yeasts for bread, beer and wine; domesticated strains carry clear genetic signatures of this.",
+      "gives": {
+        "source": "Sugary substrates, propagation",
+        "target": "Fermentation (CO₂, alcohol, flavour)"
+      },
+      "gets": {
+        "source": "Bread and beverages",
+        "target": "Global spread"
+      },
+      "impact": {
+        "ecological": "",
+        "human": "The foundation of baking and brewing; a key lab model organism."
+      },
+      "citations": [
+        {
+          "author": "Gallone et al.",
+          "year": 2016,
+          "venue": "Cell"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e64",
+      "source": "coral",
+      "target": "symbiodinium",
+      "type": "context",
+      "obligate": "Coral effectively obligate; algae also free-living",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Algae in coral tissue supply most of the coral's energy. Under heat stress the partnership breaks down and the coral expels them ('bleaching').",
+      "gives": {
+        "source": "Shelter, nutrients, CO₂",
+        "target": "Photosynthetic sugars"
+      },
+      "gets": {
+        "source": "Energy for reef-building",
+        "target": "A stable, sunlit home"
+      },
+      "impact": {
+        "ecological": "The energy base of coral reefs.",
+        "human": "Recurrent mass bleaching threatens fisheries, tourism and coastal protection."
+      },
+      "citations": [
+        {
+          "author": "LaJeunesse et al.",
+          "year": 2018,
+          "venue": "Current Biology"
+        },
+        {
+          "author": "Hughes et al.",
+          "year": 2017,
+          "venue": "Nature"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e65",
+      "source": "reticulitermes",
+      "target": "trichonympha",
+      "type": "mutualism",
+      "obligate": "Both",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Flagellate protists in the termite hindgut break down cellulose from wood. Termites cleared of them starve.",
+      "gives": {
+        "source": "Chewed wood and gut habitat",
+        "target": "Cellulose breakdown products"
+      },
+      "gets": {
+        "source": "Nutrition from wood",
+        "target": "A home"
+      },
+      "impact": {
+        "ecological": "Major contributors to wood decomposition.",
+        "human": "Termites damage buildings; their gut is studied for biofuel enzymes."
+      },
+      "citations": [
+        {
+          "author": "Brune",
+          "year": 2014,
+          "venue": "Nature Reviews Microbiology"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e66",
+      "source": "plasmodium",
+      "target": "anopheles",
+      "type": "parasitism",
+      "obligate": "Plasmodium obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "The malaria parasite reproduces sexually inside Anopheles mosquitoes and reaches their salivary glands to be passed on.",
+      "gives": {
+        "source": "Some fitness costs",
+        "target": "A host for sexual reproduction and transmission"
+      },
+      "gets": {
+        "source": "Transmission",
+        "target": "Nothing"
+      },
+      "impact": {
+        "ecological": "A key vector–parasite link.",
+        "human": "Ronald Ross's 1897 discovery transformed malaria control."
+      },
+      "citations": [
+        {
+          "author": "Ross",
+          "year": 1897,
+          "venue": "British Medical Journal"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e67",
+      "source": "plasmodium",
+      "target": "humans",
+      "type": "parasitism",
+      "obligate": "Plasmodium obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "The parasite multiplies in human liver and red blood cells, causing malaria.",
+      "gives": {
+        "source": "Disease",
+        "target": "Host cells"
+      },
+      "gets": {
+        "source": "Reproduction",
+        "target": "Illness or death"
+      },
+      "impact": {
+        "ecological": "Has shaped human evolution, for example the sickle-cell trait.",
+        "human": "Hundreds of thousands of deaths per year."
+      },
+      "citations": [
+        {
+          "author": "World Health Organization",
+          "year": "annual",
+          "venue": "World Malaria Report"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e68",
+      "source": "anopheles",
+      "target": "humans",
+      "type": "parasitism",
+      "obligate": "Females need blood for eggs",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Female Anopheles feed on human blood, carrying Plasmodium between people.",
+      "gives": {
+        "source": "Bites and malaria transmission",
+        "target": "Blood"
+      },
+      "gets": {
+        "source": "Protein for eggs",
+        "target": "Disease"
+      },
+      "impact": {
+        "ecological": "",
+        "human": "The only vectors of human malaria."
+      },
+      "citations": [
+        {
+          "author": "Ross",
+          "year": 1897,
+          "venue": "British Medical Journal"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "chains": [
+    {
+      "id": "c01",
+      "name": "Fungus-farming ants",
+      "summary": "Ants farm a fungus; a specialist parasite attacks the crop; antibiotic bacteria defend it.",
+      "nodes": [
+        "leafcutter",
+        "leucoagaricus",
+        "escovopsis",
+        "pseudonocardia"
+      ],
+      "edges": [
+        "e14",
+        "e15",
+        "e16"
+      ]
+    },
+    {
+      "id": "c02",
+      "name": "Aphid protection stack",
+      "summary": "A sap-feeder kept alive by one bacterium, defended by another, farmed by ants, hunted by wasps, and damaging nitrogen-fixing soybeans.",
+      "nodes": [
+        "lasius",
+        "aphids",
+        "buchnera",
+        "hamiltonella",
+        "aphidius",
+        "soybean",
+        "bradyrhizobium"
+      ],
+      "edges": [
+        "e24",
+        "e21",
+        "e22",
+        "e23",
+        "e25",
+        "e08"
+      ]
+    },
+    {
+      "id": "c03",
+      "name": "Almond supply chain",
+      "summary": "Humans rent bees, bees pollinate almonds, almonds trade sugars with soil fungi; mites and gut bacteria shape bee health.",
+      "nodes": [
+        "humans",
+        "honeybee",
+        "almond",
+        "amf",
+        "varroa",
+        "bee_gut"
+      ],
+      "edges": [
+        "e35",
+        "e34",
+        "e01",
+        "e36",
+        "e37"
+      ]
+    },
+    {
+      "id": "c04",
+      "name": "Mycoheterotrophy",
+      "summary": "Trees feed fungi; a chlorophyll-free plant taps those fungi; birch shares the network.",
+      "nodes": [
+        "douglas_fir",
+        "ecm",
+        "ghost_pipe",
+        "paper_birch"
+      ],
+      "edges": [
+        "e03",
+        "e06",
+        "e04",
+        "e05"
+      ]
+    },
+    {
+      "id": "c05",
+      "name": "Laurel wilt",
+      "summary": "An invasive beetle's fungal crop kills redbay and avocado.",
+      "nodes": [
+        "ambrosia_beetle",
+        "raffaelea",
+        "avocado"
+      ],
+      "edges": [
+        "e18",
+        "e19"
+      ]
+    },
+    {
+      "id": "c06",
+      "name": "Wolbachia vs dengue",
+      "summary": "A reproductive parasite turned public-health tool.",
+      "nodes": [
+        "wolbachia",
+        "aedes",
+        "humans"
+      ],
+      "edges": [
+        "e29",
+        "e30"
+      ]
+    },
+    {
+      "id": "c07",
+      "name": "Lyme disease cycle",
+      "summary": "Mice infect ticks, ticks carry Borrelia, people get sick.",
+      "nodes": [
+        "mouse",
+        "ixodes",
+        "borrelia",
+        "humans"
+      ],
+      "edges": [
+        "e53",
+        "e54",
+        "e55"
+      ]
+    },
+    {
+      "id": "c08",
+      "name": "Three-partner lichen",
+      "summary": "Fungus + alga + a recently discovered yeast.",
+      "nodes": [
+        "lichen_fungus",
+        "trebouxia",
+        "cyphobasidium"
+      ],
+      "edges": [
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "id": "c09",
+      "name": "Pasture",
+      "summary": "Egrets ride with cattle; cattle depend on rumen microbes to eat grass.",
+      "nodes": [
+        "cattle_egret",
+        "cattle",
+        "rumen_bacteria"
+      ],
+      "edges": [
+        "e47",
+        "e48"
+      ]
+    },
+    {
+      "id": "c10",
+      "name": "The honey hunt",
+      "summary": "A wild bird guides people to bees' nests; humans also keep the same bees.",
+      "nodes": [
+        "honeyguide",
+        "humans",
+        "honeybee"
+      ],
+      "edges": [
+        "e60",
+        "e35"
+      ]
+    },
+    {
+      "id": "c11",
+      "name": "Malaria",
+      "summary": "A protist parasite moves between mosquitoes and people.",
+      "nodes": [
+        "plasmodium",
+        "anopheles",
+        "humans"
+      ],
+      "edges": [
+        "e66",
+        "e67",
+        "e68"
+      ]
+    }
+  ]
+}
