@@ -208,6 +208,8 @@ select { width: 100%; padding: .5rem .6rem; border-radius: 9px; border: 1px soli
 .kv dd { margin: 0; }
 .cites { margin: 0; padding-left: 1.1rem; font-size: .85rem; }
 .cites li { margin-bottom: .3rem; }
+.cites a { color: var(--text); text-decoration: underline; text-decoration-color: rgba(94,242,200,.35); text-underline-offset: 3px; }
+.cites a:hover { color: var(--accent); }
 .cites li.needed { color: var(--warn); font-style: italic; }
 .flag { color: var(--warn); font-size: .84rem; background: rgba(255,181,71,.07); border: 1px solid rgba(255,181,71,.25); border-radius: 10px; padding: .5rem .7rem; }
 .surprise-tag { display: inline-block; font-family: var(--mono); font-size: .72rem; color: var(--accent-2); margin-bottom: .5rem; padding: .2rem .55rem; border: 1px solid rgba(183,255,106,.35); border-radius: 999px; animation: glowin 1.2s ease-out; }

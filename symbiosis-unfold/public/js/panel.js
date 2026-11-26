@@ -22,8 +22,12 @@ export function edgeDetail(index, e) {
   const b = index.byId.get(e.target);
   const chains = index.chainsByEdge.get(e.id) || [];
   const arrow = e.type === "parasitism" ? "→" : "↔";
-  const cites = e.citations.map((c) =>
-    `<li class="${c.needed ? "needed" : ""}">${esc(citationText(c))}</li>`).join("");
+  const cites = e.citations.map((c) => {
+    const text = esc(citationText(c));
+    const body = c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${text} ↗</a>` : text;
+    const note = !c.needed && c.note ? `<span class="muted small"> (${esc(c.note)})</span>` : "";
+    return `<li class="${c.needed ? "needed" : ""}">${body}${note}</li>`;
+  }).join("");
   return `
     <header class="panel-head">
       <div class="eyebrow">${esc(e.id)} · relationship</div>

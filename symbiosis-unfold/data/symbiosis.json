@@ -111,6 +111,10 @@
         "cosmopolitan",
         "tropical-oceans"
       ]
+    },
+    "audit": {
+      "date": "2026-11-26",
+      "summary": "All non-needed citations checked against web records; all matched first author, year and venue. e51 not retrieved directly. e01 and e11 filled with almond-specific sources; e27 gained the biotin source (Nikoh 2014)."
     }
   },
   "nodes": [
@@ -2353,12 +2357,14 @@
           "venue": "Mycorrhizal Symbiosis, 3rd ed. (Academic Press)"
         },
         {
-          "needed": true,
-          "note": "almond-specific field study"
+          "author": "Vasilikiotis et al.",
+          "year": 2020,
+          "venue": "Biological Agriculture & Horticulture",
+          "url": "https://doi.org/10.1080/01448765.2020.1802777"
         }
       ],
       "confidence": "medium",
-      "confidence_note": "The general biology is textbook; almond-specific evidence is not cited here."
+      "confidence_note": "The association in almond is documented: 62–73% root colonisation in California orchards (Vasilikiotis et al. 2020). The nutrient and drought benefit for almond specifically was not measured there."
     },
     {
       "id": "e02",
@@ -2387,7 +2393,8 @@
         {
           "author": "Johnson, Graham & Smith",
           "year": 1997,
-          "venue": "New Phytologist"
+          "venue": "New Phytologist",
+          "url": "https://doi.org/10.1046/j.1469-8137.1997.00729.x"
         }
       ],
       "confidence": "high"
@@ -2483,12 +2490,14 @@
         {
           "author": "Simard et al.",
           "year": 1997,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/41557"
         },
         {
           "author": "Karst, Jones & Hoeksema",
           "year": 2023,
-          "venue": "Nature Ecology & Evolution"
+          "venue": "Nature Ecology & Evolution",
+          "url": "https://doi.org/10.1038/s41559-023-01986-1"
         }
       ],
       "confidence": "low",
@@ -2522,7 +2531,8 @@
         {
           "author": "Bidartondo",
           "year": 2005,
-          "venue": "New Phytologist"
+          "venue": "New Phytologist",
+          "url": "https://doi.org/10.1111/j.1469-8137.2005.01429.x"
         }
       ],
       "confidence": "high"
@@ -2586,12 +2596,14 @@
         {
           "author": "Kiers et al.",
           "year": 2003,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/nature01931"
         },
         {
           "author": "Oldroyd et al.",
           "year": 2011,
-          "venue": "Annual Review of Genetics"
+          "venue": "Annual Review of Genetics",
+          "url": "https://doi.org/10.1146/annurev-genet-110410-132549"
         }
       ],
       "confidence": "high"
@@ -2623,7 +2635,8 @@
         {
           "author": "Ran et al.",
           "year": 2010,
-          "venue": "PLoS ONE"
+          "venue": "PLoS ONE",
+          "url": "https://doi.org/10.1371/journal.pone.0011486"
         }
       ],
       "confidence": "high"
@@ -2687,15 +2700,18 @@
         {
           "author": "Chilton et al.",
           "year": 1977,
-          "venue": "Cell"
+          "venue": "Cell",
+          "url": "https://doi.org/10.1016/0092-8674(77)90043-5"
         },
         {
-          "needed": true,
-          "note": "almond-specific host record"
+          "author": "Habbadi et al.",
+          "year": 2023,
+          "venue": "African and Mediterranean Agricultural Journal – Al Awamia",
+          "url": "https://revues.imist.ma/index.php/Afrimed/article/view/43733"
         }
       ],
       "confidence": "medium",
-      "confidence_note": "The mechanism is well established; the almond-specific citation is missing."
+      "confidence_note": "Mechanism well established (Chilton 1977). The almond-specific record (tumorigenic isolates from Moroccan almond orchards) is in a regional journal and was confirmed from bibliographic listings only."
     },
     {
       "id": "e12",
@@ -2756,7 +2772,8 @@
         {
           "author": "Spribille et al.",
           "year": 2016,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.aaf8287"
         }
       ],
       "confidence": "low",
@@ -2821,7 +2838,8 @@
         {
           "author": "Currie, Mueller & Malloch",
           "year": 1999,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.96.14.7998"
         }
       ],
       "confidence": "high"
@@ -2853,12 +2871,14 @@
         {
           "author": "Currie et al.",
           "year": 1999,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/19519"
         },
         {
           "author": "Currie et al.",
           "year": 2003,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.1078155"
         }
       ],
       "confidence": "medium",
@@ -2892,7 +2912,8 @@
         {
           "author": "Aanen et al.",
           "year": 2002,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.222313099"
         }
       ],
       "confidence": "high"
@@ -2924,12 +2945,14 @@
         {
           "author": "Farrell et al.",
           "year": 2001,
-          "venue": "Evolution"
+          "venue": "Evolution",
+          "url": "https://doi.org/10.1554/0014-3820(2001)055[2011:TEOAIB]2.0.CO;2"
         },
         {
           "author": "Fraedrich et al.",
           "year": 2008,
-          "venue": "Plant Disease"
+          "venue": "Plant Disease",
+          "url": "https://apsnet.org/publications/plantdisease/2008/February/Pages/92_2_215.aspx"
         }
       ],
       "confidence": "high"
@@ -2961,7 +2984,8 @@
         {
           "author": "Fraedrich et al.",
           "year": 2008,
-          "venue": "Plant Disease"
+          "venue": "Plant Disease",
+          "url": "https://apsnet.org/publications/plantdisease/2008/February/Pages/92_2_215.aspx"
         }
       ],
       "confidence": "high"
@@ -2993,7 +3017,8 @@
         {
           "author": "Hughes et al.",
           "year": 2011,
-          "venue": "BMC Ecology"
+          "venue": "BMC Ecology",
+          "url": "https://doi.org/10.1186/1472-6785-11-13"
         }
       ],
       "confidence": "high"
@@ -3025,7 +3050,8 @@
         {
           "author": "Shigenobu et al.",
           "year": 2000,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/35024074"
         }
       ],
       "confidence": "high"
@@ -3057,7 +3083,8 @@
         {
           "author": "Oliver et al.",
           "year": 2003,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC149914/"
         }
       ],
       "confidence": "high"
@@ -3089,7 +3116,8 @@
         {
           "author": "Oliver et al.",
           "year": 2003,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC149914/"
         }
       ],
       "confidence": "high"
@@ -3121,7 +3149,8 @@
         {
           "author": "Stadler & Dixon",
           "year": 2005,
-          "venue": "Annual Review of Ecology, Evolution, and Systematics"
+          "venue": "Annual Review of Ecology, Evolution, and Systematics",
+          "url": "https://doi.org/10.1146/annurev.ecolsys.36.091704.175531"
         }
       ],
       "confidence": "high"
@@ -3153,7 +3182,8 @@
         {
           "author": "Ragsdale et al.",
           "year": 2011,
-          "venue": "Annual Review of Entomology"
+          "venue": "Annual Review of Entomology",
+          "url": "https://doi.org/10.1146/annurev-ento-120709-144755"
         }
       ],
       "confidence": "high"
@@ -3185,7 +3215,8 @@
         {
           "author": "Akman et al.",
           "year": 2002,
-          "venue": "Nature Genetics"
+          "venue": "Nature Genetics",
+          "url": "https://doi.org/10.1038/ng986"
         }
       ],
       "confidence": "high"
@@ -3217,7 +3248,14 @@
         {
           "author": "Hosokawa et al.",
           "year": 2010,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2818902"
+        },
+        {
+          "author": "Nikoh et al.",
+          "year": 2014,
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.1409501111"
         }
       ],
       "confidence": "high"
@@ -3249,12 +3287,14 @@
         {
           "author": "Turelli & Hoffmann",
           "year": 1991,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/353440a0"
         },
         {
           "author": "Werren, Baldo & Clark",
           "year": 2008,
-          "venue": "Nature Reviews Microbiology"
+          "venue": "Nature Reviews Microbiology",
+          "url": "https://doi.org/10.1038/nrmicro1969"
         }
       ],
       "confidence": "high"
@@ -3286,12 +3326,14 @@
         {
           "author": "Moreira et al.",
           "year": 2009,
-          "venue": "Cell"
+          "venue": "Cell",
+          "url": "https://doi.org/10.1016/j.cell.2009.11.042"
         },
         {
           "author": "Utarini et al.",
           "year": 2021,
-          "venue": "New England Journal of Medicine"
+          "venue": "New England Journal of Medicine",
+          "url": "https://doi.org/10.1056/NEJMoa2030243"
         }
       ],
       "confidence": "high"
@@ -3323,11 +3365,11 @@
         {
           "author": "Powell & Tabachnick",
           "year": 2013,
-          "venue": "Memórias do Instituto Oswaldo Cruz"
+          "venue": "Memórias do Instituto Oswaldo Cruz",
+          "url": "https://doi.org/10.1590/0074-0276130395"
         }
       ],
-      "confidence": "medium",
-      "confidence_note": "The biology is certain; please double-check the citation details."
+      "confidence": "high"
     },
     {
       "id": "e31",
@@ -3356,7 +3398,8 @@
         {
           "author": "Kittler, Kayser & Stoneking",
           "year": 2003,
-          "venue": "Current Biology"
+          "venue": "Current Biology",
+          "url": "https://doi.org/10.1016/S0960-9822(03)00507-4"
         }
       ],
       "confidence": "high"
@@ -3388,12 +3431,14 @@
         {
           "author": "Pellmyr & Huth",
           "year": 1994,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/372257a0"
         },
         {
           "author": "Pellmyr",
           "year": 2003,
-          "venue": "Annals of the Missouri Botanical Garden"
+          "venue": "Annals of the Missouri Botanical Garden",
+          "url": "https://biodiversitylibrary.org/part/10167"
         }
       ],
       "confidence": "high"
@@ -3425,7 +3470,8 @@
         {
           "author": "Janzen",
           "year": 1979,
-          "venue": "Annual Review of Ecology and Systematics"
+          "venue": "Annual Review of Ecology and Systematics",
+          "url": "https://doi.org/10.1146/annurev.es.10.110179.000305"
         },
         {
           "author": "Cook & Rasplus",
@@ -3462,7 +3508,8 @@
         {
           "author": "Klein et al.",
           "year": 2007,
-          "venue": "Proceedings of the Royal Society B"
+          "venue": "Proceedings of the Royal Society B",
+          "url": "https://doi.org/10.1098/rspb.2006.3721"
         }
       ],
       "confidence": "high"
@@ -3526,7 +3573,8 @@
         {
           "author": "Ramsey et al.",
           "year": 2019,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.1818371116"
         }
       ],
       "confidence": "high"
@@ -3558,7 +3606,8 @@
         {
           "author": "Kwong & Moran",
           "year": 2016,
-          "venue": "Nature Reviews Microbiology"
+          "venue": "Nature Reviews Microbiology",
+          "url": "https://doi.org/10.1038/nrmicro.2016.43"
         }
       ],
       "confidence": "high"
@@ -3590,7 +3639,8 @@
         {
           "author": "Schiestl et al.",
           "year": 1999,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/20829"
         }
       ],
       "confidence": "high"
@@ -3622,7 +3672,8 @@
         {
           "author": "Temeles & Kress",
           "year": 2003,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.1080003"
         }
       ],
       "confidence": "high"
@@ -3718,12 +3769,14 @@
         {
           "author": "Grutter",
           "year": 1999,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/19443"
         },
         {
           "author": "Bshary & Grutter",
           "year": 2006,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/nature04755"
         }
       ],
       "confidence": "high"
@@ -3792,7 +3845,8 @@
         {
           "author": "Nyholm & McFall-Ngai",
           "year": 2004,
-          "venue": "Nature Reviews Microbiology"
+          "venue": "Nature Reviews Microbiology",
+          "url": "https://doi.org/10.1038/nrmicro957"
         }
       ],
       "confidence": "high"
@@ -3824,7 +3878,8 @@
         {
           "author": "Cavanaugh et al.",
           "year": 1981,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.213.4505.340"
         }
       ],
       "confidence": "high"
@@ -3856,12 +3911,14 @@
         {
           "author": "Weeks",
           "year": 2000,
-          "venue": "Behavioral Ecology"
+          "venue": "Behavioral Ecology",
+          "url": "https://doi.org/10.1093/beheco/11.2.154"
         },
         {
           "author": "Plotz & Linklater",
           "year": 2020,
-          "venue": "Current Biology"
+          "venue": "Current Biology",
+          "url": "https://doi.org/10.1016/j.cub.2020.03.015"
         }
       ],
       "confidence": "high"
@@ -3893,11 +3950,11 @@
         {
           "author": "Heatwole",
           "year": 1965,
-          "venue": "Animal Behaviour"
+          "venue": "Animal Behaviour",
+          "url": "https://doi.org/10.1016/0003-3472(65)90075-8"
         }
       ],
-      "confidence": "medium",
-      "confidence_note": "The pattern is well documented; please double-check the citation details."
+      "confidence": "high"
     },
     {
       "id": "e48",
@@ -3958,7 +4015,8 @@
         {
           "author": "Davies & Brooke",
           "year": 1988,
-          "venue": "Animal Behaviour"
+          "venue": "Animal Behaviour",
+          "url": "https://doi.org/10.1016/S0003-3472(88)80261-0"
         }
       ],
       "confidence": "high"
@@ -3995,12 +4053,13 @@
         {
           "author": "Soler et al.",
           "year": 2017,
-          "venue": "PLoS ONE"
+          "venue": "PLoS ONE",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5396876/"
         }
       ],
       "confidence": "low",
       "contested": true,
-      "confidence_note": "The original result is contested and its generality is unresolved."
+      "confidence_note": "Contested: Soler et al. 2017 found no anti-predator effect in southern Spain, and Canestrari et al. published a formal reply. Whether the effect generalises is unresolved."
     },
     {
       "id": "e51",
@@ -4029,7 +4088,8 @@
         {
           "author": "Stahler, Heinrich & Smith",
           "year": 2002,
-          "venue": "Animal Behaviour"
+          "venue": "Animal Behaviour",
+          "note": "widely cited for this finding; the record itself was not retrieved in the 2026-11 audit"
         }
       ],
       "confidence": "high"
@@ -4061,7 +4121,8 @@
         {
           "author": "Scheele et al.",
           "year": 2019,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.aav0379"
         }
       ],
       "confidence": "high"
@@ -4093,7 +4154,8 @@
         {
           "author": "LoGiudice et al.",
           "year": 2003,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.0233733100"
         }
       ],
       "confidence": "high"
@@ -4125,7 +4187,8 @@
         {
           "author": "Burgdorfer et al.",
           "year": 1982,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2590008"
         }
       ],
       "confidence": "medium",
@@ -4158,7 +4221,8 @@
         {
           "author": "Burgdorfer et al.",
           "year": 1982,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2590008"
         }
       ],
       "confidence": "high"
@@ -4190,7 +4254,8 @@
         {
           "author": "Bäckhed et al.",
           "year": 2005,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.1104816"
         }
       ],
       "confidence": "high"
@@ -4222,7 +4287,8 @@
         {
           "author": "Sela et al.",
           "year": 2008,
-          "venue": "PNAS"
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.0809584105"
         }
       ],
       "confidence": "high"
@@ -4254,12 +4320,14 @@
         {
           "author": "Marshall & Warren",
           "year": 1984,
-          "venue": "The Lancet"
+          "venue": "The Lancet",
+          "url": "https://doi.org/10.1016/s0140-6736(84)91816-6"
         },
         {
           "author": "Blaser",
           "year": 2006,
-          "venue": "EMBO Reports"
+          "venue": "EMBO Reports",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1618379"
         }
       ],
       "confidence": "high"
@@ -4291,7 +4359,8 @@
         {
           "author": "Otto",
           "year": 2009,
-          "venue": "Nature Reviews Microbiology"
+          "venue": "Nature Reviews Microbiology",
+          "url": "https://doi.org/10.1038/nrmicro2182"
         }
       ],
       "confidence": "high"
@@ -4323,12 +4392,14 @@
         {
           "author": "Isack & Reyer",
           "year": 1989,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.243.4896.1343"
         },
         {
           "author": "Spottiswoode, Begg & Begg",
           "year": 2016,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.aaf4885"
         }
       ],
       "confidence": "high"
@@ -4360,7 +4431,8 @@
         {
           "author": "Frantz et al.",
           "year": 2016,
-          "venue": "Science"
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.aaf3161"
         }
       ],
       "confidence": "high"
@@ -4392,7 +4464,8 @@
         {
           "author": "Doebley, Gaut & Smith",
           "year": 2006,
-          "venue": "Cell"
+          "venue": "Cell",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1876441"
         }
       ],
       "confidence": "high"
@@ -4424,7 +4497,8 @@
         {
           "author": "Gallone et al.",
           "year": 2016,
-          "venue": "Cell"
+          "venue": "Cell",
+          "url": "https://doi.org/10.1016/j.cell.2016.08.020"
         }
       ],
       "confidence": "high"
@@ -4456,12 +4530,14 @@
         {
           "author": "LaJeunesse et al.",
           "year": 2018,
-          "venue": "Current Biology"
+          "venue": "Current Biology",
+          "url": "https://doi.org/10.1016/j.cub.2018.07.008"
         },
         {
           "author": "Hughes et al.",
           "year": 2017,
-          "venue": "Nature"
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/nature21707"
         }
       ],
       "confidence": "high"
@@ -4493,7 +4569,8 @@
         {
           "author": "Brune",
           "year": 2014,
-          "venue": "Nature Reviews Microbiology"
+          "venue": "Nature Reviews Microbiology",
+          "url": "https://doi.org/10.1038/nrmicro3182"
         }
       ],
       "confidence": "high"
