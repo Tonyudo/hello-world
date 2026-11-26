@@ -46,7 +46,7 @@ const REQ = {
     note: { type: "string" },
   },
 };
-const ANALYSIS_SCHEMA = {
+export const ANALYSIS_SCHEMA = {
   type: "object",
   additionalProperties: false,
   required: [
@@ -87,7 +87,7 @@ const ANALYSIS_SCHEMA = {
   },
 };
 
-async function buildSystemPrompt() {
+export async function buildSystemPrompt() {
   const data = JSON.parse(await fs.readFile(DATA_PATH, "utf8"));
   const name = Object.fromEntries(data.nodes.map((n) => [n.id, n.name]));
   const edgeLines = data.edges
@@ -116,9 +116,9 @@ ${edgeLines}`;
 
 let systemPromptCache = null;
 
-async function analyzePair(a, b) {
+export async function analyzePair(a, b, api = client) {
   if (!systemPromptCache) systemPromptCache = await buildSystemPrompt();
-  const response = await client.beta.messages.create({
+  const response = await api.beta.messages.create({
     model: MODEL,
     max_tokens: 16000,
     betas: ["server-side-fallback-2026-07-01"],
@@ -174,20 +174,21 @@ async function readBody(req, limit = 4096) {
 
 const clean = (s) => String(s ?? "").replace(/[\u0000-\u001f]/g, " ").trim().slice(0, 120);
 
-const server = http.createServer(async (req, res) => {
+export function createServer({ client: api = client } = {}) {
+  return http.createServer(async (req, res) => {
   const url = new URL(req.url, "http://localhost");
   try {
     if (url.pathname === "/api/status") {
-      return send(res, 200, { llm: Boolean(client), model: client ? MODEL : null });
+      return send(res, 200, { llm: Boolean(api), model: api ? MODEL : null });
     }
     if (url.pathname === "/api/analyze" && req.method === "POST") {
-      if (!client) return send(res, 503, { error: "No Claude credentials configured on the server." });
+      if (!api) return send(res, 503, { error: "No Claude credentials configured on the server." });
       const body = await readBody(req);
       const a = clean(body.a);
       const b = clean(body.b);
       if (!a || !b) return send(res, 400, { error: "Both organisms are required." });
       try {
-        return send(res, 200, await analyzePair(a, b));
+        return send(res, 200, await analyzePair(a, b, api));
       } catch (err) {
         if (err instanceof Anthropic.RateLimitError) return send(res, 429, { error: "Rate limited — try again shortly." });
         if (err instanceof Anthropic.AuthenticationError) return send(res, 503, { error: "Claude credentials were rejected." });
@@ -210,9 +211,11 @@ const server = http.createServer(async (req, res) => {
     if (err.code === "ENOENT") return send(res, 404, "Not found", "text/plain");
     return send(res, err.status || 500, { error: err.message });
   }
-});
+  });
+}
 
-server.listen(PORT, () => {
+// Only listen when run directly (`node server.js`), so tests can import the module.
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) createServer().listen(PORT, () => {
   console.log(`Symbiosis Unfold → http://localhost:${PORT}`);
   console.log(client ? `Claude analysis enabled (${MODEL}).` : "No ANTHROPIC_API_KEY: free-text pairs use the offline engine.");
 });
