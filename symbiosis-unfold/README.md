@@ -2,7 +2,7 @@
 
 A research and experiment tool for how life cooperates, competes and depends on itself.
 
-- **Connection Map**: a force-directed graph of 95 organisms and 68 citation-backed relationships in 8 groups, with 11 multi-party chains.
+- **Connection Map**: a force-directed graph of 149 organisms and 101 citation-backed relationships in 8 groups, with 15 multi-party chains. Most citations link to a DOI or record.
 - **Playground**: a compatibility analysis for any two organisms, with an experiment log and a side-by-side comparison of two runs.
 - **Discovery**: a random surprising connection, a shortest dependency-chain finder, and a "what breaks if X disappears?" cascade.
 
@@ -38,7 +38,7 @@ scripts/check-data.js   ← dataset validator
 
 ## Growing the dataset
 
-Edit `data/symbiosis.json`, then run `npm run check-data`. No code changes are needed.
+Edit `data/symbiosis.json`, then run `npm run check-data` and `npm test`. No code changes are needed. Node tags `microhabitat`, `zone` and `region` must use the values in `meta.vocab`.
 
 Edge schema:
 

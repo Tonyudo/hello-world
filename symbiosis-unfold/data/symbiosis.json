@@ -2324,6 +2324,1168 @@
       "region": [
         "cosmopolitan"
       ]
+    },
+    {
+      "id": "sloth",
+      "name": "Brown-throated three-toed sloth",
+      "sci": "Bradypus variegatus",
+      "group": "animals",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "medium",
+      "fact": "Its fur hosts algae and moths, and it climbs down from the canopy roughly once a week to defecate on the ground.",
+      "microhabitat": [
+        "canopy",
+        "animal-surface"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "south-america"
+      ]
+    },
+    {
+      "id": "sloth_moth",
+      "name": "Sloth moths",
+      "sci": "Cryptoses choloepi",
+      "group": "insects",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Adult moths live in sloth fur, and females lay eggs in the dung that sloths deposit on the forest floor.",
+      "microhabitat": [
+        "animal-surface",
+        "canopy"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "south-america"
+      ]
+    },
+    {
+      "id": "bottlenose_dolphin",
+      "name": "Common bottlenose dolphin (Laguna)",
+      "sci": "Tursiops truncatus",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "large",
+      "fact": "In Laguna, Brazil, dolphins and net-casting fishers have worked together across generations, with dolphins signalling when to cast.",
+      "microhabitat": [
+        "intertidal",
+        "pelagic"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "south-america"
+      ]
+    },
+    {
+      "id": "dung_beetle",
+      "name": "Dung beetles",
+      "sci": "Scarabaeinae",
+      "group": "insects",
+      "habitat": [
+        "grassland",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Many dung beetles roll or bury dung balls, which moves nutrients into the soil and buries seeds.",
+      "microhabitat": [
+        "open-ground",
+        "soil"
+      ],
+      "zone": [
+        "ground",
+        "subterranean"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "fig_frugivores",
+      "name": "Fruit bats (fig eaters)",
+      "sci": "Pteropodidae (e.g. Pteropus, Cynopterus)",
+      "group": "animals",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "medium",
+      "fact": "A global review found more than 1,200 bird and mammal species eat figs; Old World fruit bats are among the most important seed dispersers.",
+      "microhabitat": [
+        "canopy"
+      ],
+      "zone": [
+        "canopy",
+        "aerial"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "large_blue",
+      "name": "Large blue butterfly",
+      "sci": "Phengaris (Maculinea) arion",
+      "group": "insects",
+      "habitat": [
+        "grassland"
+      ],
+      "scale": "small",
+      "fact": "Its caterpillars spend most of their life underground inside ant nests, having been carried there by the ants themselves.",
+      "microhabitat": [
+        "nest-or-colony",
+        "open-ground"
+      ],
+      "zone": [
+        "ground",
+        "subterranean"
+      ],
+      "region": [
+        "europe"
+      ]
+    },
+    {
+      "id": "myrmica_ants",
+      "name": "Red ants (Myrmica)",
+      "sci": "Myrmica spp.",
+      "group": "insects",
+      "habitat": [
+        "grassland"
+      ],
+      "scale": "small",
+      "fact": "Myrmica workers adopt Phengaris caterpillars because the caterpillars mimic the chemical smell of ant larvae.",
+      "microhabitat": [
+        "nest-or-colony",
+        "soil"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "europe"
+      ]
+    },
+    {
+      "id": "lesser_long_nosed_bat",
+      "name": "Lesser long-nosed bat",
+      "sci": "Leptonycteris yerbabuenae",
+      "group": "animals",
+      "habitat": [
+        "desert"
+      ],
+      "scale": "medium",
+      "fact": "It is a migratory nectar-feeding bat often called a tequila bat because of its link to agave flowers.",
+      "microhabitat": [
+        "arid"
+      ],
+      "zone": [
+        "aerial"
+      ],
+      "region": [
+        "north-america"
+      ]
+    },
+    {
+      "id": "agave",
+      "name": "Agave",
+      "sci": "Agave spp.",
+      "group": "plants",
+      "habitat": [
+        "desert"
+      ],
+      "scale": "medium",
+      "fact": "Many agaves flower once, producing a tall stalk of nectar-rich blooms visited by nectar-feeding bats.",
+      "microhabitat": [
+        "arid"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
+    },
+    {
+      "id": "agouti",
+      "name": "Agouti",
+      "sci": "Dasyprocta spp.",
+      "group": "animals",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "medium",
+      "fact": "Agoutis scatter-hoard seeds, burying them in many small caches, and some are forgotten and sprout.",
+      "microhabitat": [
+        "understory",
+        "leaf-litter"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "south-america"
+      ]
+    },
+    {
+      "id": "brazil_nut",
+      "name": "Brazil nut tree",
+      "sci": "Bertholletia excelsa",
+      "group": "plants",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "large",
+      "fact": "Its fruit is a hard woody capsule that few animals can open.",
+      "microhabitat": [
+        "canopy"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "south-america"
+      ]
+    },
+    {
+      "id": "mistletoebird",
+      "name": "Mistletoebird",
+      "sci": "Dicaeum hirundinaceum",
+      "group": "birds",
+      "habitat": [
+        "forest",
+        "desert"
+      ],
+      "scale": "small",
+      "fact": "Its digestive system passes mistletoe berries quickly, and the sticky seeds are wiped onto branches.",
+      "microhabitat": [
+        "canopy"
+      ],
+      "zone": [
+        "canopy",
+        "aerial"
+      ],
+      "region": [
+        "oceania"
+      ]
+    },
+    {
+      "id": "mistletoe",
+      "name": "Mistletoes (Amyema)",
+      "sci": "Amyema spp.",
+      "group": "plants",
+      "habitat": [
+        "forest",
+        "desert"
+      ],
+      "scale": "small",
+      "fact": "Mistletoes are plants that grow on the branches of other trees and tap their sap.",
+      "microhabitat": [
+        "canopy",
+        "plant-surface"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "oceania"
+      ]
+    },
+    {
+      "id": "hermit_crab",
+      "name": "Hermit crabs (Dardanus)",
+      "sci": "Dardanus spp.",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "Hermit crabs live in recycled snail shells and some carry live anemones on them.",
+      "microhabitat": [
+        "intertidal",
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "calliactis",
+      "name": "Hermit-crab anemones (Calliactis)",
+      "sci": "Calliactis spp.",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "Some Calliactis anemones are known to move onto hermit crab shells.",
+      "microhabitat": [
+        "animal-surface",
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "boxer_crab",
+      "name": "Boxer crab",
+      "sci": "Lybia leptochelis",
+      "group": "animals",
+      "habitat": [
+        "reef",
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "Boxer crabs carry a small anemone in each claw and wave them like pom-poms.",
+      "microhabitat": [
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
+    },
+    {
+      "id": "boxer_anemone",
+      "name": "Boxer-crab anemones",
+      "sci": "Triactis, Bunodeopsis spp.",
+      "group": "animals",
+      "habitat": [
+        "reef",
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "These anemones are carried in the crab claws and can be split into two clones by the crab.",
+      "microhabitat": [
+        "animal-surface",
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
+    },
+    {
+      "id": "african_elephant",
+      "name": "African elephant",
+      "sci": "Loxodonta africana",
+      "group": "animals",
+      "habitat": [
+        "tropical-forest",
+        "grassland"
+      ],
+      "scale": "large",
+      "fact": "Elephants are the largest living land animals and eat huge quantities of fruit.",
+      "microhabitat": [
+        "understory",
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "africa"
+      ]
+    },
+    {
+      "id": "balanites",
+      "name": "Balanites wilsoniana",
+      "sci": "Balanites wilsoniana",
+      "group": "plants",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "large",
+      "fact": "It is a large rainforest tree with big fruit that few animals eat apart from elephants.",
+      "microhabitat": [
+        "canopy"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "africa"
+      ]
+    },
+    {
+      "id": "humpback_whale",
+      "name": "Humpback whale",
+      "sci": "Megaptera novaeangliae",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "large",
+      "fact": "Humpbacks carry barnacles and other hitchhikers on their skin, and the barnacle patterns can reflect where a whale has travelled.",
+      "microhabitat": [
+        "pelagic"
+      ],
+      "zone": [
+        "deep-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "whale_barnacle",
+      "name": "Whale barnacles (Coronula)",
+      "sci": "Coronula diadema",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "Whale barnacles grow in a ring of shell embedded into the skin of the whale.",
+      "microhabitat": [
+        "animal-surface",
+        "pelagic"
+      ],
+      "zone": [
+        "deep-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "hummingbirds",
+      "name": "Hummingbirds",
+      "sci": "Trochilidae",
+      "group": "birds",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "small",
+      "fact": "Hummingbirds are only found in the Americas and can hover while feeding on nectar.",
+      "microhabitat": [
+        "canopy",
+        "understory"
+      ],
+      "zone": [
+        "aerial"
+      ],
+      "region": [
+        "south-america",
+        "north-america"
+      ]
+    },
+    {
+      "id": "flower_mites",
+      "name": "Hummingbird flower mites",
+      "sci": "Rhinoseius, Tropicoseius, Proctolaelaps",
+      "group": "animals",
+      "habitat": [
+        "tropical-forest"
+      ],
+      "scale": "micro",
+      "fact": "These mites live and mate inside flowers and move between flowers on hummingbird bills.",
+      "microhabitat": [
+        "plant-surface",
+        "animal-surface"
+      ],
+      "zone": [
+        "understory"
+      ],
+      "region": [
+        "south-america"
+      ]
+    },
+    {
+      "id": "pearlfish",
+      "name": "Pearlfish",
+      "sci": "Carapidae (Carapus, Encheliophis)",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "small",
+      "fact": "Pearlfish are slender fish that enter sea cucumbers through the anus to shelter inside.",
+      "microhabitat": [
+        "animal-surface",
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
+    },
+    {
+      "id": "sea_cucumber",
+      "name": "Sea cucumbers",
+      "sci": "Holothuroidea",
+      "group": "animals",
+      "habitat": [
+        "marine"
+      ],
+      "scale": "medium",
+      "fact": "Sea cucumbers can expel sticky threads from their body when attacked, which many fish avoid.",
+      "microhabitat": [
+        "coral-reef",
+        "open-ground"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
+    },
+    {
+      "id": "cowbird",
+      "name": "Brown-headed cowbird",
+      "sci": "Molothrus ater",
+      "group": "birds",
+      "habitat": [
+        "grassland",
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "Cowbirds never build nests; females lay eggs in the nests of many other bird species.",
+      "microhabitat": [
+        "understory",
+        "open-ground"
+      ],
+      "zone": [
+        "ground",
+        "aerial"
+      ],
+      "region": [
+        "north-america"
+      ]
+    },
+    {
+      "id": "yellow_warbler",
+      "name": "Yellow warbler",
+      "sci": "Setophaga petechia",
+      "group": "birds",
+      "habitat": [
+        "wetland",
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "Yellow warblers sometimes build a new nest floor over a cowbird egg, burying it.",
+      "microhabitat": [
+        "understory",
+        "wetland"
+      ],
+      "zone": [
+        "understory"
+      ],
+      "region": [
+        "north-america"
+      ]
+    },
+    {
+      "id": "trichophilus",
+      "name": "Sloth-hair alga",
+      "sci": "Trichophilus welckeri",
+      "group": "protists",
+      "habitat": [
+        "tropical-forest",
+        "host-external"
+      ],
+      "scale": "micro",
+      "fact": "Described in 1887, it forms its own lineage within the green algal class Ulvophyceae.",
+      "microhabitat": [
+        "animal-surface"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "south-america"
+      ]
+    },
+    {
+      "id": "spotted_salamander",
+      "name": "Spotted salamander",
+      "sci": "Ambystoma maculatum",
+      "group": "animals",
+      "habitat": [
+        "forest",
+        "wetland",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Its embryos were the first vertebrate cells reported to contain living algae.",
+      "microhabitat": [
+        "wetland",
+        "leaf-litter"
+      ],
+      "zone": [
+        "ground",
+        "shallow-water"
+      ],
+      "region": [
+        "north-america"
+      ]
+    },
+    {
+      "id": "oophila",
+      "name": "Salamander-egg alga",
+      "sci": "Oophila amblystomatis",
+      "group": "protists",
+      "habitat": [
+        "wetland",
+        "freshwater"
+      ],
+      "scale": "micro",
+      "fact": "Gives salamander egg masses a green tint as the algae grow inside the egg jelly.",
+      "microhabitat": [
+        "freshwater",
+        "animal-intracellular"
+      ],
+      "zone": [
+        "shallow-water",
+        "inside-host"
+      ],
+      "region": [
+        "north-america"
+      ]
+    },
+    {
+      "id": "chlorella",
+      "name": "Symbiotic Chlorella",
+      "sci": "Chlorella spp. (e.g. Chlorella variabilis, Chlorella sp. A99)",
+      "group": "protists",
+      "habitat": [
+        "freshwater"
+      ],
+      "scale": "micro",
+      "fact": "Green algae of this kind live inside the cells of several freshwater hosts, including ciliates and Hydra.",
+      "microhabitat": [
+        "freshwater",
+        "animal-intracellular"
+      ],
+      "zone": [
+        "shallow-water",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "paramecium_bursaria",
+      "name": "Green Paramecium",
+      "sci": "Paramecium bursaria",
+      "group": "protists",
+      "habitat": [
+        "freshwater"
+      ],
+      "scale": "micro",
+      "fact": "A single ciliate cell can carry hundreds of green algae, which tint it green.",
+      "microhabitat": [
+        "freshwater"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "hydra_viridissima",
+      "name": "Green hydra",
+      "sci": "Hydra viridissima",
+      "group": "animals",
+      "habitat": [
+        "freshwater"
+      ],
+      "scale": "small",
+      "fact": "The only Hydra species known to keep a permanent partnership with Chlorella algae.",
+      "microhabitat": [
+        "freshwater"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "bsal",
+      "name": "Salamander chytrid fungus",
+      "sci": "Batrachochytrium salamandrivorans",
+      "group": "fungi",
+      "habitat": [
+        "forest",
+        "freshwater",
+        "host-external"
+      ],
+      "scale": "micro",
+      "fact": "Described in 2013 after a mass die-off of fire salamanders in the Netherlands.",
+      "microhabitat": [
+        "animal-surface",
+        "leaf-litter"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "europe"
+      ]
+    },
+    {
+      "id": "fire_salamander",
+      "name": "Fire salamander",
+      "sci": "Salamandra salamandra",
+      "group": "animals",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Its bold yellow-and-black pattern warns predators that its skin is toxic.",
+      "microhabitat": [
+        "leaf-litter",
+        "understory"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "europe"
+      ]
+    },
+    {
+      "id": "pdestructans",
+      "name": "White-nose fungus",
+      "sci": "Pseudogymnoascus destructans",
+      "group": "fungi",
+      "habitat": [
+        "forest",
+        "host-external"
+      ],
+      "scale": "micro",
+      "fact": "It grows best in the cold, which is why it thrives on bats while they hibernate.",
+      "microhabitat": [
+        "animal-surface"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "north-america",
+        "europe"
+      ]
+    },
+    {
+      "id": "hibernating_bats",
+      "name": "Hibernating bats",
+      "sci": "Myotis lucifugus and relatives",
+      "group": "animals",
+      "habitat": [
+        "forest",
+        "temperate"
+      ],
+      "scale": "small",
+      "fact": "Since the winter of 2006-2007, white-nose syndrome has caused declines above 75 percent at surveyed hibernation sites.",
+      "microhabitat": [
+        "nest-or-colony"
+      ],
+      "zone": [
+        "subterranean",
+        "aerial"
+      ],
+      "region": [
+        "north-america"
+      ]
+    },
+    {
+      "id": "onchocerca",
+      "name": "River blindness worm",
+      "sci": "Onchocerca volvulus",
+      "group": "animals",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "small",
+      "fact": "Humans are its definitive host, and blackflies that breed in fast rivers carry the larvae between people.",
+      "microhabitat": [
+        "animal-surface"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "africa"
+      ]
+    },
+    {
+      "id": "metarhizium_acridum",
+      "name": "Locust-killing fungus",
+      "sci": "Metarhizium acridum",
+      "group": "fungi",
+      "habitat": [
+        "grassland",
+        "agricultural",
+        "soil"
+      ],
+      "scale": "micro",
+      "fact": "The strain behind the Green Muscle biopesticide was isolated from a grasshopper in Niger.",
+      "microhabitat": [
+        "soil",
+        "animal-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "locusts",
+      "name": "Locusts and grasshoppers",
+      "sci": "Acrididae (e.g. Schistocerca gregaria, Locusta migratoria)",
+      "group": "insects",
+      "habitat": [
+        "grassland",
+        "desert",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Some species switch between a solitary form and a swarming form that can devastate crops.",
+      "microhabitat": [
+        "open-ground",
+        "arid"
+      ],
+      "zone": [
+        "ground",
+        "aerial"
+      ],
+      "region": [
+        "africa",
+        "asia"
+      ]
+    },
+    {
+      "id": "bt",
+      "name": "Bt (insecticidal soil bacterium)",
+      "sci": "Bacillus thuringiensis",
+      "group": "bacteria",
+      "habitat": [
+        "soil",
+        "agricultural"
+      ],
+      "scale": "micro",
+      "fact": "Its crystal (Cry) proteins underlie both Bt sprays and Bt transgenic crops.",
+      "microhabitat": [
+        "soil",
+        "plant-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "lepidoptera_larvae",
+      "name": "Caterpillars",
+      "sci": "Lepidoptera larvae",
+      "group": "insects",
+      "habitat": [
+        "forest",
+        "agricultural",
+        "grassland"
+      ],
+      "scale": "small",
+      "fact": "Bt Cry toxins have been studied most in caterpillars, whose gut chemistry activates them.",
+      "microhabitat": [
+        "plant-surface",
+        "understory"
+      ],
+      "zone": [
+        "ground",
+        "understory"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "xenorhabdus",
+      "name": "Xenorhabdus nematophila",
+      "sci": "Xenorhabdus nematophila",
+      "group": "bacteria",
+      "habitat": [
+        "soil",
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "The best-studied Xenorhabdus species, a bacterium that helps nematodes kill insects and also feeds them.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host",
+        "subterranean"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "steinernema",
+      "name": "Insect-killing nematode",
+      "sci": "Steinernema carpocapsae",
+      "group": "animals",
+      "habitat": [
+        "soil"
+      ],
+      "scale": "micro",
+      "fact": "Carries its bacterial partner into insect larvae, which die within days.",
+      "microhabitat": [
+        "soil"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "bark_beetles",
+      "name": "Bark beetles",
+      "sci": "Dendroctonus and Ips spp.",
+      "group": "insects",
+      "habitat": [
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "Many species carry fungal spores into trees and raise their young in the fungus-colonised wood.",
+      "microhabitat": [
+        "wood",
+        "plant-interior"
+      ],
+      "zone": [
+        "understory"
+      ],
+      "region": [
+        "north-america",
+        "europe"
+      ]
+    },
+    {
+      "id": "ophiostomatoid",
+      "name": "Bark-beetle blue-stain fungi",
+      "sci": "Ophiostomatoid fungi (e.g. Grosmannia, Ophiostoma)",
+      "group": "fungi",
+      "habitat": [
+        "forest"
+      ],
+      "scale": "micro",
+      "fact": "Some stain sapwood blue and are phytopathogenic, though their role for the beetle is debated.",
+      "microhabitat": [
+        "wood",
+        "plant-interior"
+      ],
+      "zone": [
+        "understory"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "sirex_woodwasp",
+      "name": "Sirex woodwasp",
+      "sci": "Sirex noctilio",
+      "group": "insects",
+      "habitat": [
+        "forest"
+      ],
+      "scale": "small",
+      "fact": "Females inject fungal spores and a toxic mucus into pines when laying eggs.",
+      "microhabitat": [
+        "wood",
+        "plant-interior"
+      ],
+      "zone": [
+        "canopy",
+        "understory"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "amylostereum",
+      "name": "Woodwasp fungus",
+      "sci": "Amylostereum areolatum",
+      "group": "fungi",
+      "habitat": [
+        "forest"
+      ],
+      "scale": "micro",
+      "fact": "In many populations it spreads only as asexual spores carried by woodwasps, so populations are clonal.",
+      "microhabitat": [
+        "wood",
+        "plant-interior"
+      ],
+      "zone": [
+        "understory"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "candida",
+      "name": "Candida albicans",
+      "sci": "Candida albicans",
+      "group": "fungi",
+      "habitat": [
+        "host-internal",
+        "human-settlement"
+      ],
+      "scale": "micro",
+      "fact": "Intestinal colonisation is found in roughly 40-60 percent of healthy individuals.",
+      "microhabitat": [
+        "animal-gut",
+        "animal-surface"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "malassezia",
+      "name": "Skin yeasts",
+      "sci": "Malassezia spp.",
+      "group": "fungi",
+      "habitat": [
+        "host-external",
+        "human-settlement"
+      ],
+      "scale": "micro",
+      "fact": "Eleven of the 14 known Malassezia species were detected on skin of healthy adult volunteers in one survey.",
+      "microhabitat": [
+        "animal-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "toxoplasma",
+      "name": "Toxoplasma",
+      "sci": "Toxoplasma gondii",
+      "group": "protists",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Cats are its only definitive hosts, while many warm-blooded animals can carry it as an intermediate host.",
+      "microhabitat": [
+        "animal-intracellular"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "brown_rat",
+      "name": "Brown rat",
+      "sci": "Rattus norvegicus",
+      "group": "animals",
+      "habitat": [
+        "human-settlement",
+        "agricultural"
+      ],
+      "scale": "small",
+      "fact": "Lab rats infected with Toxoplasma lose their usual avoidance of cat odour.",
+      "microhabitat": [
+        "human-built",
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
+    },
+    {
+      "id": "mixotricha",
+      "name": "Mixotricha paradoxa",
+      "sci": "Mixotricha paradoxa",
+      "group": "protists",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "This termite hindgut protist swims using spirochete bacteria attached to its surface.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "oceania"
+      ]
+    },
+    {
+      "id": "propulsinema",
+      "name": "Mixotricha surface spirochetes",
+      "sci": "Propulsinema mixotrichae and relatives",
+      "group": "bacteria",
+      "habitat": [
+        "host-internal"
+      ],
+      "scale": "micro",
+      "fact": "Described from the Mixotricha holobiont in 2025 genome-based work.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "oceania"
+      ]
     }
   ],
   "edges": [
@@ -4706,6 +5868,1157 @@
         }
       ],
       "confidence": "high"
+    },
+    {
+      "id": "e69",
+      "source": "sloth_moth",
+      "target": "sloth",
+      "type": "mutualism",
+      "obligate": "Moth obligate; sloth facultative",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Moths ride in sloth fur and breed in the dung sloths leave on the ground. The moths may also raise the nutrient level of the fur and so help algae grow, which sloths may eat.",
+      "gives": {
+        "source": "A habitat in the fur",
+        "target": "A trip to the ground feeds the moths: fresh dung for larvae"
+      },
+      "gets": {
+        "source": "Fur and dung to breed in",
+        "target": "Possible fur nutrients that boost algal growth"
+      },
+      "impact": {
+        "ecological": "A proposed three-way partnership among sloth, moth and fur algae.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Pauli et al.",
+          "year": 2014,
+          "venue": "Proceedings of the Royal Society B",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3906947"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The authors present this as a proposed mechanism supported by correlations; other sloth researchers have not seen sloths eating the algae."
+    },
+    {
+      "id": "e70",
+      "source": "humans",
+      "target": "bottlenose_dolphin",
+      "type": "mutualism",
+      "obligate": "Neither obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "In Laguna, Brazil, dolphins herd mullet toward net-casting fishers and signal when to cast. Fishers catch more fish and cooperating dolphins show higher survival.",
+      "gives": {
+        "source": "Larger catches (reported by fishers)",
+        "target": "Mullet driven to the nets, and cooperating dolphins survived better"
+      },
+      "gets": {
+        "source": "Larger catches",
+        "target": "Fish that escape the nets and possible protection"
+      },
+      "impact": {
+        "ecological": "Only some dolphins and fishers take part, and the practice is passed on culturally.",
+        "human": "The partnership is a cultural tradition now at risk from falling mullet numbers."
+      },
+      "citations": [
+        {
+          "author": "Cantor, Farine & Daura-Jorge",
+          "year": 2023,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9963516"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e71",
+      "source": "dung_beetle",
+      "target": "cattle",
+      "type": "commensalism",
+      "obligate": "Beetles facultative on cattle dung; cattle unaffected",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Dung beetles feed and breed in cattle dung, burying it and recycling its nutrients. This benefits pasture, while the cattle themselves are largely unaffected.",
+      "gives": {
+        "source": "Nothing directly",
+        "target": "Dung to eat and breed in"
+      },
+      "gets": {
+        "source": "Nothing directly (pasture benefits)",
+        "target": "Food and brood material"
+      },
+      "impact": {
+        "ecological": "Beetles bury dung, aerate soil, move seeds and suppress some dung-breeding pests.",
+        "human": "Dung beetle services can lower pasture fouling and parasite pressure in livestock systems."
+      },
+      "citations": [
+        {
+          "author": "Nichols et al.",
+          "year": 2008,
+          "venue": "Biological Conservation",
+          "url": "https://doi.org/10.1016/j.biocon.2008.04.011"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Cattle benefit only indirectly through better pasture; the size of the service varies by beetle community."
+    },
+    {
+      "id": "e72",
+      "source": "fig_frugivores",
+      "target": "fig",
+      "type": "mutualism",
+      "obligate": "Neither obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Fruit bats eat figs and disperse the seeds, alongside many fig-eating birds. Figs fruit nearly year-round in many forests, so they feed animals when other fruit is scarce.",
+      "gives": {
+        "source": "Seed dispersal",
+        "target": "Ripe fruit as food"
+      },
+      "gets": {
+        "source": "Food",
+        "target": "Seeds carried away from the parent tree"
+      },
+      "impact": {
+        "ecological": "Fig fruit often supports animal communities in lean seasons.",
+        "human": "Figs support forest food webs; fig farming and forest planting use figs to attract dispersers."
+      },
+      "citations": [
+        {
+          "author": "Shanahan, So, Compton & Corlett",
+          "year": 2001,
+          "venue": "Biological Reviews",
+          "url": "https://doi.org/10.1017/S1464793101005760"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e73",
+      "source": "large_blue",
+      "target": "myrmica_ants",
+      "type": "parasitism",
+      "obligate": "Butterfly obligate; ants not",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "Large blue caterpillars trick Myrmica ants into carrying them into the nest, where they eat ant brood. The ants lose young while the butterfly completes its life cycle.",
+      "gives": {
+        "source": "Nothing",
+        "target": "Care and a nest (at the cost of ant brood)"
+      },
+      "gets": {
+        "source": "Nothing",
+        "target": "Food and shelter for most of the caterpillar stage"
+      },
+      "impact": {
+        "ecological": "A textbook case of a social parasite that mimics ant chemical cues.",
+        "human": "Large blues went extinct in Britain and were reintroduced, with the right ant species a key requirement."
+      },
+      "citations": [
+        {
+          "author": "Thomas & Schönrogge",
+          "year": 2019,
+          "venue": "Insect Conservation and Diversity",
+          "url": "https://doi.org/10.1111/icad.12385"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Only one source with a detailed life-history summary was checked; host ant species vary by region."
+    },
+    {
+      "id": "e74",
+      "source": "lesser_long_nosed_bat",
+      "target": "agave",
+      "type": "mutualism",
+      "obligate": "Neither strictly obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Nectar-feeding bats drink agave nectar and carry pollen between plants. Agave flowers often depend on them for seed set.",
+      "gives": {
+        "source": "Pollen transfer between agave plants",
+        "target": "Nectar"
+      },
+      "gets": {
+        "source": "Cross pollination",
+        "target": "Energy-rich nectar"
+      },
+      "impact": {
+        "ecological": "Bats are among the main pollinators of several wild agave species.",
+        "human": "Tequila agave is usually cloned and harvested before flowering, which has reduced the bats' food; some producers now allow a few plants to flower."
+      },
+      "citations": [
+        {
+          "author": "Trejo-Salazar, Eguiarte, Suro-Piñera & Medellín",
+          "year": 2016,
+          "venue": "Natural Areas Journal",
+          "url": "https://doi.org/10.3375/043.036.0417"
+        },
+        {
+          "author": "Trejo-Salazar, Scheinvar & Eguiarte",
+          "year": 2015,
+          "venue": "Revista Mexicana de Biodiversidad",
+          "url": "https://doi.org/10.1016/j.rmb.2015.04.007"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e75",
+      "source": "agouti",
+      "target": "brazil_nut",
+      "type": "mutualism",
+      "obligate": "Neither strictly obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Agoutis gnaw open Brazil nut fruit and bury seeds away from the parent tree. Seeds that are forgotten can sprout.",
+      "gives": {
+        "source": "Seed dispersal and burial",
+        "target": "Seeds to eat and store"
+      },
+      "gets": {
+        "source": "Seed dispersal",
+        "target": "Food"
+      },
+      "impact": {
+        "ecological": "Scatter-hoarding rodents are a main route of dispersal for this tree.",
+        "human": "Brazil nuts are harvested from wild forests, so heavy harvest could leave too few seeds for dispersers."
+      },
+      "citations": [
+        {
+          "author": "Haugaasen, Haugaasen, Peres, Gribel & Wegge",
+          "year": 2010,
+          "venue": "Journal of Tropical Ecology",
+          "url": "https://doi.org/10.1017/S0266467410000027"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The study covers scatter-hoarding rodents in general, with agoutis among them."
+    },
+    {
+      "id": "e76",
+      "source": "mistletoebird",
+      "target": "mistletoe",
+      "type": "mutualism",
+      "obligate": "Bird obligate-leaning; mistletoe facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Mistletoebirds eat mistletoe berries and wipe the sticky seeds onto branches. The seeds can then germinate on a new host tree.",
+      "gives": {
+        "source": "Seed dispersal to new host branches",
+        "target": "Berries to eat"
+      },
+      "gets": {
+        "source": "Seed placement on suitable branches",
+        "target": "Food"
+      },
+      "impact": {
+        "ecological": "Mistletoes are a key resource in woodlands and the bird is a specialist disperser.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Reid",
+          "year": 1989,
+          "venue": "Ecology",
+          "url": "https://doi.org/10.2307/1938420"
+        },
+        {
+          "author": "Rawsthorne et al.",
+          "year": 2012,
+          "venue": "Emu",
+          "url": "https://doi.org/10.1071/MU12098"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Reid showed a honeyeater also disperses the seeds, so the mistletoe is not exclusively dependent; the bird is described as a mistletoe specialist."
+    },
+    {
+      "id": "e77",
+      "source": "calliactis",
+      "target": "hermit_crab",
+      "type": "mutualism",
+      "obligate": "Neither obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Hermit crabs carry anemones on their shells, and the stinging tentacles deter octopus attacks. The anemone gets a ride and scraps.",
+      "gives": {
+        "source": "Defence from stinging tentacles",
+        "target": "Transport and food scraps"
+      },
+      "gets": {
+        "source": "Protection from predators",
+        "target": "Mobile feeding opportunities"
+      },
+      "impact": {
+        "ecological": "A classic example of defensive mutualism on reefs and sea floors.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Ross",
+          "year": 1971,
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/230401a0"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e78",
+      "source": "boxer_crab",
+      "target": "boxer_anemone",
+      "type": "mutualism",
+      "obligate": "Neither strictly obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Boxer crabs hold small anemones in their claws as defence and can split them to make clones. The anemones are carried to food and kept alive.",
+      "gives": {
+        "source": "Carried to feeding sites and propagated by splitting",
+        "target": "Stinging weapons and defence"
+      },
+      "gets": {
+        "source": "Anemones to defend and feed",
+        "target": "Protection and a way to find food"
+      },
+      "impact": {
+        "ecological": "Crabs steal anemones from rivals and clone them.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Schnytzer et al.",
+          "year": 2017,
+          "venue": "PeerJ",
+          "url": "https://peerj.com/articles/2954"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The paper documents theft and splitting; how much each side depends on the partnership in the wild is less clear."
+    },
+    {
+      "id": "e79",
+      "source": "african_elephant",
+      "target": "balanites",
+      "type": "mutualism",
+      "obligate": "Tree strongly dependent; elephant facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "Elephants eat the large fruit of Balanites wilsoniana and pass the seeds. Where elephants are absent, far fewer seeds germinate.",
+      "gives": {
+        "source": "Seed dispersal and germination",
+        "target": "Fruit to eat"
+      },
+      "gets": {
+        "source": "Dispersal away from parent tree",
+        "target": "Food"
+      },
+      "impact": {
+        "ecological": "Loss of elephants can threaten trees that depend on them for dispersal.",
+        "human": "Conserving elephants helps maintain forest tree diversity."
+      },
+      "citations": [
+        {
+          "author": "Babweteera, Savill & Brown",
+          "year": 2007,
+          "venue": "Biological Conservation",
+          "url": "https://doi.org/10.1016/j.biocon.2006.08.002"
+        }
+      ],
+      "confidence": "high",
+      "confidence_note": "Babweteera et al. found germination and recruitment fall sharply without elephants; obligate is strong but supported locally."
+    },
+    {
+      "id": "e80",
+      "source": "humans",
+      "target": "cattle",
+      "type": "mutualism",
+      "obligate": "Neither obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "obligate"
+      },
+      "tldr": "People domesticated cattle for milk, meat and draught power, and cattle gained protection and huge population growth. Genetic data trace cattle to wild aurochs.",
+      "gives": {
+        "source": "Protection, feed and care",
+        "target": "Milk, meat, hides and labour"
+      },
+      "gets": {
+        "source": "Population growth",
+        "target": "Food and labour"
+      },
+      "impact": {
+        "ecological": "Cattle are among the most numerous large mammals on Earth.",
+        "human": "Cattle underpin food systems and also drive emissions and land use."
+      },
+      "citations": [
+        {
+          "author": "Beja-Pereira et al.",
+          "year": 2006,
+          "venue": "Proceedings of the National Academy of Sciences",
+          "url": "https://doi.org/10.1073/pnas.0509210103"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Domesticated cattle depend on humans much as dogs do; framing this as an even exchange is debatable."
+    },
+    {
+      "id": "e81",
+      "source": "whale_barnacle",
+      "target": "humpback_whale",
+      "type": "commensalism",
+      "obligate": "Barnacle obligate on whales; whale not",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "Whale barnacles settle on whale skin and filter food from the water the whale pushes them through. The whale is largely unaffected.",
+      "gives": {
+        "source": "Nothing",
+        "target": "Place to live and moving water to feed in"
+      },
+      "gets": {
+        "source": "Nothing (possible small drag)",
+        "target": "Habitat"
+      },
+      "impact": {
+        "ecological": "Barnacle patterns can be used to study whale movement.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Ten, Raga & Aznar",
+          "year": 2022,
+          "venue": "Frontiers in Marine Science",
+          "url": "https://doi.org/10.3389/fmars.2022.846558"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The review catalogues commensal and other epibiont relationships; a small cost or benefit to whales cannot be ruled out."
+    },
+    {
+      "id": "e82",
+      "source": "flower_mites",
+      "target": "hummingbirds",
+      "type": "commensalism",
+      "obligate": "Mites rely on hummingbirds to move",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "Flower mites ride in hummingbird nostrils and bills from flower to flower. The birds appear unaffected.",
+      "gives": {
+        "source": "Nothing",
+        "target": "A ride between flowers"
+      },
+      "gets": {
+        "source": "Nothing",
+        "target": "Dispersal between host plants"
+      },
+      "impact": {
+        "ecological": "Mites live and breed in flowers hummingbirds visit.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Bizzarri, Baer & García-Robledo",
+          "year": 2022,
+          "venue": "The American Naturalist",
+          "url": "https://doi.org/10.1086/718474"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The cited paper is about mite host use and dispersal; effects on the bird are not measured there."
+    },
+    {
+      "id": "e83",
+      "source": "pearlfish",
+      "target": "sea_cucumber",
+      "type": "context",
+      "obligate": "Pearlfish facultative; sea cucumber not",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Some pearlfish shelter harmlessly inside sea cucumbers. Others eat the host gonads, so the relationship ranges from commensal to parasitic.",
+      "gives": {
+        "source": "Nothing, or in some cases harm",
+        "target": "Shelter"
+      },
+      "gets": {
+        "source": "Nothing",
+        "target": "A protected hiding place"
+      },
+      "impact": {
+        "ecological": "Shows how one body plan can cover commensalism and parasitism.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Parmentier & Vandewalle",
+          "year": 2005,
+          "venue": "Marine Biology",
+          "url": "https://doi.org/10.1007/s00227-004-1467-7"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Outcome depends on the pearlfish genus."
+    },
+    {
+      "id": "e84",
+      "source": "cowbird",
+      "target": "yellow_warbler",
+      "type": "parasitism",
+      "obligate": "Cowbird facultative on this host; warbler none",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "Cowbirds lay eggs in warbler nests and leave the warblers to raise the young. Warblers sometimes bury the foreign egg or abandon the nest.",
+      "gives": {
+        "source": "Nothing",
+        "target": "Parental care"
+      },
+      "gets": {
+        "source": "Nothing",
+        "target": "Chicks raised by the host"
+      },
+      "impact": {
+        "ecological": "Warblers lose some of their own offspring.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Guigueno & Sealy",
+          "year": 2010,
+          "venue": "The Condor",
+          "url": "https://doi.org/10.1525/cond.2010.090135"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e85",
+      "source": "sloth",
+      "target": "trichophilus",
+      "type": "mutualism",
+      "obligate": "Neither clearly",
+      "dependence": {
+        "source": "none",
+        "target": "facultative"
+      },
+      "tldr": "Green algae grow in sloth fur and may camouflage the animal, though the benefit has not been demonstrated. Sampling across all six sloth species supports the algae being a regular fur community.",
+      "gives": {
+        "source": "A moist, protected growth surface",
+        "target": "Possible camouflage (unproven)"
+      },
+      "gets": {
+        "source": "A habitat and dispersal",
+        "target": "Little or nothing demonstrated"
+      },
+      "impact": {
+        "ecological": "The fur is a micro-habitat that hosts a whole community of algae and other eukaryotes.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Suutari et al.",
+          "year": 2010,
+          "venue": "BMC Evolutionary Biology",
+          "url": "https://doi.org/10.1186/1471-2148-10-86"
+        }
+      ],
+      "confidence": "low",
+      "confidence_note": "The authors say their results strengthen the case for a symbiosis, but they note there was no clear evidence for any single benefit hypothesis.",
+      "contested": true
+    },
+    {
+      "id": "e86",
+      "source": "spotted_salamander",
+      "target": "oophila",
+      "type": "mutualism",
+      "obligate": "Neither obligate",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Green algae live in spotted salamander egg masses and even enter the embryos' cells. This was the first vertebrate cell reported to host algae inside it.",
+      "gives": {
+        "source": "A sheltered egg capsule to live in",
+        "target": "Photosynthetic products and oxygen (proposed)"
+      },
+      "gets": {
+        "source": "A protected, nutrient-rich home",
+        "target": "Possible extra oxygen and sugars"
+      },
+      "impact": {
+        "ecological": "A rare intracellular partnership between a vertebrate and a photosynthetic eukaryote.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Kerney et al.",
+          "year": 2011,
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.1018259108"
+        },
+        {
+          "author": "Burns et al.",
+          "year": 2017,
+          "venue": "eLife",
+          "url": "https://elifesciences.org/articles/22054"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The invasion is well documented; the size of the benefit to the embryo is still being worked out."
+    },
+    {
+      "id": "e87",
+      "source": "paramecium_bursaria",
+      "target": "chlorella",
+      "type": "mutualism",
+      "obligate": "Neither strictly",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "The ciliate shelters green algae in its cell; the algae pay with sugar (mainly maltose) and oxygen from photosynthesis. The host supplies nitrogen compounds and protection.",
+      "gives": {
+        "source": "Shelter, nitrogen, CO2 and protection from predators and viruses",
+        "target": "Maltose and oxygen"
+      },
+      "gets": {
+        "source": "Sugar and oxygen",
+        "target": "A stable home and nutrients"
+      },
+      "impact": {
+        "ecological": "A textbook model for how single-celled hosts can acquire photosynthesis.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Jenkins",
+          "year": 2024,
+          "venue": "PLOS Biology",
+          "url": "https://doi.org/10.1371/journal.pbio.3002563"
+        },
+        {
+          "author": "Kodama & Fujishima",
+          "year": 2024,
+          "venue": "Microorganisms",
+          "url": "https://doi.org/10.3390/microorganisms12122537"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e88",
+      "source": "hydra_viridissima",
+      "target": "chlorella",
+      "type": "mutualism",
+      "obligate": "Algae depend on host in nature; hydra can live without them",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Green hydra houses Chlorella algae in its gut cells. The algae supply maltose and the host supplies glutamine, and the algae appear to have lost the ability to live free in nature.",
+      "gives": {
+        "source": "Glutamine nitrogen and a protected home",
+        "target": "Maltose from photosynthesis"
+      },
+      "gets": {
+        "source": "Sugar",
+        "target": "Nutrients and shelter"
+      },
+      "impact": {
+        "ecological": "An ancient, tightly coupled animal-algae partnership that is a model for studying how symbioses evolve.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Hamada et al.",
+          "year": 2018,
+          "venue": "eLife",
+          "url": "https://doi.org/10.7554/eLife.35122"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The studied algal strain (Chlorella sp. A99) appears unable to live free; the Chlorella node here is genus-level, so that side is facultative."
+    },
+    {
+      "id": "e89",
+      "source": "bsal",
+      "target": "fire_salamander",
+      "type": "parasitism",
+      "obligate": "Fungus facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A skin fungus that causes lethal, erosive skin disease in fire salamanders. It was identified after steep salamander declines in north-western Europe.",
+      "gives": {
+        "source": "Lethal skin infection",
+        "target": "Keratinised skin to grow on"
+      },
+      "gets": {
+        "source": "Habitat and nutrients",
+        "target": "Death"
+      },
+      "impact": {
+        "ecological": "Caused rapid local declines of European salamanders and threatens other salamander populations.",
+        "human": "A conservation concern that has driven wildlife-trade restrictions."
+      },
+      "citations": [
+        {
+          "author": "Martel et al.",
+          "year": 2013,
+          "venue": "PNAS",
+          "url": "https://doi.org/10.1073/pnas.1307356110"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e90",
+      "source": "pdestructans",
+      "target": "hibernating_bats",
+      "type": "parasitism",
+      "obligate": "Fungus facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A cold-loving fungus that infects the skin of hibernating bats and causes white-nose syndrome. Bat declines above 75 percent have been seen at surveyed hibernation sites.",
+      "gives": {
+        "source": "Skin infection and disrupted hibernation",
+        "target": "A warm, hibernating host"
+      },
+      "gets": {
+        "source": "Nutrients from skin",
+        "target": "Death in many infected bats"
+      },
+      "impact": {
+        "ecological": "Removes major insect predators from many North American caves.",
+        "human": "Fewer bats may mean more crop and forest pests."
+      },
+      "citations": [
+        {
+          "author": "Blehert et al.",
+          "year": 2009,
+          "venue": "Science",
+          "url": "https://doi.org/10.1126/science.1163874"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The 2009 paper named the fungus Geomyces destructans; it is now classified as Pseudogymnoascus destructans. The pest-control human impact is an inference not tested in the cited paper."
+    },
+    {
+      "id": "e91",
+      "source": "onchocerca",
+      "target": "wolbachia",
+      "type": "mutualism",
+      "obligate": "Both obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "Wolbachia bacteria inside the river blindness worm are essential for the worm's development, fertility and survival. This lets doxycycline treatment weaken or kill the worms.",
+      "gives": {
+        "source": "A protected cellular home",
+        "target": "Support for growth and fertility"
+      },
+      "gets": {
+        "source": "Nutrients and host-cell habitat",
+        "target": "Survival and reproduction"
+      },
+      "impact": {
+        "ecological": "Shows that an endosymbiont can become an essential part of a parasite's biology.",
+        "human": "Targeting Wolbachia with doxycycline is an alternative to ivermectin treatment."
+      },
+      "citations": [
+        {
+          "author": "Taylor, Hoerauf & Bockarie",
+          "year": 2010,
+          "venue": "The Lancet",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20739055/"
+        },
+        {
+          "author": "Turner et al.",
+          "year": 2010,
+          "venue": "PLoS Neglected Tropical Diseases",
+          "url": "https://doi.org/10.1371/journal.pntd.0000660"
+        }
+      ],
+      "confidence": "high",
+      "confidence_note": "The worm depends obligately on its Wolbachia strain; the Wolbachia node here is genus-level, so that side is facultative."
+    },
+    {
+      "id": "e92",
+      "source": "onchocerca",
+      "target": "humans",
+      "type": "parasitism",
+      "obligate": "Worm obligate on a mammal host",
+      "dependence": {
+        "source": "obligate",
+        "target": "none"
+      },
+      "tldr": "A parasitic worm spread by blackflies that causes skin disease and can lead to blindness. It is concentrated in sub-Saharan Africa.",
+      "gives": {
+        "source": "Skin disease and vision loss",
+        "target": "Nutrients and a place to live"
+      },
+      "gets": {
+        "source": "A host for adult worms",
+        "target": "Illness and blindness"
+      },
+      "impact": {
+        "ecological": "Controlling blackfly rivers and mass treatment have shrunk the disease in many areas.",
+        "human": "Second leading infectious cause of blindness; treated with yearly ivermectin and, in some cases, doxycycline."
+      },
+      "citations": [
+        {
+          "author": "GBD 2017 Disease and Injury Incidence and Prevalence Collaborators",
+          "year": 2018,
+          "venue": "The Lancet",
+          "url": "https://doi.org/10.1016/S0140-6736(18)32279-7"
+        },
+        {
+          "author": "Taylor, Hoerauf & Bockarie",
+          "year": 2010,
+          "venue": "The Lancet",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20739055/"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The burden figures come from GBD summaries; the cited Lancet paper is the broad GBD analysis rather than an onchocerciasis-only paper."
+    },
+    {
+      "id": "e93",
+      "source": "metarhizium_acridum",
+      "target": "locusts",
+      "type": "parasitism",
+      "obligate": "Fungus facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A soil fungus that infects and kills locusts and grasshoppers; it is sold as a biopesticide. In reviewed trials it killed 70-90 percent of treated locusts within 14-20 days.",
+      "gives": {
+        "source": "Lethal infection",
+        "target": "Death of the host"
+      },
+      "gets": {
+        "source": "A host to feed and reproduce on",
+        "target": "Death"
+      },
+      "impact": {
+        "ecological": "A targeted alternative to chemical spraying with no measurable effect on nontarget organisms in the review.",
+        "human": "Used as a biological control to protect crops and pasture from locust plagues."
+      },
+      "citations": [
+        {
+          "author": "Lomer et al.",
+          "year": 2001,
+          "venue": "Annual Review of Entomology",
+          "url": "https://doi.org/10.1146/annurev.ento.46.1.667"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e94",
+      "source": "bt",
+      "target": "lepidoptera_larvae",
+      "type": "parasitism",
+      "obligate": "Bacterium facultative",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A soil bacterium whose Cry toxins punch holes in caterpillar gut cells and kill them. People use it as a bioinsecticide.",
+      "gives": {
+        "source": "Gut-damaging Cry toxins",
+        "target": "Nutrients and growth after the larva dies"
+      },
+      "gets": {
+        "source": "Nutrients from the carcass",
+        "target": "Death"
+      },
+      "impact": {
+        "ecological": "Mostly specific to certain insect groups, which is why it is used instead of broad-spectrum chemicals.",
+        "human": "Basis of Bt sprays and Bt transgenic crops."
+      },
+      "citations": [
+        {
+          "author": "Bravo et al.",
+          "year": 2011,
+          "venue": "Insect Biochemistry and Molecular Biology",
+          "url": "https://doi.org/10.1016/j.ibmb.2011.02.006"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e95",
+      "source": "steinernema",
+      "target": "xenorhabdus",
+      "type": "mutualism",
+      "obligate": "Both obligate",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "The nematode carries the bacterium into insect larvae; the bacterium suppresses the insect's immunity and kills it. The nematode then feeds and breeds on the dead insect and re-acquires its partner.",
+      "gives": {
+        "source": "Transport into the insect and a protected home",
+        "target": "Insect-killing toxins and nutrients"
+      },
+      "gets": {
+        "source": "A food source and reproduction",
+        "target": "A host and a ride"
+      },
+      "impact": {
+        "ecological": "Together they form a lethal two-species insect killer in soil.",
+        "human": "The pair is used commercially as a biological insecticide."
+      },
+      "citations": [
+        {
+          "author": "Herbert & Goodrich-Blair",
+          "year": 2007,
+          "venue": "Nature Reviews Microbiology",
+          "url": "https://doi.org/10.1038/nrmicro1706"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Review front matter was seen; specific mechanisms were taken from search summaries."
+    },
+    {
+      "id": "e96",
+      "source": "bark_beetles",
+      "target": "ophiostomatoid",
+      "type": "mutualism",
+      "obligate": "Neither strictly",
+      "dependence": {
+        "source": "facultative",
+        "target": "facultative"
+      },
+      "tldr": "Bark beetles carry spores of blue-stain fungi into trees, where the fungi colonise wood and may feed larvae. Whether the fungi help beetles kill trees is debated.",
+      "gives": {
+        "source": "Transport to new trees",
+        "target": "A suitable wood habitat and possibly nutrition"
+      },
+      "gets": {
+        "source": "Spread to fresh trees",
+        "target": "A food source for larvae (some species)"
+      },
+      "impact": {
+        "ecological": "Beetle-fungus outbreaks can kill large areas of conifers.",
+        "human": "Linked to large timber losses."
+      },
+      "citations": [
+        {
+          "author": "Six & Wingfield",
+          "year": 2011,
+          "venue": "Annual Review of Entomology",
+          "url": "https://doi.org/10.1146/annurev-ento-120709-144839"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "The classic view that the fungi help beetles kill trees is challenged by this review; benefits vary among beetle-fungus pairs.",
+      "contested": true
+    },
+    {
+      "id": "e97",
+      "source": "sirex_woodwasp",
+      "target": "amylostereum",
+      "type": "mutualism",
+      "obligate": "Both obligate on the genus",
+      "dependence": {
+        "source": "obligate",
+        "target": "obligate"
+      },
+      "tldr": "Female woodwasps carry Amylostereum fungus in special pouches and inoculate it into pines when laying eggs, and the larvae feed on the fungus-colonised wood. Native woodwasps can carry more than one Amylostereum species.",
+      "gives": {
+        "source": "Transport and egg-laying inoculation",
+        "target": "Food for larvae and wood decay"
+      },
+      "gets": {
+        "source": "Dispersal",
+        "target": "A food source for larvae"
+      },
+      "impact": {
+        "ecological": "Invasive woodwasps can kill pines, and the fungus is a key part of the damage.",
+        "human": "Pine plantation pest in several regions."
+      },
+      "citations": [
+        {
+          "author": "Hajek et al.",
+          "year": 2013,
+          "venue": "Microbial Ecology",
+          "url": "https://doi.org/10.1007/s00248-013-0218-z"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Hajek et al. showed that pairings are less species-specific than once thought; claims about wood damage rest on the general literature not on this paper."
+    },
+    {
+      "id": "e98",
+      "source": "humans",
+      "target": "candida",
+      "type": "context",
+      "obligate": "Fungus facultative",
+      "dependence": {
+        "source": "none",
+        "target": "facultative"
+      },
+      "tldr": "Candida is a common gut and mucosal resident that is harmless in many people. It can cause infections when the immune system, gut lining or resident microbes are disrupted.",
+      "gives": {
+        "source": "Warm, nutrient-rich surfaces",
+        "target": "Usually nothing; sometimes illness"
+      },
+      "gets": {
+        "source": "A habitat",
+        "target": "Usually nothing"
+      },
+      "impact": {
+        "ecological": "Interacts with gut bacteria that keep it in check.",
+        "human": "A leading cause of fungal infections in hospitals and in people with weakened immunity."
+      },
+      "citations": [
+        {
+          "author": "Jacobsen",
+          "year": 2023,
+          "venue": "Current Clinical Microbiology Reports",
+          "url": "https://doi.org/10.1007/s40588-023-00190-w"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "e99",
+      "source": "humans",
+      "target": "malassezia",
+      "type": "commensalism",
+      "obligate": "Fungus mostly depends on skin lipids",
+      "dependence": {
+        "source": "none",
+        "target": "facultative"
+      },
+      "tldr": "Malassezia yeasts dominate the fungi on healthy human skin, especially in oily areas. Feet are the exception, with fewer Malassezia and more varied fungi.",
+      "gives": {
+        "source": "A habitat",
+        "target": "Usually nothing known"
+      },
+      "gets": {
+        "source": "Skin oils and a home",
+        "target": "Little or nothing known"
+      },
+      "impact": {
+        "ecological": "A major part of the skin mycobiome that interacts with skin bacteria.",
+        "human": "Provides a baseline for studying skin fungal disease."
+      },
+      "citations": [
+        {
+          "author": "Findley et al.",
+          "year": 2013,
+          "venue": "Nature",
+          "url": "https://doi.org/10.1038/nature12171"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Dependence rating is conservative; the cited paper surveys community composition rather than testing dependence."
+    },
+    {
+      "id": "e100",
+      "source": "toxoplasma",
+      "target": "brown_rat",
+      "type": "parasitism",
+      "obligate": "Parasite facultative on rodent hosts",
+      "dependence": {
+        "source": "facultative",
+        "target": "none"
+      },
+      "tldr": "A single-celled parasite that infects rats and can weaken their avoidance of cat odour. Cats are its only definitive hosts, so this may help it complete its cycle.",
+      "gives": {
+        "source": "Behavioural change",
+        "target": "Ability to reach cats"
+      },
+      "gets": {
+        "source": "Transmission to the final host",
+        "target": "Higher predation risk"
+      },
+      "impact": {
+        "ecological": "A famous example of parasite manipulation of host behaviour.",
+        "human": "Also infects humans, where effects are debated."
+      },
+      "citations": [
+        {
+          "author": "Berdoy, Webster & Macdonald",
+          "year": 2000,
+          "venue": "Proceedings of the Royal Society B",
+          "url": "https://doi.org/10.1098/rspb.2000.1182"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Behavioural effects in rats are well studied, but the adaptive explanation is still debated.",
+      "contested": true
+    },
+    {
+      "id": "e101",
+      "source": "mixotricha",
+      "target": "propulsinema",
+      "type": "mutualism",
+      "obligate": "Host depends on its spirochetes for swimming",
+      "dependence": {
+        "source": "obligate",
+        "target": "facultative"
+      },
+      "tldr": "The termite-gut protist Mixotricha swims using spirochete bacteria attached to its surface. The bacteria gain a home inside the termite hindgut.",
+      "gives": {
+        "source": "A surface to live on and nutrients",
+        "target": "Swimming movement"
+      },
+      "gets": {
+        "source": "A habitat",
+        "target": "Motility"
+      },
+      "impact": {
+        "ecological": "A classic example of how bacteria can substitute for a cell's own locomotion.",
+        "human": ""
+      },
+      "citations": [
+        {
+          "author": "Fu et al.",
+          "year": 2025,
+          "venue": "The ISME Journal",
+          "url": "https://doi.org/10.1093/ismejo/wraf178"
+        }
+      ],
+      "confidence": "medium",
+      "confidence_note": "Based on a recent genome-based study; details of the spirochete's own dependence are uncertain."
     }
   ],
   "chains": [
@@ -4883,6 +7196,64 @@
         "e66",
         "e67",
         "e68"
+      ]
+    },
+    {
+      "id": "c12",
+      "name": "Cattle, dung and people",
+      "summary": "Cattle pair with people, gut microbes and the beetles that recycle their dung.",
+      "nodes": [
+        "humans",
+        "cattle",
+        "dung_beetle",
+        "rumen_bacteria"
+      ],
+      "edges": [
+        "e80",
+        "e71",
+        "e48"
+      ]
+    },
+    {
+      "id": "c13",
+      "name": "Fig web",
+      "summary": "Figs are pollinated by wasps and then fed to birds and mammals that spread their seeds.",
+      "nodes": [
+        "fig_wasp",
+        "fig",
+        "fig_frugivores"
+      ],
+      "edges": [
+        "e33",
+        "e72"
+      ]
+    },
+    {
+      "id": "c14",
+      "name": "River blindness",
+      "summary": "A filarial worm needs its Wolbachia bacteria and infects people.",
+      "nodes": [
+        "onchocerca",
+        "wolbachia",
+        "humans"
+      ],
+      "edges": [
+        "e91",
+        "e92"
+      ]
+    },
+    {
+      "id": "c15",
+      "name": "Sloth fur ecosystem",
+      "summary": "Moths ride in sloth fur and breed in sloth dung; green algae grow in the fur. The proposed link between them (moths enrich the fur, algae feed or hide the sloth) is still debated.",
+      "nodes": [
+        "sloth_moth",
+        "sloth",
+        "trichophilus"
+      ],
+      "edges": [
+        "e69",
+        "e85"
       ]
     }
   ]
