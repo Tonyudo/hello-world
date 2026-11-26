@@ -2953,6 +2953,12 @@
           "year": 2008,
           "venue": "Plant Disease",
           "url": "https://apsnet.org/publications/plantdisease/2008/February/Pages/92_2_215.aspx"
+        },
+        {
+          "author": "Harrington, Fraedrich & Aghayeva",
+          "year": 2008,
+          "venue": "Mycotaxon",
+          "url": "https://research.fs.usda.gov/treesearch/34543"
         }
       ],
       "confidence": "high"
@@ -3400,6 +3406,12 @@
           "year": 2003,
           "venue": "Current Biology",
           "url": "https://doi.org/10.1016/S0960-9822(03)00507-4"
+        },
+        {
+          "author": "Amanzougaghene et al.",
+          "year": 2020,
+          "venue": "Frontiers in Cellular and Infection Microbiology",
+          "url": "https://doi.org/10.3389/fcimb.2019.00474"
         }
       ],
       "confidence": "high"
@@ -3510,6 +3522,12 @@
           "year": 2007,
           "venue": "Proceedings of the Royal Society B",
           "url": "https://doi.org/10.1098/rspb.2006.3721"
+        },
+        {
+          "author": "Henselek et al.",
+          "year": 2018,
+          "venue": "Journal of Economic Entomology",
+          "url": "https://doi.org/10.1093/jee/toy053"
         }
       ],
       "confidence": "high"
@@ -4189,6 +4207,12 @@
           "year": 1982,
           "venue": "Science",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2590008"
+        },
+        {
+          "author": "Coumou et al.",
+          "year": 2016,
+          "venue": "Journal of Molecular Medicine",
+          "url": "https://doi.org/10.1007/s00109-015-1365-0"
         }
       ],
       "confidence": "medium",
@@ -4433,6 +4457,12 @@
           "year": 2016,
           "venue": "Science",
           "url": "https://doi.org/10.1126/science.aaf3161"
+        },
+        {
+          "author": "Chambers et al.",
+          "year": 2020,
+          "venue": "Journal of Ethnobiology",
+          "url": "https://doi.org/10.2993/0278-0771-40.4.414"
         }
       ],
       "confidence": "high"
@@ -4667,6 +4697,12 @@
           "author": "Ross",
           "year": 1897,
           "venue": "British Medical Journal"
+        },
+        {
+          "author": "Takken & Verhulst",
+          "year": 2013,
+          "venue": "Annual Review of Entomology",
+          "url": "https://doi.org/10.1146/annurev-ento-120811-153618"
         }
       ],
       "confidence": "high"
