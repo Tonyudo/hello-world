@@ -169,7 +169,11 @@ async function readBody(req, limit = 4096) {
     if (size > limit) throw Object.assign(new Error("Body too large"), { status: 413 });
     chunks.push(chunk);
   }
-  return JSON.parse(Buffer.concat(chunks).toString("utf8") || "{}");
+  try {
+    return JSON.parse(Buffer.concat(chunks).toString("utf8") || "{}");
+  } catch {
+    throw Object.assign(new Error("Request body must be valid JSON."), { status: 400 });
+  }
 }
 
 const clean = (s) => String(s ?? "").replace(/[\u0000-\u001f]/g, " ").trim().slice(0, 120);
@@ -201,9 +205,15 @@ export function createServer({ client: api = client } = {}) {
     // Static files
     let file = STATIC[url.pathname];
     if (!file) {
-      const rel = url.pathname === "/" ? "index.html" : decodeURIComponent(url.pathname).replace(/^\/+/, "");
-      file = path.join(here, "public", rel);
-      if (!file.startsWith(path.join(here, "public"))) return send(res, 403, "Forbidden", "text/plain");
+      let rel;
+      try {
+        rel = url.pathname === "/" ? "index.html" : decodeURIComponent(url.pathname).replace(/^\/+/, "");
+      } catch {
+        return send(res, 400, "Bad request", "text/plain");
+      }
+      const publicDir = path.join(here, "public") + path.sep;
+      file = path.join(publicDir, rel);
+      if (!file.startsWith(publicDir)) return send(res, 403, "Forbidden", "text/plain");
     }
     const buf = await fs.readFile(file);
     return send(res, 200, buf, MIME[path.extname(file)] || "application/octet-stream");
