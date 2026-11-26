@@ -26,7 +26,33 @@ const FALSIFY = {
 
 // ---------- offline engine ----------
 
+const HOSTED_MICRO = new Set(["animal-gut", "animal-intracellular", "animal-surface", "plant-interior"]);
+const overlap = (x = [], y = []) => x.filter((v) => y.includes(v));
+const regionsMeet = (a, b) =>
+  a.includes("cosmopolitan") || b.includes("cosmopolitan") || overlap(a, b).length > 0;
+
 function habitatCheck(A, B) {
+  // Fine-grained tags (microhabitat / zone / region) when present; coarse habitat otherwise.
+  if (A.microhabitat && B.microhabitat) return fineHabitatCheck(A, B);
+  return coarseHabitatCheck(A, B);
+}
+
+function fineHabitatCheck(A, B) {
+  if (!regionsMeet(A.region, B.region)) {
+    return { status: "no", note: `Ranges don't overlap (${A.region.join(", ")} vs ${B.region.join(", ")}).`, score: 0 };
+  }
+  const sharedMicro = overlap(A.microhabitat, B.microhabitat);
+  if (sharedMicro.length) return { status: "yes", note: `Both live in: ${sharedMicro.join(", ")}.`, score: 2 };
+  const aHosted = A.zone.includes("inside-host") || A.microhabitat.some((m) => HOSTED_MICRO.has(m));
+  const bHosted = B.zone.includes("inside-host") || B.microhabitat.some((m) => HOSTED_MICRO.has(m));
+  if (aHosted && B.scale !== "micro") return { status: "partial", note: `${A.name} lives in or on hosts; ${B.name} would have to become a new host.`, score: 1 };
+  if (bHosted && A.scale !== "micro") return { status: "partial", note: `${B.name} lives in or on hosts; ${A.name} would have to become a new host.`, score: 1 };
+  const sharedZone = overlap(A.zone, B.zone).filter((z) => z !== "inside-host");
+  if (sharedZone.length) return { status: "partial", note: `Same zone (${sharedZone.join(", ")}) and overlapping ranges, but different microhabitats (${A.microhabitat.join(", ")} vs ${B.microhabitat.join(", ")}).`, score: 1 };
+  return { status: "no", note: `Different microhabitats and zones (${A.microhabitat.join(", ")} / ${A.zone.join(", ")} vs ${B.microhabitat.join(", ")} / ${B.zone.join(", ")}).`, score: 0 };
+}
+
+function coarseHabitatCheck(A, B) {
   const ha = A.habitat.filter((h) => !HOST_TAGS.has(h));
   const hb = B.habitat.filter((h) => !HOST_TAGS.has(h));
   const shared = ha.filter((h) => hb.includes(h));
@@ -122,7 +148,7 @@ export function analyzeLocal(index, A, B) {
   if (hab === 0 && requirements.habitat.status === "no") {
     verdict = "Unlikely";
     confidence = "Med";
-    why = "They don't share a habitat in the dataset's coarse habitat tags. Medium, not High, because the tags are coarse.";
+    why = `${requirements.habitat.note} Medium, not High: the tags describe typical habitat, and organisms can meet outside it.`;
   } else if (score >= 4) {
     verdict = "Plausible";
     confidence = analog.precedent && near ? "Med" : "Low";
@@ -153,7 +179,7 @@ export function analyzeLocal(index, A, B) {
 
 function analyzeOfflineFreeText(index, aText, bText, Anode, Bnode) {
   const known = Anode || Bnode;
-  const analogEdge = known ? index.adj.get(known.id).map((x) => x.edge)[0] : index.edges[0];
+  const analogEdge = (known && index.adj.get(known.id)[0]?.edge) || index.edges[0];
   const unk = { status: "unknown", note: "Can't check: at least one organism isn't in the curated dataset and Claude analysis is offline." };
   return {
     source: "offline",

@@ -66,7 +66,52 @@
         "label": "Shifts with context",
         "color": "gradient"
       }
-    ]
+    ],
+    "vocab": {
+      "microhabitat": [
+        "soil",
+        "rhizosphere",
+        "leaf-litter",
+        "plant-surface",
+        "plant-interior",
+        "wood",
+        "canopy",
+        "understory",
+        "open-ground",
+        "arid",
+        "freshwater",
+        "wetland",
+        "intertidal",
+        "coral-reef",
+        "pelagic",
+        "deep-sea-vent",
+        "animal-gut",
+        "animal-intracellular",
+        "animal-surface",
+        "nest-or-colony",
+        "human-built"
+      ],
+      "zone": [
+        "subterranean",
+        "ground",
+        "understory",
+        "canopy",
+        "aerial",
+        "shallow-water",
+        "deep-water",
+        "inside-host"
+      ],
+      "region": [
+        "africa",
+        "asia",
+        "europe",
+        "north-america",
+        "south-america",
+        "oceania",
+        "cosmopolitan",
+        "tropical-oceans"
+      ]
+    }
   },
   "nodes": [
     {
@@ -81,7 +126,19 @@
         "grassland"
       ],
       "scale": "micro",
-      "fact": "Fossil arbuscules in the ~400-million-year-old Rhynie chert show this partnership is about as old as land plants themselves."
+      "fact": "Fossil arbuscules in the ~400-million-year-old Rhynie chert show this partnership is about as old as land plants themselves.",
+      "microhabitat": [
+        "soil",
+        "rhizosphere",
+        "plant-interior"
+      ],
+      "zone": [
+        "subterranean",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "ecm",
@@ -94,7 +151,17 @@
         "temperate"
       ],
       "scale": "micro",
-      "fact": "Mapped forest networks have shown single Douglas firs linked through ectomycorrhizal fungi to dozens of neighbouring trees."
+      "fact": "Mapped forest networks have shown single Douglas firs linked through ectomycorrhizal fungi to dozens of neighbouring trees.",
+      "microhabitat": [
+        "soil",
+        "rhizosphere"
+      ],
+      "zone": [
+        "subterranean"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "tulasnella",
@@ -107,7 +174,19 @@
         "grassland"
       ],
       "scale": "micro",
-      "fact": "Orchid seeds are dust-like with almost no food reserve; most cannot germinate in nature without one of these fungi feeding them."
+      "fact": "Orchid seeds are dust-like with almost no food reserve; most cannot germinate in nature without one of these fungi feeding them.",
+      "microhabitat": [
+        "soil",
+        "rhizosphere",
+        "plant-interior"
+      ],
+      "zone": [
+        "subterranean",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "epichloe",
@@ -120,7 +199,17 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Lives entirely inside the grass and passes to the next generation through the seed—it never needs to leave its host."
+      "fact": "Lives entirely inside the grass and passes to the next generation through the seed—it never needs to leave its host.",
+      "microhabitat": [
+        "plant-interior"
+      ],
+      "zone": [
+        "inside-host",
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "lichen_fungus",
@@ -132,7 +221,19 @@
         "temperate"
       ],
       "scale": "small",
-      "fact": "Bryoria fremontii (black tree lichen) was pit-cooked and eaten by several Indigenous peoples of the Pacific Northwest."
+      "fact": "Bryoria fremontii (black tree lichen) was pit-cooked and eaten by several Indigenous peoples of the Pacific Northwest.",
+      "microhabitat": [
+        "plant-surface",
+        "canopy"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "north-america",
+        "europe",
+        "asia"
+      ]
     },
     {
       "id": "cyphobasidium",
@@ -144,7 +245,18 @@
         "temperate"
       ],
       "scale": "micro",
-      "fact": "Its 2016 discovery in lichen cortices challenged the ~150-year-old 'one fungus + one alga' definition of a lichen."
+      "fact": "Its 2016 discovery in lichen cortices challenged the ~150-year-old 'one fungus + one alga' definition of a lichen.",
+      "microhabitat": [
+        "plant-surface",
+        "canopy"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "cosmopolitan"
+      ],
+      "tags_note": "Lichen-yeast distribution poorly mapped; host Bryoria is boreal/temperate"
     },
     {
       "id": "leucoagaricus",
@@ -156,7 +268,19 @@
         "soil"
       ],
       "scale": "micro",
-      "fact": "Produces swollen hyphal tips called gongylidia that appear to exist only to feed the ants."
+      "fact": "Produces swollen hyphal tips called gongylidia that appear to exist only to feed the ants.",
+      "microhabitat": [
+        "nest-or-colony",
+        "soil"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "south-america",
+        "north-america"
+      ]
     },
     {
       "id": "escovopsis",
@@ -168,7 +292,19 @@
         "soil"
       ],
       "scale": "micro",
-      "fact": "A specialised mycoparasite known only from the gardens of fungus-growing ants."
+      "fact": "A specialised mycoparasite known only from the gardens of fungus-growing ants.",
+      "microhabitat": [
+        "nest-or-colony",
+        "soil"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "south-america",
+        "north-america"
+      ]
     },
     {
       "id": "termitomyces",
@@ -181,7 +317,19 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Termitomyces mushrooms that sprout from termite mounds are prized wild edibles across Africa and Asia."
+      "fact": "Termitomyces mushrooms that sprout from termite mounds are prized wild edibles across Africa and Asia.",
+      "microhabitat": [
+        "nest-or-colony",
+        "soil"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "africa",
+        "asia"
+      ]
     },
     {
       "id": "raffaelea",
@@ -193,7 +341,20 @@
         "agricultural"
       ],
       "scale": "micro",
-      "fact": "Since detection in Georgia in 2002, laurel wilt has killed a large share of redbay trees across the US Southeast."
+      "fact": "Since detection in Georgia in 2002, laurel wilt has killed a large share of redbay trees across the US Southeast.",
+      "microhabitat": [
+        "wood",
+        "plant-interior",
+        "animal-surface"
+      ],
+      "zone": [
+        "understory",
+        "inside-host"
+      ],
+      "region": [
+        "north-america",
+        "asia"
+      ]
     },
     {
       "id": "ophiocordyceps",
@@ -204,7 +365,23 @@
         "tropical-forest"
       ],
       "scale": "micro",
-      "fact": "Infected ants clamp onto a leaf vein in a 'death grip' at a height and humidity that suits the fungus's spore release."
+      "fact": "Infected ants clamp onto a leaf vein in a 'death grip' at a height and humidity that suits the fungus's spore release.",
+      "microhabitat": [
+        "leaf-litter",
+        "understory",
+        "animal-surface"
+      ],
+      "zone": [
+        "understory",
+        "ground",
+        "inside-host"
+      ],
+      "region": [
+        "south-america",
+        "asia",
+        "africa"
+      ],
+      "tags_note": "Species complex; exact ranges unclear"
     },
     {
       "id": "bd",
@@ -217,7 +394,19 @@
         "wetland"
       ],
       "scale": "micro",
-      "fact": "Scheele et al. (2019) linked chytridiomycosis to declines in at least 501 amphibian species, including 90 presumed extinctions."
+      "fact": "Scheele et al. (2019) linked chytridiomycosis to declines in at least 501 amphibian species, including 90 presumed extinctions.",
+      "microhabitat": [
+        "freshwater",
+        "wetland",
+        "animal-surface"
+      ],
+      "zone": [
+        "shallow-water",
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "saccharomyces",
@@ -229,7 +418,17 @@
         "forest"
       ],
       "scale": "micro",
-      "fact": "Industrial beer yeasts trace to a few domesticated lineages—a genuine case of humans domesticating a microbe."
+      "fact": "Industrial beer yeasts trace to a few domesticated lineages—a genuine case of humans domesticating a microbe.",
+      "microhabitat": [
+        "human-built",
+        "plant-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "bradyrhizobium",
@@ -241,7 +440,19 @@
         "agricultural"
       ],
       "scale": "micro",
-      "fact": "Nitrogenase is so oxygen-sensitive that the plant makes leghemoglobin to buffer it—why active nodules are pink inside."
+      "fact": "Nitrogenase is so oxygen-sensitive that the plant makes leghemoglobin to buffer it—why active nodules are pink inside.",
+      "microhabitat": [
+        "soil",
+        "rhizosphere",
+        "plant-interior"
+      ],
+      "zone": [
+        "subterranean",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "trichormus",
@@ -255,7 +466,18 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Passed between fern generations and so degraded in its genome that it appears unable to live on its own."
+      "fact": "Passed between fern generations and so degraded in its genome that it appears unable to live on its own.",
+      "microhabitat": [
+        "freshwater",
+        "plant-interior"
+      ],
+      "zone": [
+        "shallow-water",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "agrobacterium",
@@ -267,7 +489,19 @@
         "agricultural"
       ],
       "scale": "micro",
-      "fact": "Its natural ability to insert DNA into plant genomes became the workhorse tool of plant genetic engineering."
+      "fact": "Its natural ability to insert DNA into plant genomes became the workhorse tool of plant genetic engineering.",
+      "microhabitat": [
+        "soil",
+        "rhizosphere",
+        "plant-interior"
+      ],
+      "zone": [
+        "subterranean",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "pseudonocardia",
@@ -280,7 +514,18 @@
         "host-external"
       ],
       "scale": "micro",
-      "fact": "On some fungus-growing ants it grows in specialised cuticle crypts—a living antibiotic dispenser on the ant's body."
+      "fact": "On some fungus-growing ants it grows in specialised cuticle crypts—a living antibiotic dispenser on the ant's body.",
+      "microhabitat": [
+        "animal-surface",
+        "nest-or-colony"
+      ],
+      "zone": [
+        "ground",
+        "subterranean"
+      ],
+      "region": [
+        "south-america"
+      ]
     },
     {
       "id": "buchnera",
@@ -291,7 +536,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Its genome is ~640 kb—roughly one-seventh of E. coli's—after shedding genes it no longer needs inside aphid cells."
+      "fact": "Its genome is ~640 kb—roughly one-seventh of E. coli's—after shedding genes it no longer needs inside aphid cells.",
+      "microhabitat": [
+        "animal-intracellular"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "hamiltonella",
@@ -302,7 +556,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Much of its anti-wasp protection comes from toxin genes carried by a bacteriophage (APSE) living inside the bacterium."
+      "fact": "Much of its anti-wasp protection comes from toxin genes carried by a bacteriophage (APSE) living inside the bacterium.",
+      "microhabitat": [
+        "animal-intracellular"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "wigglesworthia",
@@ -313,7 +576,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Supplies B vitamins missing from an all-blood diet; tsetse females cleared of it become sterile."
+      "fact": "Supplies B vitamins missing from an all-blood diet; tsetse females cleared of it become sterile.",
+      "microhabitat": [
+        "animal-intracellular"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "africa"
+      ]
     },
     {
       "id": "wolbachia",
@@ -324,7 +596,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Estimated to infect roughly 40–65% of insect species—possibly the most widespread bacterial infection on Earth."
+      "fact": "Estimated to infect roughly 40–65% of insect species—possibly the most widespread bacterial infection on Earth.",
+      "microhabitat": [
+        "animal-intracellular"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "bee_gut",
@@ -335,7 +616,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "A small, consistent set of bacterial species makes up most of the honeybee gut community worldwide."
+      "fact": "A small, consistent set of bacterial species makes up most of the honeybee gut community worldwide.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "rumen_bacteria",
@@ -346,7 +636,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "The microbes, not the cow, break down cellulose; the cow lives largely on their fermentation products."
+      "fact": "The microbes, not the cow, break down cellulose; the cow lives largely on their fermentation products.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "vibrio",
@@ -358,7 +657,19 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Each dawn the squid vents most of its bacteria into the sea and regrows the population by nightfall."
+      "fact": "Each dawn the squid vents most of its bacteria into the sea and regrows the population by nightfall.",
+      "microhabitat": [
+        "animal-surface",
+        "pelagic"
+      ],
+      "zone": [
+        "shallow-water",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ],
+      "tags_note": "Squid light organ crypt has no exact vocab match; animal-surface chosen as epithelial-lined"
     },
     {
       "id": "endoriftia",
@@ -371,7 +682,19 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Oxidises hydrogen sulphide from vent fluid to fix carbon—photosynthesis-free primary production."
+      "fact": "Oxidises hydrogen sulphide from vent fluid to fix carbon—photosynthesis-free primary production.",
+      "microhabitat": [
+        "animal-intracellular",
+        "deep-sea-vent"
+      ],
+      "zone": [
+        "deep-water",
+        "inside-host"
+      ],
+      "region": [
+        "tropical-oceans"
+      ],
+      "tags_note": "Hosts live at Pacific vents, not strictly tropical; vocab has no Pacific/deep-ocean region"
     },
     {
       "id": "borrelia",
@@ -384,7 +707,17 @@
         "temperate"
       ],
       "scale": "micro",
-      "fact": "Lyme disease is named after Lyme, Connecticut, where a cluster of cases was investigated in the 1970s."
+      "fact": "Lyme disease is named after Lyme, Connecticut, where a cluster of cases was investigated in the 1970s.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "north-america",
+        "europe"
+      ]
     },
     {
       "id": "bacteroides",
@@ -395,7 +728,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Carries a huge repertoire of genes for breaking down plant polysaccharides that human enzymes can't touch."
+      "fact": "Carries a huge repertoire of genes for breaking down plant polysaccharides that human enzymes can't touch.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "bifido",
@@ -406,7 +748,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Human milk contains oligosaccharides the infant can't digest—they largely feed bacteria like this one."
+      "fact": "Human milk contains oligosaccharides the infant can't digest—they largely feed bacteria like this one.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "hpylori",
@@ -417,7 +768,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Barry Marshall drank a culture of it to help prove it causes gastritis; he and Robin Warren won the 2005 Nobel Prize."
+      "fact": "Barry Marshall drank a culture of it to help prove it causes gastritis; he and Robin Warren won the 2005 Nobel Prize.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "sepidermidis",
@@ -428,7 +788,16 @@
         "host-external"
       ],
       "scale": "micro",
-      "fact": "One of the most common bacteria on human skin—and a leading cause of infections on implanted medical devices."
+      "fact": "One of the most common bacteria on human skin—and a leading cause of infections on implanted medical devices.",
+      "microhabitat": [
+        "animal-surface"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "almond",
@@ -440,7 +809,21 @@
         "temperate"
       ],
       "scale": "medium",
-      "fact": "Most commercial varieties are self-incompatible, so California orchards rent well over a million honeybee hives each bloom."
+      "fact": "Most commercial varieties are self-incompatible, so California orchards rent well over a million honeybee hives each bloom.",
+      "microhabitat": [
+        "open-ground",
+        "arid"
+      ],
+      "zone": [
+        "ground",
+        "canopy"
+      ],
+      "region": [
+        "north-america",
+        "europe",
+        "asia",
+        "oceania"
+      ]
     },
     {
       "id": "soybean",
@@ -451,7 +834,18 @@
         "agricultural"
       ],
       "scale": "medium",
-      "fact": "A top global protein crop, partly because its root nodules supply much of its own nitrogen."
+      "fact": "A top global protein crop, partly because its root nodules supply much of its own nitrogen.",
+      "microhabitat": [
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "north-america",
+        "south-america",
+        "asia"
+      ]
     },
     {
       "id": "douglas_fir",
@@ -463,7 +857,18 @@
         "temperate"
       ],
       "scale": "large",
-      "fact": "Can live for more than 500 years and grow among the tallest trees on Earth."
+      "fact": "Can live for more than 500 years and grow among the tallest trees on Earth.",
+      "microhabitat": [
+        "canopy",
+        "understory"
+      ],
+      "zone": [
+        "canopy",
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "paper_birch",
@@ -475,7 +880,18 @@
         "temperate"
       ],
       "scale": "large",
-      "fact": "Its white bark is rich in betulin and was used for canoes and containers."
+      "fact": "Its white bark is rich in betulin and was used for canoes and containers.",
+      "microhabitat": [
+        "canopy",
+        "understory"
+      ],
+      "zone": [
+        "canopy",
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "ghost_pipe",
@@ -487,7 +903,19 @@
         "temperate"
       ],
       "scale": "small",
-      "fact": "Has no chlorophyll; it takes all its carbon from fungi, which take it from trees."
+      "fact": "Has no chlorophyll; it takes all its carbon from fungi, which take it from trees.",
+      "microhabitat": [
+        "leaf-litter",
+        "understory"
+      ],
+      "zone": [
+        "ground",
+        "understory"
+      ],
+      "region": [
+        "north-america",
+        "asia"
+      ]
     },
     {
       "id": "orchids",
@@ -500,7 +928,18 @@
         "temperate"
       ],
       "scale": "small",
-      "fact": "Orchidaceae is one of the largest families of flowering plants, with roughly 28,000 species."
+      "fact": "Orchidaceae is one of the largest families of flowering plants, with roughly 28,000 species.",
+      "microhabitat": [
+        "soil",
+        "understory",
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "azolla",
@@ -513,7 +952,17 @@
         "agricultural"
       ],
       "scale": "small",
-      "fact": "Used for centuries as a green manure in rice paddies in China and Vietnam."
+      "fact": "Used for centuries as a green manure in rice paddies in China and Vietnam.",
+      "microhabitat": [
+        "freshwater",
+        "wetland"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "fescue",
@@ -525,7 +974,18 @@
         "agricultural"
       ],
       "scale": "small",
-      "fact": "Endophyte-infected pastures cause 'fescue toxicosis' in cattle, costing US producers hundreds of millions of dollars a year."
+      "fact": "Endophyte-infected pastures cause 'fescue toxicosis' in cattle, costing US producers hundreds of millions of dollars a year.",
+      "microhabitat": [
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "europe",
+        "north-america",
+        "oceania"
+      ]
     },
     {
       "id": "avocado",
@@ -537,7 +997,19 @@
         "agricultural"
       ],
       "scale": "large",
-      "fact": "Avocado shares the laurel family with redbay, which is why laurel wilt threatens Florida's avocado groves."
+      "fact": "Avocado shares the laurel family with redbay, which is why laurel wilt threatens Florida's avocado groves.",
+      "microhabitat": [
+        "canopy",
+        "understory"
+      ],
+      "zone": [
+        "canopy",
+        "ground"
+      ],
+      "region": [
+        "north-america",
+        "south-america"
+      ]
     },
     {
       "id": "yucca",
@@ -549,7 +1021,17 @@
         "grassland"
       ],
       "scale": "medium",
-      "fact": "Relies on a single moth lineage for pollination—no bees, no wind."
+      "fact": "Relies on a single moth lineage for pollination—no bees, no wind.",
+      "microhabitat": [
+        "arid",
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "fig",
@@ -560,7 +1042,19 @@
         "tropical-forest"
       ],
       "scale": "large",
-      "fact": "There are 750+ fig species; the old 'one fig, one wasp' rule has many exceptions."
+      "fact": "There are 750+ fig species; the old 'one fig, one wasp' rule has many exceptions.",
+      "microhabitat": [
+        "canopy"
+      ],
+      "zone": [
+        "canopy"
+      ],
+      "region": [
+        "south-america",
+        "africa",
+        "asia",
+        "oceania"
+      ]
     },
     {
       "id": "heliconia",
@@ -571,7 +1065,18 @@
         "tropical-forest"
       ],
       "scale": "medium",
-      "fact": "Its curved flowers match the curved bills of the hummingbirds that pollinate it."
+      "fact": "Its curved flowers match the curved bills of the hummingbirds that pollinate it.",
+      "microhabitat": [
+        "understory"
+      ],
+      "zone": [
+        "understory",
+        "ground"
+      ],
+      "region": [
+        "south-america",
+        "north-america"
+      ]
     },
     {
       "id": "whitebark_pine",
@@ -583,7 +1088,17 @@
         "temperate"
       ],
       "scale": "large",
-      "fact": "Its cones don't open on their own; it depends almost entirely on Clark's nutcrackers to plant its seeds."
+      "fact": "Its cones don't open on their own; it depends almost entirely on Clark's nutcrackers to plant its seeds.",
+      "microhabitat": [
+        "canopy"
+      ],
+      "zone": [
+        "canopy",
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "bullhorn_acacia",
@@ -594,7 +1109,19 @@
         "tropical-forest"
       ],
       "scale": "medium",
-      "fact": "Grows hollow thorns to house ants and feeds them nectar and protein-rich 'Beltian bodies'."
+      "fact": "Grows hollow thorns to house ants and feeds them nectar and protein-rich 'Beltian bodies'.",
+      "microhabitat": [
+        "understory",
+        "canopy"
+      ],
+      "zone": [
+        "understory",
+        "canopy"
+      ],
+      "region": [
+        "north-america",
+        "south-america"
+      ]
     },
     {
       "id": "ophrys",
@@ -606,7 +1133,17 @@
         "temperate"
       ],
       "scale": "small",
-      "fact": "Mimics the sex pheromone of female mining bees so precisely that males try to mate with the flower."
+      "fact": "Mimics the sex pheromone of female mining bees so precisely that males try to mate with the flower.",
+      "microhabitat": [
+        "open-ground",
+        "soil"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "europe"
+      ]
     },
     {
       "id": "maize",
@@ -617,7 +1154,16 @@
         "agricultural"
       ],
       "scale": "medium",
-      "fact": "Domesticated from teosinte in southern Mexico ~9,000 years ago; its husked cobs can't disperse seed without people."
+      "fact": "Domesticated from teosinte in southern Mexico ~9,000 years ago; its husked cobs can't disperse seed without people.",
+      "microhabitat": [
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "trebouxia",
@@ -629,7 +1175,18 @@
         "temperate"
       ],
       "scale": "micro",
-      "fact": "One of the most common green-algal partners in lichens worldwide."
+      "fact": "One of the most common green-algal partners in lichens worldwide.",
+      "microhabitat": [
+        "plant-surface",
+        "canopy"
+      ],
+      "zone": [
+        "canopy",
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "symbiodinium",
@@ -642,7 +1199,18 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "These dinoflagellates can supply most of a reef coral's energy through photosynthesis."
+      "fact": "These dinoflagellates can supply most of a reef coral's energy through photosynthesis.",
+      "microhabitat": [
+        "animal-intracellular",
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water",
+        "inside-host"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
     },
     {
       "id": "trichonympha",
@@ -653,7 +1221,16 @@
         "host-internal"
       ],
       "scale": "micro",
-      "fact": "Lower termites can't digest wood without the flagellates packed into their hindgut."
+      "fact": "Lower termites can't digest wood without the flagellates packed into their hindgut.",
+      "microhabitat": [
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "plasmodium",
@@ -666,7 +1243,20 @@
         "human-settlement"
       ],
       "scale": "micro",
-      "fact": "Malaria still kills hundreds of thousands of people a year, most of them young children in Africa."
+      "fact": "Malaria still kills hundreds of thousands of people a year, most of them young children in Africa.",
+      "microhabitat": [
+        "animal-intracellular",
+        "animal-gut"
+      ],
+      "zone": [
+        "inside-host"
+      ],
+      "region": [
+        "africa",
+        "asia",
+        "south-america",
+        "oceania"
+      ]
     },
     {
       "id": "leafcutter",
@@ -678,7 +1268,20 @@
         "soil"
       ],
       "scale": "small",
-      "fact": "They don't eat the leaves they cut—they feed them to a fungus they farm underground."
+      "fact": "They don't eat the leaves they cut—they feed them to a fungus they farm underground.",
+      "microhabitat": [
+        "nest-or-colony",
+        "soil",
+        "leaf-litter"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "south-america",
+        "north-america"
+      ]
     },
     {
       "id": "macrotermes",
@@ -691,7 +1294,19 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Their mounds act as ventilation systems that help keep the fungus garden's climate stable."
+      "fact": "Their mounds act as ventilation systems that help keep the fungus garden's climate stable.",
+      "microhabitat": [
+        "nest-or-colony",
+        "soil"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "africa",
+        "asia"
+      ]
     },
     {
       "id": "reticulitermes",
@@ -704,7 +1319,21 @@
         "temperate"
       ],
       "scale": "small",
-      "fact": "Among the most economically damaging structural pests in North America and Europe."
+      "fact": "Among the most economically damaging structural pests in North America and Europe.",
+      "microhabitat": [
+        "wood",
+        "soil",
+        "nest-or-colony"
+      ],
+      "zone": [
+        "subterranean",
+        "ground"
+      ],
+      "region": [
+        "north-america",
+        "europe",
+        "asia"
+      ]
     },
     {
       "id": "ambrosia_beetle",
@@ -716,7 +1345,19 @@
         "agricultural"
       ],
       "scale": "small",
-      "fact": "Females carry fungal spores in special pouches called mycangia."
+      "fact": "Females carry fungal spores in special pouches called mycangia.",
+      "microhabitat": [
+        "wood",
+        "plant-interior"
+      ],
+      "zone": [
+        "understory",
+        "inside-host"
+      ],
+      "region": [
+        "north-america",
+        "asia"
+      ]
     },
     {
       "id": "carpenter_ant",
@@ -728,7 +1369,20 @@
         "forest"
       ],
       "scale": "small",
-      "fact": "They nest in wood but don't eat it—unlike termites, they only excavate."
+      "fact": "They nest in wood but don't eat it—unlike termites, they only excavate.",
+      "microhabitat": [
+        "wood",
+        "nest-or-colony",
+        "canopy"
+      ],
+      "zone": [
+        "understory",
+        "canopy",
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "aphids",
@@ -741,7 +1395,17 @@
         "forest"
       ],
       "scale": "small",
-      "fact": "Many aphids reproduce clonally, born already carrying their own developing daughters ('telescoping generations')."
+      "fact": "Many aphids reproduce clonally, born already carrying their own developing daughters ('telescoping generations').",
+      "microhabitat": [
+        "plant-surface"
+      ],
+      "zone": [
+        "ground",
+        "understory"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "aphidius",
@@ -753,7 +1417,17 @@
         "grassland"
       ],
       "scale": "small",
-      "fact": "Lays an egg inside a living aphid; the larva eats it from within, leaving a swollen 'mummy'."
+      "fact": "Lays an egg inside a living aphid; the larva eats it from within, leaving a swollen 'mummy'.",
+      "microhabitat": [
+        "plant-surface"
+      ],
+      "zone": [
+        "ground",
+        "inside-host"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "lasius",
@@ -766,7 +1440,21 @@
         "human-settlement"
       ],
       "scale": "small",
-      "fact": "Strokes aphids with its antennae to solicit droplets of honeydew—'milking' them."
+      "fact": "Strokes aphids with its antennae to solicit droplets of honeydew—'milking' them.",
+      "microhabitat": [
+        "soil",
+        "nest-or-colony",
+        "open-ground"
+      ],
+      "zone": [
+        "ground",
+        "subterranean"
+      ],
+      "region": [
+        "europe",
+        "north-america",
+        "asia"
+      ]
     },
     {
       "id": "tsetse",
@@ -778,7 +1466,18 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Gives birth to one fully grown larva at a time, fed on 'milk' secreted inside the mother."
+      "fact": "Gives birth to one fully grown larva at a time, fed on 'milk' secreted inside the mother.",
+      "microhabitat": [
+        "understory",
+        "open-ground",
+        "animal-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "africa"
+      ]
     },
     {
       "id": "bedbug",
@@ -789,7 +1488,18 @@
         "human-settlement"
       ],
       "scale": "small",
-      "fact": "Feeds only on blood, a diet poor in B vitamins—hence its reliance on Wolbachia."
+      "fact": "Feeds only on blood, a diet poor in B vitamins—hence its reliance on Wolbachia.",
+      "microhabitat": [
+        "human-built",
+        "animal-surface",
+        "nest-or-colony"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "drosophila",
@@ -801,7 +1511,17 @@
         "agricultural"
       ],
       "scale": "small",
-      "fact": "Researchers watched Wolbachia spread through California populations of this fly in near real time."
+      "fact": "Researchers watched Wolbachia spread through California populations of this fly in near real time.",
+      "microhabitat": [
+        "human-built",
+        "plant-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "aedes",
@@ -813,7 +1533,19 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Spread worldwide with human shipping; it breeds in tiny containers of water around homes."
+      "fact": "Spread worldwide with human shipping; it breeds in tiny containers of water around homes.",
+      "microhabitat": [
+        "human-built",
+        "freshwater",
+        "animal-surface"
+      ],
+      "zone": [
+        "ground",
+        "shallow-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "anopheles",
@@ -826,7 +1558,19 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Only females bite; they need the protein in blood to produce eggs."
+      "fact": "Only females bite; they need the protein in blood to produce eggs.",
+      "microhabitat": [
+        "freshwater",
+        "wetland",
+        "human-built"
+      ],
+      "zone": [
+        "ground",
+        "shallow-water"
+      ],
+      "region": [
+        "africa"
+      ]
     },
     {
       "id": "head_louse",
@@ -838,7 +1582,16 @@
         "human-settlement"
       ],
       "scale": "small",
-      "fact": "Louse genetics have been used to estimate when humans started wearing clothing."
+      "fact": "Louse genetics have been used to estimate when humans started wearing clothing.",
+      "microhabitat": [
+        "animal-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "yucca_moth",
@@ -850,7 +1603,18 @@
         "grassland"
       ],
       "scale": "small",
-      "fact": "Females use specialised mouthpart tentacles to pack pollen onto the yucca stigma—deliberate pollination."
+      "fact": "Females use specialised mouthpart tentacles to pack pollen onto the yucca stigma—deliberate pollination.",
+      "microhabitat": [
+        "arid",
+        "open-ground",
+        "plant-interior"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "fig_wasp",
@@ -861,7 +1625,21 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Wingless males spend their whole lives inside the fig, mating and chewing exit tunnels for the females."
+      "fact": "Wingless males spend their whole lives inside the fig, mating and chewing exit tunnels for the females.",
+      "microhabitat": [
+        "plant-interior",
+        "canopy"
+      ],
+      "zone": [
+        "canopy",
+        "inside-host"
+      ],
+      "region": [
+        "south-america",
+        "africa",
+        "asia",
+        "oceania"
+      ]
     },
     {
       "id": "honeybee",
@@ -875,7 +1653,19 @@
         "forest"
       ],
       "scale": "small",
-      "fact": "Foragers share the direction and distance of food with the waggle dance."
+      "fact": "Foragers share the direction and distance of food with the waggle dance.",
+      "microhabitat": [
+        "nest-or-colony",
+        "plant-surface",
+        "open-ground"
+      ],
+      "zone": [
+        "aerial",
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "andrena",
@@ -887,7 +1677,20 @@
         "temperate"
       ],
       "scale": "small",
-      "fact": "Solitary bees that nest in burrows dug into the ground."
+      "fact": "Solitary bees that nest in burrows dug into the ground.",
+      "microhabitat": [
+        "soil",
+        "open-ground",
+        "nest-or-colony"
+      ],
+      "zone": [
+        "ground",
+        "subterranean",
+        "aerial"
+      ],
+      "region": [
+        "europe"
+      ]
     },
     {
       "id": "acacia_ant",
@@ -898,7 +1701,19 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Workers attack herbivores and prune away plants that grow too close to their host acacia."
+      "fact": "Workers attack herbivores and prune away plants that grow too close to their host acacia.",
+      "microhabitat": [
+        "plant-interior",
+        "nest-or-colony",
+        "understory"
+      ],
+      "zone": [
+        "understory",
+        "canopy"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "oxpecker",
@@ -909,7 +1724,18 @@
         "grassland"
       ],
       "scale": "small",
-      "fact": "Its Swahili name translates roughly as 'the rhino's guard'—its alarm calls warn rhinos of approaching people."
+      "fact": "Its Swahili name translates roughly as 'the rhino's guard'—its alarm calls warn rhinos of approaching people.",
+      "microhabitat": [
+        "animal-surface",
+        "open-ground"
+      ],
+      "zone": [
+        "ground",
+        "aerial"
+      ],
+      "region": [
+        "africa"
+      ]
     },
     {
       "id": "cattle_egret",
@@ -922,7 +1748,19 @@
         "wetland"
       ],
       "scale": "medium",
-      "fact": "Colonised the Americas from Africa on its own in the late 1800s and spread alongside cattle ranching."
+      "fact": "Colonised the Americas from Africa on its own in the late 1800s and spread alongside cattle ranching.",
+      "microhabitat": [
+        "open-ground",
+        "wetland",
+        "animal-surface"
+      ],
+      "zone": [
+        "ground",
+        "aerial"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "common_cuckoo",
@@ -935,7 +1773,22 @@
         "grassland"
       ],
       "scale": "medium",
-      "fact": "Different female lineages lay eggs that mimic the eggs of their particular host species."
+      "fact": "Different female lineages lay eggs that mimic the eggs of their particular host species.",
+      "microhabitat": [
+        "wetland",
+        "nest-or-colony",
+        "understory"
+      ],
+      "zone": [
+        "ground",
+        "understory",
+        "aerial"
+      ],
+      "region": [
+        "europe",
+        "asia",
+        "africa"
+      ]
     },
     {
       "id": "reed_warbler",
@@ -946,7 +1799,19 @@
         "wetland"
       ],
       "scale": "small",
-      "fact": "Rejects odd-looking eggs more often after seeing a cuckoo near its nest."
+      "fact": "Rejects odd-looking eggs more often after seeing a cuckoo near its nest.",
+      "microhabitat": [
+        "wetland",
+        "nest-or-colony"
+      ],
+      "zone": [
+        "ground",
+        "understory"
+      ],
+      "region": [
+        "europe",
+        "africa"
+      ]
     },
     {
       "id": "gs_cuckoo",
@@ -958,7 +1823,20 @@
         "agricultural"
       ],
       "scale": "medium",
-      "fact": "Unlike the common cuckoo, its chicks don't evict their host's eggs or nestlings."
+      "fact": "Unlike the common cuckoo, its chicks don't evict their host's eggs or nestlings.",
+      "microhabitat": [
+        "open-ground",
+        "nest-or-colony",
+        "canopy"
+      ],
+      "zone": [
+        "canopy",
+        "ground"
+      ],
+      "region": [
+        "europe",
+        "africa"
+      ]
     },
     {
       "id": "carrion_crow",
@@ -971,7 +1849,21 @@
         "forest"
       ],
       "scale": "medium",
-      "fact": "Some carrion crow populations breed cooperatively, with helpers raising young that aren't their own."
+      "fact": "Some carrion crow populations breed cooperatively, with helpers raising young that aren't their own.",
+      "microhabitat": [
+        "open-ground",
+        "human-built",
+        "canopy"
+      ],
+      "zone": [
+        "ground",
+        "canopy",
+        "aerial"
+      ],
+      "region": [
+        "europe",
+        "asia"
+      ]
     },
     {
       "id": "raven",
@@ -984,7 +1876,21 @@
         "temperate"
       ],
       "scale": "medium",
-      "fact": "In Yellowstone, ravens turn up at virtually every winter wolf kill."
+      "fact": "In Yellowstone, ravens turn up at virtually every winter wolf kill.",
+      "microhabitat": [
+        "open-ground",
+        "canopy",
+        "arid"
+      ],
+      "zone": [
+        "ground",
+        "aerial"
+      ],
+      "region": [
+        "north-america",
+        "europe",
+        "asia"
+      ]
     },
     {
       "id": "nutcracker",
@@ -996,7 +1902,19 @@
         "temperate"
       ],
       "scale": "medium",
-      "fact": "One bird can cache tens of thousands of pine seeds a season and relocate many of them months later."
+      "fact": "One bird can cache tens of thousands of pine seeds a season and relocate many of them months later.",
+      "microhabitat": [
+        "canopy",
+        "open-ground"
+      ],
+      "zone": [
+        "canopy",
+        "aerial",
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "carib",
@@ -1007,7 +1925,18 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Males and females have differently shaped bills, each matching a different Heliconia species."
+      "fact": "Males and females have differently shaped bills, each matching a different Heliconia species.",
+      "microhabitat": [
+        "canopy",
+        "understory"
+      ],
+      "zone": [
+        "understory",
+        "aerial"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "honeyguide",
@@ -1019,7 +1948,19 @@
         "forest"
       ],
       "scale": "small",
-      "fact": "Responds specifically to the Yao honey-hunters' 'brrr-hm' call, which makes guiding far more likely."
+      "fact": "Responds specifically to the Yao honey-hunters' 'brrr-hm' call, which makes guiding far more likely.",
+      "microhabitat": [
+        "canopy",
+        "open-ground",
+        "nest-or-colony"
+      ],
+      "zone": [
+        "canopy",
+        "aerial"
+      ],
+      "region": [
+        "africa"
+      ]
     },
     {
       "id": "varroa",
@@ -1031,7 +1972,17 @@
         "agricultural"
       ],
       "scale": "small",
-      "fact": "Jumped from the Asian honeybee to Apis mellifera in the 20th century and is now a leading driver of colony losses."
+      "fact": "Jumped from the Asian honeybee to Apis mellifera in the 20th century and is now a leading driver of colony losses.",
+      "microhabitat": [
+        "nest-or-colony",
+        "animal-surface"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "cleaner_wrasse",
@@ -1043,7 +1994,16 @@
         "marine"
       ],
       "scale": "small",
-      "fact": "A single cleaner can inspect more than 2,000 client fish in a day."
+      "fact": "A single cleaner can inspect more than 2,000 client fish in a day.",
+      "microhabitat": [
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
     },
     {
       "id": "reef_fish",
@@ -1055,7 +2015,16 @@
         "marine"
       ],
       "scale": "medium",
-      "fact": "Clients visit cleaning stations many times a day; removing cleaners can reduce local fish diversity."
+      "fact": "Clients visit cleaning stations many times a day; removing cleaners can reduce local fish diversity.",
+      "microhabitat": [
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
     },
     {
       "id": "clownfish",
@@ -1067,7 +2036,16 @@
         "marine"
       ],
       "scale": "small",
-      "fact": "All clownfish start life male; the dominant fish in a group becomes the female."
+      "fact": "All clownfish start life male; the dominant fish in a group becomes the female.",
+      "microhabitat": [
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
     },
     {
       "id": "anemone",
@@ -1079,7 +2057,16 @@
         "marine"
       ],
       "scale": "medium",
-      "fact": "Its stinging cells don't fire on its resident clownfish, protected by the fish's mucus coat."
+      "fact": "Its stinging cells don't fire on its resident clownfish, protected by the fish's mucus coat.",
+      "microhabitat": [
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
     },
     {
       "id": "coral",
@@ -1091,7 +2078,16 @@
         "marine"
       ],
       "scale": "medium",
-      "fact": "Coral reefs cover well under 1% of the sea floor yet host roughly a quarter of known marine species."
+      "fact": "Coral reefs cover well under 1% of the sea floor yet host roughly a quarter of known marine species.",
+      "microhabitat": [
+        "coral-reef"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ]
     },
     {
       "id": "bobtail_squid",
@@ -1102,7 +2098,18 @@
         "marine"
       ],
       "scale": "small",
-      "fact": "Uses bacterial light to erase its own moonlit shadow from predators below (counter-illumination)."
+      "fact": "Uses bacterial light to erase its own moonlit shadow from predators below (counter-illumination).",
+      "microhabitat": [
+        "intertidal",
+        "pelagic"
+      ],
+      "zone": [
+        "shallow-water"
+      ],
+      "region": [
+        "oceania"
+      ],
+      "tags_note": "Lives in shallow sandy Hawaiian flats; no benthic-sand vocab term, so intertidal/pelagic are approximations"
     },
     {
       "id": "riftia",
@@ -1114,7 +2121,17 @@
         "marine"
       ],
       "scale": "medium",
-      "fact": "Adults have no mouth or gut; a tissue packed with bacteria feeds them."
+      "fact": "Adults have no mouth or gut; a tissue packed with bacteria feeds them.",
+      "microhabitat": [
+        "deep-sea-vent"
+      ],
+      "zone": [
+        "deep-water"
+      ],
+      "region": [
+        "tropical-oceans"
+      ],
+      "tags_note": "Pacific vents, not strictly tropical; vocab has no deep-ocean region"
     },
     {
       "id": "rhino",
@@ -1125,7 +2142,17 @@
         "grassland"
       ],
       "scale": "large",
-      "fact": "Critically endangered; poaching for horn remains the main threat."
+      "fact": "Critically endangered; poaching for horn remains the main threat.",
+      "microhabitat": [
+        "open-ground",
+        "understory"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "africa"
+      ]
     },
     {
       "id": "cattle",
@@ -1137,7 +2164,17 @@
         "agricultural"
       ],
       "scale": "large",
-      "fact": "Rumen fermentation produces methane that cattle belch out—a significant greenhouse-gas source."
+      "fact": "Rumen fermentation produces methane that cattle belch out—a significant greenhouse-gas source.",
+      "microhabitat": [
+        "open-ground",
+        "human-built"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "grey_wolf",
@@ -1150,7 +2187,19 @@
         "temperate"
       ],
       "scale": "large",
-      "fact": "Reintroduced to Yellowstone National Park in 1995."
+      "fact": "Reintroduced to Yellowstone National Park in 1995.",
+      "microhabitat": [
+        "open-ground",
+        "understory"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "north-america",
+        "europe",
+        "asia"
+      ]
     },
     {
       "id": "amphibians",
@@ -1163,7 +2212,19 @@
         "tropical-forest"
       ],
       "scale": "small",
-      "fact": "Amphibians are the most threatened vertebrate class; roughly two in five species are at risk."
+      "fact": "Amphibians are the most threatened vertebrate class; roughly two in five species are at risk.",
+      "microhabitat": [
+        "freshwater",
+        "wetland",
+        "leaf-litter"
+      ],
+      "zone": [
+        "ground",
+        "shallow-water"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "ixodes",
@@ -1176,7 +2237,19 @@
         "host-external"
       ],
       "scale": "small",
-      "fact": "Larval ticks hatch uninfected and pick up Borrelia from their first blood meal."
+      "fact": "Larval ticks hatch uninfected and pick up Borrelia from their first blood meal.",
+      "microhabitat": [
+        "leaf-litter",
+        "animal-surface",
+        "understory"
+      ],
+      "zone": [
+        "ground",
+        "understory"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "mouse",
@@ -1188,7 +2261,18 @@
         "temperate"
       ],
       "scale": "small",
-      "fact": "One of the most competent Lyme reservoirs: many larval ticks that feed on it become infected."
+      "fact": "One of the most competent Lyme reservoirs: many larval ticks that feed on it become infected.",
+      "microhabitat": [
+        "leaf-litter",
+        "understory",
+        "nest-or-colony"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "north-america"
+      ]
     },
     {
       "id": "dog",
@@ -1199,7 +2283,17 @@
         "human-settlement"
       ],
       "scale": "medium",
-      "fact": "The first domesticated animal—domestication began well before agriculture."
+      "fact": "The first domesticated animal—domestication began well before agriculture.",
+      "microhabitat": [
+        "human-built",
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     },
     {
       "id": "humans",
@@ -1215,7 +2309,17 @@
         "tropical-forest"
       ],
       "scale": "large",
-      "fact": "A typical person carries about as many bacterial cells as human cells (Sender et al. 2016)."
+      "fact": "A typical person carries about as many bacterial cells as human cells (Sender et al. 2016).",
+      "microhabitat": [
+        "human-built",
+        "open-ground"
+      ],
+      "zone": [
+        "ground"
+      ],
+      "region": [
+        "cosmopolitan"
+      ]
     }
   ],
   "edges": [

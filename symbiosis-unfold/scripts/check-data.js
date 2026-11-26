@@ -18,6 +18,11 @@ for (const n of d.nodes) {
   if (!groups.has(n.group)) errors.push(`node ${n.id}: unknown group ${n.group}`);
   for (const k of ["name", "sci", "fact", "scale"]) if (!n[k]) errors.push(`node ${n.id}: missing ${k}`);
   if (!Array.isArray(n.habitat) || !n.habitat.length) errors.push(`node ${n.id}: habitat must be a non-empty array`);
+  for (const field of ["microhabitat", "zone", "region"]) {
+    const vocab = new Set(d.meta.vocab?.[field] || []);
+    if (!Array.isArray(n[field]) || !n[field].length) { errors.push(`node ${n.id}: ${field} must be a non-empty array`); continue; }
+    for (const v of n[field]) if (!vocab.has(v)) errors.push(`node ${n.id}: ${field} value "${v}" not in meta.vocab.${field}`);
+  }
 }
 
 const eids = new Set();
